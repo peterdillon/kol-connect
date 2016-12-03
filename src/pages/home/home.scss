@@ -1,0 +1,42 @@
+page-home {
+
+
+ion-content {
+    background-image: url('../assets/custom/blurred-bg.gif');
+    background-size: cover;
+}
+
+ion-card {
+    overflow: visible;
+
+    ion-card-content {
+      @include linearGradient(#5836B9, #9152C8);
+      color: #FFFFFF;
+      text-align: center;
+      padding-bottom: 28px;
+
+      .check {
+          font-size: 3.8rem;
+          float: left;
+          margin: 0 25px 0 0;
+      }
+
+      img {
+        height: 100px;
+        width: 100px;
+      }
+      h2 {
+        font-size: 2.5rem;
+        margin-top: .5rem;
+        color: white;
+      }
+      h3 {
+        font-size: 1.8rem;
+        color: white;
+      }
+    }
+  }
+
+
+
+}
