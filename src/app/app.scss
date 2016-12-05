@@ -24,3 +24,13 @@
     background: -ms-linear-gradient(147deg,  $top 50%,$bottom 100%); /* IE10+ */
     background: linear-gradient(147deg,  $top 50%,$bottom 100%); /* W3C */
 }
+
+// Clearfix
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
