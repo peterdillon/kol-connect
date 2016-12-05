@@ -13,7 +13,8 @@ Or to create a starter app add:
 $ ionic start MyIonic2Project tabs --v2
 
 Their docs are way better than this!
-* https://ionicframework.com/docs/v2/setup/tutorial/
+
+https://ionicframework.com/docs/v2/setup/tutorial/
 
 
 ### Project Developers ###
