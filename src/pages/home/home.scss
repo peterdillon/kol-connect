@@ -35,7 +35,7 @@ page-home {
             border-right:0;
           }
           &:first-of-type {
-          padding-left: 0;
+            padding-left: 0;
           }
           ion-icon {
             color: #D2C5EB;
@@ -96,6 +96,7 @@ page-home {
       flex-wrap: wrap;
       border-right: 1px solid #ccc;
       padding: 0 1rem;
+      text-align: center;
       &:last-of-type { border-right:0; }
       a {
           font-family: 'Varela Round', sans-serif;
@@ -107,37 +108,74 @@ page-home {
   }
 
 
-  ion-card {
-      overflow: visible;
-      width: 19rem;
+.card-container {
+   max-width: 1024px;
+   margin: 0 auto;
+   display: flex;
+   flex-flow: row wrap;
+   align-content: flex-end;
+}
 
-      ion-card-content {
-        @include linearGradient(#5836B9, #9152C8);
+  .kol-card {
+      margin: 3rem 0 0 3rem;
+      width: 22rem;
+      
+
+      header {
+        background: linear-gradient(177deg, #9152C8 40%, #9152C8 60%, #fff 61%, #fff 100%);
         color: #FFFFFF;
         text-align: center;
-        padding-bottom: 28px;
-
-        .check {
-            font-size: 3.8rem;
-            float: left;
-            margin: 0 25px 0 0;
-        }
-
+        padding: 1rem 1rem 0 1rem;
+        position: relative;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
         img {
-          height: 100px;
-          width: 100px;
+          height: 8rem;
+          width: 8rem;
+          margin: 0 auto;
         }
-        h2 {
-          font-size: 2.5rem;
-          margin-top: .5rem;
-          color: white;
+        .check {
+          position: absolute;
+          font-size: 3.2rem;
+          margin: .5rem 0 0 1rem;
+          top: 0;
+          left: 0;
         }
-        h3 {
-          font-size: 1.8rem;
-          color: white;
-        }
+        .un-checked { opacity: .5; }
+        .checked    { opacity: 1; }
       }
-    }
+      section {
+        background: #fff;
+        padding: 0 1rem 2rem 1rem;
+        h1 {
+          font-size: 1.8rem;
+          margin: 0 0 .5rem 0;
+        }
+        p {
+          margin: 0;
+          font-size: 1.3rem;
+        }
+       }
+        footer {
+          background: linear-gradient(177deg, #fff 0%, #fff 10%, #f2f2f2 11%, #f7f7f7 100%);
+          padding: 1rem 1rem 0 1rem;
+          border-bottom-left-radius: .5rem;
+          border-bottom-right-radius: .5rem;
+          position: relative;
+          .rating {
+            float: left;
+            color: orange;
+            font-size: 2.3rem;
+          }
+          .info {
+            &:first-child { font-size: 3rem; }
+            float: right;
+            color: #9152C8;
+            font-size: 2.8rem;
+          }
+        }
+  }    
+    
 
 
 
