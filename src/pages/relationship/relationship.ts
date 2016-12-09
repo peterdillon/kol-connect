@@ -3,18 +3,13 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-relationship',
+  templateUrl: 'relationship.html'
 })
-export class HomePage {
+export class Relationship {
 
   constructor(public navCtrl: NavController) {
 
   }
-
-sayHello() {
-  console.log("hello world");
-}
-
 
 }

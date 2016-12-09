@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Ionic App</title>
+  <title>KOL Connect</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
@@ -24,6 +24,9 @@
   </script>-->
 
   <link href="build/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.js"></script>
 
 </head>
 <body>
@@ -40,5 +43,38 @@
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
 
+  <!-- Isotope Sorting Dependencies (Get into main build...) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  <script>
+      var $grid = $('.grid').isotope({
+          itemSelector: '.element-item',
+          layoutMode: 'fitRows',
+          getSortData: {
+            name: '.name',
+            userImage: '.user-icon',
+            number: '.number parseInt',
+            category: '[data-category]',
+            rank: function( itemElem ) {
+              var rank = $( itemElem ).find('.rank').text();
+              return parseFloat( rank.replace( /[\(\)]/g, '') );
+            }
+          }
+        });
+
+        $('#sorts').on('click', 'a', function() {
+          var sortByValue = $(this).attr('data-sort-by');
+          $grid.isotope({ sortBy: sortByValue });
+        });
+
+        // change is-checked class on buttons
+        $('.button-group').each(function(i, buttonGroup) {
+          var $buttonGroup = $(buttonGroup);
+          $buttonGroup.on('click', 'a', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $(this).addClass('is-checked');
+          });
+        });
+  </script>
 </body>
 </html>

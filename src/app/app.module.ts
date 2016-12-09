@@ -1,19 +1,22 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TempPage } from '../pages/temp/temp';
+import { CardList } from '../pages/cardlist/cardlist';
+import { Relationship } from '../pages/relationship/relationship';
+import { Scatterplot } from '../pages/scatterplot/scatterplot';
+import { nvD3 } from 'ng2-nvd3';
+import { Geographical } from '../pages/geographical/geographical';
 import { TabsPage } from '../pages/tabs/tabs';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TempPage,
+    CardList,
+    Relationship,
+    Scatterplot,
+    nvD3,
+    Geographical,
     TabsPage
   ],
   imports: [
@@ -22,10 +25,11 @@ import { TabsPage } from '../pages/tabs/tabs';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TempPage,
+    CardList,
+    Relationship,
+    Scatterplot,
+    nvD3,
+    Geographical,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

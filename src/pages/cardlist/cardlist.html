@@ -1,11 +1,4 @@
-<!--<ion-header>
-  <ion-navbar>
-       </ion-navbar>
-</ion-header>-->
-
-
 <ion-content>
-
 
     <div class="global-nav cf">
         <div class="logo">
@@ -24,25 +17,28 @@
     </div> 
 
 
-    <div class="filter-nav cf">
-        <div class="filter-title"> Viewing: </div>
+    <div class="filter-nav cf button-group" id="sorts">
+        <div class="filter-title"> Sort by: </div>
         <div class="filter-list">
-            <div class="filter-item"><a href="#">Surgery (25)</a></div>
-            <div class="filter-item"><a href="#">M.D. (45)</a></div>
-            <div class="filter-item"><a href="#">Ph.D. (15)</a></div>
+            <div class="filter-item"><a href="#" data-sort-by="name">Name</a></div>
+            <div class="filter-item"><a href="#" data-sort-by="number">Number</a></div>
+            <div class="filter-item"><a href="#" data-sort-by="rank">Rank</a></div>
         </div>
     </div> 
 
 
-<div class="card-container">
-   
-    <div class="kol-card">
+
+<div class="card-container grid">
+
+    <div class="kol-card element-item" data-category="transition">>
         <header>
             <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
             <img src="../assets/custom/doctor-1.png" />
         </header>
         <section>
-            <h1>Dr. Karin Coppermill-Greenfield Ph.D.</h1>
+            <h1 class="name">Dr. GGG Ph.D.</h1>
+            <p>Rank: <span class="rank">121</span></p>
+            <p>Number: <span class="number">8</span></p>
             <p>Director of Oncology NYU </p>
             <p>Head of Cancer Center, Saint Mary's Hospital, Denver CO.</p>
         </section>
@@ -59,13 +55,15 @@
         </footer>
     </div>
 
-     <div class="kol-card">
+    <div class="kol-card element-item" data-category="transition">>
         <header>
             <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
             <img src="../assets/custom/doctor-1.png" />
         </header>
         <section>
-            <h1>Dr. Karin Coppermill-Greenfield Ph.D.</h1>
+            <h1 class="name">Dr. FFF Ph.D.</h1>
+            <p>Rank: <span class="rank">32</span></p>
+            <p>Number: <span class="number">7</span></p>
             <p>Director of Oncology NYU </p>
             <p>Head of Cancer Center, Saint Mary's Hospital, Denver CO.</p>
         </section>
@@ -82,13 +80,15 @@
         </footer>
     </div>
 
-     <div class="kol-card">
+    <div class="kol-card element-item" data-category="transition">>
         <header>
             <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
             <img src="../assets/custom/doctor-1.png" />
         </header>
         <section>
-            <h1>Dr. Karin Coppermill-Greenfield Ph.D.</h1>
+            <h1 class="name">Dr. EEE Ph.D.</h1>
+            <p>Rank: <span class="rank">99</span></p>
+            <p>Number: <span class="number">6</span></p>
             <p>Director of Oncology NYU </p>
             <p>Head of Cancer Center, Saint Mary's Hospital, Denver CO.</p>
         </section>
@@ -105,13 +105,15 @@
         </footer>
     </div>
 
-     <div class="kol-card">
+    <div class="kol-card element-item" data-category="transition">>
         <header>
             <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
             <img src="../assets/custom/doctor-1.png" />
         </header>
         <section>
-            <h1>Dr. Karin Coppermill-Greenfield Ph.D.</h1>
+            <h1 class="name">Dr. DDD Ph.D.</h1>
+            <p>Rank: <span class="rank">314</span></p>
+            <p>Number: <span class="number">5</span></p>
             <p>Director of Oncology NYU </p>
             <p>Head of Cancer Center, Saint Mary's Hospital, Denver CO.</p>
         </section>
@@ -128,13 +130,15 @@
         </footer>
     </div>
 
-     <div class="kol-card">
+    <div class="kol-card element-item" data-category="transition">>
         <header>
             <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
             <img src="../assets/custom/doctor-1.png" />
         </header>
         <section>
-            <h1>Dr. Karin Coppermill-Greenfield Ph.D.</h1>
+            <h1 class="name">Dr. CCC Ph.D.</h1>
+            <p>Rank: <span class="rank">53</span></p>
+            <p>Number: <span class="number">4</span></p>
             <p>Director of Oncology NYU </p>
             <p>Head of Cancer Center, Saint Mary's Hospital, Denver CO.</p>
         </section>
@@ -150,7 +154,88 @@
             </div>
         </footer>
     </div>
+
+    <div class="kol-card element-item" data-category="transition">>
+        <header>
+            <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
+            <img src="../assets/custom/doctor-1.png" />
+        </header>
+        <section>
+            <h1 class="name">Dr. BBB Ph.D.</h1>
+            <p>Rank: <span class="rank">81</span></p>
+            <p>Number: <span class="number">3</span></p>
+            <p>Director of Oncology NYU </p>
+            <p>Head of Cancer Center, Saint Mary's Hospital, Denver CO.</p>
+        </section>
+        <footer class="cf">
+            <div class="rating">
+                <ion-icon name="md-star" item-left></ion-icon>
+                <ion-icon name="md-star" item-left></ion-icon>
+                <ion-icon name="md-star-half" item-left></ion-icon>
+            </div>
+            <div class="info">
+                <ion-icon name="ios-flag-outline" item-left></ion-icon>
+                <ion-icon name="ios-heart-outline" item-left></ion-icon>
+            </div>
+        </footer>
+    </div>
+
+    <div class="kol-card element-item" data-category="transition">>
+        <header>
+            <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
+            <img src="../assets/custom/doctor-1.png" />
+        </header>
+        <section>
+            <h1 class="name">Dr. AAA Ph.D.</h1>
+            <p>Rank: <span class="rank">49</span></p>
+            <p>Number: <span class="number">2</span></p>
+            <p>Director of Oncology NYU </p>
+            <p>Head of Cancer Center, Saint Mary's Hospital, Denver CO.</p>
+        </section>
+        <footer class="cf">
+            <div class="rating">
+                <ion-icon name="md-star" item-left></ion-icon>
+                <ion-icon name="md-star" item-left></ion-icon>
+                <ion-icon name="md-star-half" item-left></ion-icon>
+            </div>
+            <div class="info">
+                <ion-icon name="ios-flag-outline" item-left></ion-icon>
+                <ion-icon name="ios-heart-outline" item-left></ion-icon>
+            </div>
+        </footer>
+    </div>
+
+     <div class="kol-card element-item" data-category="transition">>
+        <header>
+            <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
+            <img src="../assets/custom/doctor-1.png" />
+        </header>
+        <section>
+            <h1 class="name">Dr. HHH Ph.D.</h1>
+            <p>Rank: <span class="rank">8</span></p>
+            <p>Number: <span class="number">1</span></p>
+            <p>Director of Oncology NYU </p>
+            <p>Head of Cancer Center, Saint Mary's Hospital, Denver CO.</p>
+        </section>
+        <footer class="cf">
+            <div class="rating">
+                <ion-icon name="md-star" item-left></ion-icon>
+                <ion-icon name="md-star" item-left></ion-icon>
+                <ion-icon name="md-star-half" item-left></ion-icon>
+            </div>
+            <div class="info">
+                <ion-icon name="ios-flag-outline" item-left></ion-icon>
+                <ion-icon name="ios-heart-outline" item-left></ion-icon>
+            </div>
+        </footer>
+    </div>
+
+
+
        
 </div> <!-- END card-container-->
 
+
+
 </ion-content>
+

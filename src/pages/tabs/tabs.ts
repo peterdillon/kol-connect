@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import { HomePage } from '../home/home';
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { TempPage } from '../temp/temp';
+import { CardList } from '../cardlist/cardlist';
+import { Relationship } from '../relationship/relationship';
+import { Scatterplot } from '../scatterplot/scatterplot';
+import { Geographical } from '../geographical/geographical';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -11,10 +11,10 @@ import { TempPage } from '../temp/temp';
 export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  tab1Root: any = HomePage;
-  tab2Root: any = AboutPage;
-  tab3Root: any = ContactPage;
-  tab4Root: any = TempPage;
+  tab1Root: any = CardList;
+  tab2Root: any = Relationship;
+  tab3Root: any = Scatterplot;
+  tab4Root: any = Geographical;
 
   constructor() {
 
