@@ -1,30 +1,51 @@
 import { Component, OnInit } from '@angular/core';
-
 import { NavController } from 'ionic-angular';
-
 
 @Component({
   selector: 'page-scatterplot',
   templateUrl: 'scatterplot.html'
 })
 export class Scatterplot {
-
   constructor(public navCtrl: NavController) {
-
   }
-
 }
-
-// import {Component, OnInit} from '@angular/core';
 
 declare let d3: any;
 
 @Component({
+  // templateUrl: 'scatterplot.html',
   selector: 'main',
   template: `
+  <ion-content>
+   <div class="global-nav cf">
+        <div class="logo">
+            <img src="../assets/custom/logo.png" />
+        </div>
+        <ul>
+            <li><a href="#"><ion-icon name="md-heart"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="ios-ribbon"></ion-icon> Top 40</a></li>
+            <li><a href="#">Rising Stars</a> </li>
+            <li><a href="#">Export List</a></li>
+        </ul>
+        <div class="actions">
+            <button>Compare KOLs</button>
+            <button>Adjust Filters</button>
+        </div>
+    </div> 
+
+
+    <div class="filter-nav cf">
+        <div class="filter-title"> Viewing: </div>
+        <div class="filter-list">
+            <div class="filter-item"><a href="#">Surgery (25)</a></div>
+            <div class="filter-item"><a href="#">M.D. (45)</a></div>
+            <div class="filter-item"><a href="#">Ph.D. (15)</a></div>
+        </div>
+    </div> 
     <div>
       <nvd3 [options]="options" [data]="data"></nvd3>
     </div>
+    </ion-content>
   `
 })
 
@@ -36,6 +57,7 @@ export class Main implements OnInit{
       chart: {
         type: 'discreteBarChart',
         height: 450,
+         //color: ['#2ca02c', 'darkred'],
         margin : {
           top: 20,
           right: 20,
@@ -100,4 +122,3 @@ export class Main implements OnInit{
   }
 
 }
-
