@@ -44,18 +44,18 @@
 
 
   <!-- Isotope Sorting Dependencies (Get into main build...) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
   <script>
       var $grid = $('.grid').isotope({
           itemSelector: '.element-item',
           layoutMode: 'fitRows',
           getSortData: {
-            name: '.name',
-            userImage: '.user-icon',
-            number: '.number parseInt',
-            category: '[data-category]',
-            rank: function( itemElem ) {
+          name: '.name',
+          userImage: '.user-icon',
+          number: '.number parseInt',
+          category: '[data-category]',
+          rank: function( itemElem ) {
               var rank = $( itemElem ).find('.rank').text();
               return parseFloat( rank.replace( /[\(\)]/g, '') );
             }
