@@ -1,16 +1,3 @@
-page-gepgraphical {
- ion-content {
-      background-image: url('../assets/custom/blurred-bg.gif');
-      background-size: cover;
-  }
-}
-geomain {
-
-text {
-  // Any fill not styled will take this - could be 'dangerous'
-  fill: #fff;
-}
-
 /* nvd3 version 1.8.5-dev (https://github.com/novus/nvd3) 2016-12-08 */
 .nvd3 .nv-axis {
     pointer-events:none;
@@ -97,7 +84,7 @@ text {
 .nvd3 .nv-discretebar .nv-groups text,
 .nvd3 .nv-multibarHorizontal .nv-groups text {
     font-weight: bold;
-    fill: inherit;
+    fill: #fff;;
     stroke: rgba(0,0,0,0);
 }
 
@@ -663,5 +650,4 @@ Interactive Layer
 
 .nvd3 line.nv-guideline {
     stroke: #ccc;
-}
 }
