@@ -33,7 +33,7 @@ export class Scatterplot implements OnInit {
           },
           color: d3.scale.category10().range(),
           scatter: {
-            onlyCircles: true
+            onlyCircles: false
           },
           showDistX: true,
           showDistY: true,

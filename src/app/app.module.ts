@@ -3,9 +3,12 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { CardList } from '../pages/cardlist/cardlist';
 import { Barchart } from '../pages/barchart/barchart';
+import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
+// ---------------------
 import { Scatterplot } from '../pages/scatterplot/scatterplot';
 import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
+
 
 
 @NgModule({
@@ -13,6 +16,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     MyApp,
     CardList,
     Barchart,
+    CardlistJSON,
     Scatterplot,
     nvD3,
     TabsPage
@@ -25,11 +29,15 @@ import { TabsPage } from '../pages/tabs/tabs';
     MyApp,
     CardList,
     Barchart,
+    CardlistJSON,
     Scatterplot,
     nvD3,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{
+    provide: ErrorHandler, 
+    useClass: IonicErrorHandler
+  }]
 })
 export class AppModule {}
 
