@@ -1,67 +1,35 @@
 <ion-content>
+  <div class="card-container grid">
 
-<div class="global-container">
-    <div class="global-nav cf">
-        <div class="logo">
-            <img src="../assets/custom/logo.png" />
+    <div *ngFor="let kol of kols" >
+        <div class="kol-card element-item" data-category="transition">
+            <header>
+                <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
+                <img src="{{kol.imgPath}}" />
+            </header>
+            <section>
+                <h1 class="name">{{kol.firstName}} {{kol.lastName}}</h1>
+                <p>Rank: <span class="rank">{{kol.rank}}</span></p>
+                <p>ID: <span class="number">{{kol.id}}</span></p>
+                <p>{{kol.positionCurrent}}</p>
+                <p>{{kol.positionDetails}}</p>
+                <p>PH:{{kol.phoneNumber.number}}</p>
+            </section>
+            <footer class="cf">
+                <div class="rating">
+                    <ion-icon name="md-star" item-left></ion-icon>
+                    <ion-icon name="md-star" item-left></ion-icon>
+                    <ion-icon name="md-star-half" item-left></ion-icon>
+                </div>
+                <div class="info">
+                    <ion-icon name="ios-flag-outline" item-left></ion-icon>
+                    <ion-icon name="{{kol.favIconClass}}" item-left></ion-icon>
+                </div>
+            </footer>
         </div>
-        <ul>
-            <li><a href="#"><ion-icon name="md-heart"></ion-icon></a></li>
-            <li><a href="#"><ion-icon name="ios-ribbon"></ion-icon> Top 40</a></li>
-            <li><a href="#">Rising Stars</a> </li>
-            <li><a href="#">Export List</a></li>
-        </ul>
-        <div class="actions">
-            <button>Compare KOLs</button>
-            <button>Adjust Filters</button>
-        </div>
-        
-    </div> 
-    <div class="filter-nav cf button-group">
-            <div class="filter-title"> Viewing: </div>
-            <div class="filter-list" id="sorts">
-                <div class="filter-item"><a href="#" data-sort-by="name">Name (25)</a></div>
-                <div class="filter-item"><a href="#" data-sort-by="rank">Rank (45)</a></div>
-                <div class="filter-item"><a href="#" data-sort-by="number">Number (15)</a></div>
-            </div>
-        </div> 
-</div> 
-
-<div class="card-container grid">
-
-  <div *ngFor="let kol of kols" >
-    <div class="kol-card element-item" data-category="transition">
-        <header>
-            <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
-            <img src="{{kol.imgPath}}" />
-        </header>
-        <section>
-            <h1 class="name">{{kol.firstName}} {{kol.lastName}}</h1>
-            <p>Rank: <span class="rank">{{kol.rank}}</span></p>
-            <p>ID: <span class="number">{{kol.id}}</span></p>
-            <p>{{kol.positionCurrent}}</p>
-            <p>{{kol.positionDetails}}</p>
-            <p>PH:{{kol.phoneNumber.number}}</p>
-        </section>
-        <footer class="cf">
-            <div class="rating">
-                <ion-icon name="md-star" item-left></ion-icon>
-                <ion-icon name="md-star" item-left></ion-icon>
-                <ion-icon name="md-star-half" item-left></ion-icon>
-            </div>
-            <div class="info">
-                <ion-icon name="ios-flag-outline" item-left></ion-icon>
-                <ion-icon name="{{kol.favIconClass}}" item-left></ion-icon>
-            </div>
-        </footer>
     </div>
-  </div>
-       
-</div> <!-- END card-container-->
 
-
-
-
+  </div> <!-- END card-container-->
 </ion-content>
 
 

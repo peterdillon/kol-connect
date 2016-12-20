@@ -9,5 +9,4 @@ export class CardList {
 
   constructor(public navCtrl: NavController) { }
 
-
-} // END export
+}

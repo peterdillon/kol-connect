@@ -1,0 +1,173 @@
+{ 
+"data":{  
+    "kols":[  
+    {
+        "firstName": "Dr. Joan",
+        "lastName": "Smith",
+        "id": "0001",
+        "title": "Ph.D.",
+        "imgPath": "../assets/custom/doctor-1.png",
+        "favIconClass": "ios-heart",
+        "positionCurrent": "Director of Oncology NYU",
+        "positionDetails": "Head of Cancer Center, New York",
+        "positionPrevious": "Lead Cancer Research Technician NYU",
+        "positionPreviousDetails": "The Cancer Center New York City",
+        "age": 47,
+        "rank": 3,
+        "isFavorite": true,
+        "isTop40": true,
+        "address":
+        {
+            "streetAddress": "16 Grand Street",
+            "city": "New York",
+            "state": "NY",
+            "postalCode": "10001"
+        },
+        "phoneNumber":
+            {
+            "type": "cell",
+            "number": "123 555-3333"
+            }
+    },
+    {
+        "firstName": "Dr. Jim",
+        "lastName": "Wilson",
+        "id": "0002",
+        "title": "Ph.D.",
+        "imgPath": "../assets/custom/doctor-2.png",
+        "favIconClass": "ios-heart-outline",
+        "positionCurrent": "Director of Cancer Research Colorado",
+        "positionDetails": "Head of Cancer Center, Saint Mary's Hospital, Denver CO",
+        "positionPrevious": "Cancer Research Technician Denver CO",
+        "positionPreviousDetails": "The Cancer Center, Denver CO",
+        "age": 47,
+        "rank": 76,
+        "isFavorite": true,
+        "isTop40": true,
+        "address":
+        {
+            "streetAddress": "2004 Moutain View Ave",
+            "city": "Denver",
+            "state": "CO",
+            "postalCode": "98732"
+        },
+        "phoneNumber":
+            {
+            "type": "cell",
+            "number": "123 555-3333"
+            }
+    },
+    {
+        "firstName": "Dr. Gilbert",
+        "lastName": "Placek",
+        "id": "0003",
+        "title": "Ph.D.",
+        "imgPath": "../assets/custom/doctor-3.png",
+        "favIconClass": "ios-heart-outline",
+        "positionCurrent": "Director of Cardiology Research",
+        "positionDetails": "Head of Cardiology, Helena WY",
+        "positionPrevious": "Cardiology Research Technician Helena WY",
+        "positionPreviousDetails": "The Cardiology Center, Helena WY",
+        "age": 47,
+        "rank": 42,
+        "isFavorite": true,
+        "isTop40": true,
+        "address":
+        {
+            "streetAddress": "190 Glacier Ave",
+            "city": "Helena",
+            "state": "WY",
+            "postalCode": "75343"
+        },
+        "phoneNumber":
+            {
+            "type": "cell",
+            "number": "123 555-3333"
+            }
+    },
+    {
+        "firstName": "Dr. Lavania",
+        "lastName": "Khandelwal",
+        "id": "0004",
+        "title": "Ph.D.",
+        "imgPath": "../assets/custom/doctor-4.png",
+        "favIconClass": "ios-heart-outline",
+        "positionCurrent": "Director of Medical Research",
+        "positionDetails": "Head of Adipisci salutatus ei pro",
+        "positionPrevious": "Adipisci salutatus ei pro, cum veritus indoctum aliquando ad",
+        "positionPreviousDetails": "Adipisci salutatus ei pro, cum veritus indoctum aliquando ad",
+        "age": 47,
+        "rank": 90,
+        "isFavorite": true,
+        "isTop40": true,
+        "address":
+        {
+            "streetAddress": "190 Glacier Ave",
+            "city": "Helena",
+            "state": "WY",
+            "postalCode": "75343"
+        },
+        "phoneNumber":
+            {
+            "type": "cell",
+            "number": "123 555-3333"
+            }
+    },
+    {
+        "firstName": "Dr. Firstname",
+        "lastName": "Lastname",
+        "id": "0005",
+        "title": "Ph.D.",
+        "imgPath": "../assets/custom/doctor-5.png",
+        "favIconClass": "ios-heart-outline",
+        "positionCurrent": "Director of Medical Research",
+        "positionDetails": "Head of Adipisci salutatus ei pro",
+        "positionPrevious": "Adipisci salutatus ei pro, cum veritus indoctum aliquando ad",
+        "positionPreviousDetails": "Adipisci salutatus ei pro, cum veritus indoctum aliquando ad",
+        "age": 47,
+        "rank": 26,
+        "isFavorite": true,
+        "isTop40": true,
+        "address":
+        {
+            "streetAddress": "190 Glacier Ave",
+            "city": "Cityname",
+            "state": "State",
+            "postalCode": "12345"
+        },
+        "phoneNumber":
+            {
+            "type": "cell",
+            "number": "123 555-3333"
+            }
+    },
+    {
+        "firstName": "Dr. Firstname",
+        "lastName": "Lastname",
+        "id": "0006",
+        "title": "Ph.D.",
+        "imgPath": "../assets/custom/doctor-6.png",
+        "favIconClass": "ios-heart",
+        "positionCurrent": "Director of Medical Research",
+        "positionDetails": "Head of Adipisci salutatus ei pro",
+        "positionPrevious": "Adipisci salutatus ei pro, cum veritus indoctum aliquando ad",
+        "positionPreviousDetails": "Adipisci salutatus ei pro, cum veritus indoctum aliquando ad",
+        "age": 47,
+        "rank": 23,
+        "isFavorite": true,
+        "isTop40": true,
+        "address":
+        {
+            "streetAddress": "19000 Street Name",
+            "city": "Cityname",
+            "state": "State",
+            "postalCode": "12345"
+        },
+        "phoneNumber":
+            {
+            "type": "cell",
+            "number": "123 555-3333"
+            }
+    }]
+}
+}

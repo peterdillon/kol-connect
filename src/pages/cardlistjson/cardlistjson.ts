@@ -14,7 +14,7 @@ export class CardlistJSON {
   constructor(public navCtrl: NavController, public http: Http, private loadingController: LoadingController) { }
 
   ionViewDidLoad() {
-    console.log("loader");
+    // console.log("Loader...");
     let loader = this.loadingController.create({
       content: "Getting KOLS..."
     });

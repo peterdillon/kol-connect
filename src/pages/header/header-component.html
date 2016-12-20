@@ -1,0 +1,225 @@
+
+<ng-content></ng-content>
+
+<div class="header-component">
+    <div class="global-container">
+        <div class="global-nav cf">
+            <div class="logo">
+                <img src="../assets/custom/logo.png" />
+            </div>
+            <ul>
+                <li><a href="#"><ion-icon name="md-heart"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="ios-ribbon"></ion-icon> Top 40</a></li>
+                <li><a href="#">Rising Stars</a> </li>
+                <li><a href="#">Export List</a></li>
+            </ul>
+            <div class="actions">
+                <button>Compare KOLs</button>
+                <button (click)="showOverlay()">Adjust Filters</button>
+            </div>
+            
+        </div> 
+        <div class="filter-nav cf button-group">
+                <div class="filter-title"> Viewing: </div>
+                <div class="filter-list" id="sorts">
+                    <div class="filter-item"><a href="#" data-sort-by="name">Name (25)</a></div>
+                    <div class="filter-item"><a href="#" data-sort-by="rank">Rank (45)</a></div>
+                    <div class="filter-item"><a href="#" data-sort-by="number">Number (15)</a></div>
+                </div>
+            </div> 
+    </div>
+
+
+    <div class="overlay" padding [hidden]="overlayHidden">
+  <div class="overlay__ct">
+
+    <header class="cf"> <!-- clearfix -->
+      <div class="w-75 flex-head">
+        <h1>Adjust Filters</h1>
+        <span class="subtitle">(Showing 93 KOLs)</span>
+        <span class="toggle-sets"><ion-icon name="color-wand"></ion-icon> Filter Sets</span>
+      </div>
+      <div class="w-25">
+        <div class="close" (click)="hideOverlay()" >
+            <div full (click)="hideOverlay()"><ion-icon name="close"></ion-icon></div>
+        </div>
+      </div>
+    </header>
+    
+    <section class="w-75">
+      <div class="filter-section">
+        <h5>Specialty</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Primary Care</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Surgery</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Endocrinology</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Degree</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Ph.D.</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>M.D.</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Ed.D.</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>M.A.</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Associations</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Tier/Category</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Region</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Affiliations</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Publications</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Clinical Trials</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Congresses</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Peer Referrals</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>CME Presentations</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+          <li class="active"><ion-icon name="checkmark-circle"></ion-icon>Filter</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+        </ul>
+      </div>
+      <div class="filter-section">
+        <h5>Age</h5>
+        <ul>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>30-40</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>40-50</li>
+          <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>60-70+</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="w-25">
+      <nav> 
+        <ul>
+          <li class="active">
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Specialty</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Degree</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Associations</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Tier/Category</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Region</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Affiliations</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Publications</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Clinical Trials</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Congresses</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Peer Referrals</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> CME Presentations</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="ios-arrow-back"></ion-icon> Age</a>
+          </li>
+        </ul>
+      </nav>
+      
+      <nav> 
+        <ul>
+          <li class="active">
+            <a href="#"><ion-icon name="checkmark"></ion-icon> Promotional Speaker</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="checkmark"></ion-icon> Investigator</a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="checkmark"></ion-icon> Relationship Owner</a>
+          </li>
+        </ul>
+      </nav>
+      
+    </section>
+
+
+
+
+  </div>
+</div>
+
+
+
+</div>

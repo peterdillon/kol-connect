@@ -4,12 +4,10 @@ import { MyApp } from './app.component';
 import { CardList } from '../pages/cardlist/cardlist';
 import { Barchart } from '../pages/barchart/barchart';
 import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
-// ---------------------
 import { Scatterplot } from '../pages/scatterplot/scatterplot';
 import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
-
-
+import { HeaderComponent } from '../pages/header/header-component';
 
 @NgModule({
   declarations: [
@@ -18,6 +16,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     Barchart,
     CardlistJSON,
     Scatterplot,
+    HeaderComponent,
     nvD3,
     TabsPage
   ],
@@ -31,6 +30,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     Barchart,
     CardlistJSON,
     Scatterplot,
+    HeaderComponent,
     nvD3,
     TabsPage
   ],
@@ -40,5 +40,3 @@ import { TabsPage } from '../pages/tabs/tabs';
   }]
 })
 export class AppModule {}
-
-

@@ -4,6 +4,7 @@ import { Barchart } from '../barchart/barchart';
 import { Scatterplot } from '../scatterplot/scatterplot';
 import { CardlistJSON } from '../cardlistjson/cardlistjson';
 
+
 @Component({
   templateUrl: 'tabs.html'
 })
