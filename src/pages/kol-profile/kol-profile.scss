@@ -1,0 +1,55 @@
+page-kol-profile {
+
+.custom-top-nav {
+    margin-top: 11rem;
+}
+
+.kol-container {
+   margin: 13rem auto;
+   display: flex;
+   flex-flow: row wrap;
+   align-content: flex-end;
+}
+
+  .kol-card {
+      width: 100%;
+      
+      header {
+        height: 15rem;
+        //background: linear-gradient(177deg, #9152C8 40%, #C96DD8 60%, #fff 61%, #fff 100%);
+        background: linear-gradient(90deg, #9152C8 40%, #C96DD8 60%, #EB6660 100%);
+        color: #FFFFFF;
+        text-align: center;
+        padding: 1rem 1rem 0 1rem;
+        position: relative;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        img {
+          height: 16rem;
+          width: 16rem;
+          float: left;
+          margin: 2rem 0 0 2rem;
+        }
+        ion-icon {
+            font-size: 4rem;
+        }
+      }
+      section {
+        background: #fff;
+        padding: 5rem 2rem 2rem 3rem;
+        border-bottom-left-radius: .5rem;
+          border-bottom-right-radius: .5rem;
+        h1 {
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
+          font-size: 2rem;
+          color: #333;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid #979797;
+        }
+        p {
+          margin: 0;
+        }
+       }
+  }    
+}

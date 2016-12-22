@@ -8,6 +8,10 @@ import { Scatterplot } from '../pages/scatterplot/scatterplot';
 import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HeaderComponent } from '../pages/header/header-component';
+import { PopoverPage } from '../pages/header/header-component';
+import { KOLProfilePage } from '../pages/kol-profile/kol-profile';
+
+
 
 @NgModule({
   declarations: [
@@ -17,6 +21,8 @@ import { HeaderComponent } from '../pages/header/header-component';
     CardlistJSON,
     Scatterplot,
     HeaderComponent,
+    PopoverPage,
+    KOLProfilePage,
     nvD3,
     TabsPage
   ],
@@ -31,6 +37,8 @@ import { HeaderComponent } from '../pages/header/header-component';
     CardlistJSON,
     Scatterplot,
     HeaderComponent,
+    PopoverPage,
+    KOLProfilePage,
     nvD3,
     TabsPage
   ],
