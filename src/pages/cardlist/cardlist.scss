@@ -26,6 +26,7 @@ page-cardlist {
           height: 8rem;
           width: 8rem;
           margin: 0 auto;
+          &:hover { cursor: pointer; }
         }
         .check {
           position: absolute;

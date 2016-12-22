@@ -1,11 +1,21 @@
 page-kol-profile {
 
+.w-75 {
+    float: left;
+    width: 75%;
+}
+.w-25 {
+    float: right;
+    width: 25%;
+}
+
 .custom-top-nav {
     margin-top: 11rem;
+    background-color: #000;
 }
 
 .kol-container {
-   margin: 13rem auto;
+   margin: 9rem auto;
    display: flex;
    flex-flow: row wrap;
    align-content: flex-end;
@@ -17,18 +27,23 @@ page-kol-profile {
       header {
         height: 15rem;
         //background: linear-gradient(177deg, #9152C8 40%, #C96DD8 60%, #fff 61%, #fff 100%);
-        background: linear-gradient(90deg, #9152C8 40%, #C96DD8 60%, #EB6660 100%);
+        background: linear-gradient(90deg, #5B38B9 0%, #C96DD8 60%, #EB6660 100%);
         color: #FFFFFF;
         text-align: center;
         padding: 1rem 1rem 0 1rem;
         position: relative;
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            text-align: left;
+        }
         img {
-          height: 16rem;
-          width: 16rem;
+          height: 12rem;
+          width: 12rem;
           float: left;
-          margin: 2rem 0 0 2rem;
+          margin: 0 0 0 2rem;
         }
         ion-icon {
             font-size: 4rem;
@@ -38,18 +53,27 @@ page-kol-profile {
         background: #fff;
         padding: 5rem 2rem 2rem 3rem;
         border-bottom-left-radius: .5rem;
-          border-bottom-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        
         h1 {
           font-family: 'Montserrat', sans-serif;
           text-transform: uppercase;
-          font-size: 2rem;
+          font-size: 1.8rem;
           color: #333;
           padding-bottom: 1rem;
-          border-bottom: 2px solid #979797;
+          border-bottom: 1px solid #979797;
+        }
+        h6 {
+          font-size: 1.5rem;
         }
         p {
           margin: 0;
+          line-height: 2rem;
         }
+        
+        .tx-rt { text-align: right; }
+        .tx-ct { text-align: center; }
+
        }
   }    
 }

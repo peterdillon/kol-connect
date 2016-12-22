@@ -11,8 +11,6 @@ import { HeaderComponent } from '../pages/header/header-component';
 import { PopoverPage } from '../pages/header/header-component';
 import { KOLProfilePage } from '../pages/kol-profile/kol-profile';
 
-
-
 @NgModule({
   declarations: [
     MyApp,
