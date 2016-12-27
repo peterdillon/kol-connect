@@ -1,19 +1,24 @@
 <ion-content>
   <div class="card-container grid">
 
-    <div *ngFor="let kol of kols" >
+    <div *ngFor="let kol of kols; let i = index" >
         <div class="kol-card element-item" data-category="transition">
             <header>
-                <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
-                <img src="{{kol.imgPath}}" />
+                <ion-icon item-left name="ios-checkmark-circle-outline" 
+                    class="check un-checked"
+                    (click)="selectedStatus[i]=!selectedStatus[i]" 
+                    [class.checked]="selectedStatus[i]">
+                 </ion-icon>
+                <span (click)="goToKOL()"><img src="{{kol.koldetails.imgPath}}" /></span>
+            
             </header>
             <section>
-                <h1 class="name">{{kol.firstName}} {{kol.lastName}}</h1>
-                <p>Rank: <span class="rank">{{kol.rank}}</span></p>
+                <h1 class="name">{{kol.koldetails.firstName}} {{kol.koldetails.lastName}} {{i}}</h1>
+                <p>Rank: <span class="rank">{{kol.koldetails.rank}}</span></p>
                 <p>ID: <span class="number">{{kol.id}}</span></p>
-                <p>{{kol.positionCurrent}}</p>
-                <p>{{kol.positionDetails}}</p>
-                <p>PH:{{kol.phoneNumber.number}}</p>
+                <p>{{kol.koldetails.position.current}}</p>
+                <p>{{kol.koldetails.position.cDetails}}</p>
+                <p>PH:{{kol.koldetails.phoneNumber.number}}</p>
             </section>
             <footer class="cf">
                 <div class="rating">

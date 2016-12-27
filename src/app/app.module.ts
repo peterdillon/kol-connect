@@ -10,6 +10,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HeaderComponent } from '../pages/header/header-component';
 import { PopoverPage } from '../pages/header/header-component';
 import { KOLProfilePage } from '../pages/kol-profile/kol-profile';
+import { KOLProfileJson } from '../pages/kol-profilejson/kol-profilejson';
+import { KOLProfileCompare } from '../pages/kol-profile-compare/kol-profile-compare';
+import { KOLProfileCompareThree } from '../pages/kol-profile-compare-three/kol-profile-compare-three';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { KOLProfilePage } from '../pages/kol-profile/kol-profile';
     HeaderComponent,
     PopoverPage,
     KOLProfilePage,
+    KOLProfileJson,
+    KOLProfileCompare,
+    KOLProfileCompareThree,
     nvD3,
     TabsPage
   ],
@@ -37,6 +43,9 @@ import { KOLProfilePage } from '../pages/kol-profile/kol-profile';
     HeaderComponent,
     PopoverPage,
     KOLProfilePage,
+    KOLProfileJson,
+    KOLProfileCompare,
+    KOLProfileCompareThree,
     nvD3,
     TabsPage
   ],

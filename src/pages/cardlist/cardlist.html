@@ -5,10 +5,10 @@
     <div class="kol-card element-item" data-category="transition">
         <header>
             <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
-            <img src="../assets/custom/doctor-1.png" />
+            <span (click)="goToKOL()"><img src="../assets/custom/doctor-1.png" /></span>
         </header>
         <section>
-            <h1 class="name">Dr. GGG Ph.D.</h1>
+            <h1 class="name">View KOL Profile</h1>
             <p>Rank: <span class="rank">121</span></p>
             <p>Number: <span class="number">8</span></p>
             <p>Director of Oncology NYU </p>
@@ -30,10 +30,10 @@
     <div class="kol-card element-item" data-category="transition">
         <header>
             <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
-            <span (click)="goToKOL()"><img src="../assets/custom/doctor-1.png" /> </span>
+            <span (click)="goToKOLCompare()"><img src="../assets/custom/doctor-2.png" /></span>
         </header>
         <section>
-            <h1 class="name">Dr. FFF Ph.D.</h1>
+            <h1 class="name">View Compare 2 KOLs</h1>
             <p>Rank: <span class="rank">32</span></p>
             <p>Number: <span class="number">7</span></p>
             <p>Director of Oncology NYU </p>
@@ -55,7 +55,7 @@
     <div class="kol-card element-item" data-category="transition">
         <header>
             <ion-icon name="ios-checkmark-circle-outline" class="check un-checked" item-left></ion-icon>
-            <img src="../assets/custom/doctor-1.png" />
+            <span (click)="goToKOLCompareThree()"><img src="../assets/custom/doctor-3.png" /></span>
         </header>
         <section>
             <h1 class="name">Dr. EEE Ph.D.</h1>

@@ -1,4 +1,4 @@
-page-kol-profile {
+page-kol-profile-compare {
 
 .w-75 {
     float: left;
@@ -22,7 +22,8 @@ page-kol-profile {
 }
 
   .kol-card {
-      width: 100%;
+      width: 50%;
+      padding-right: 1rem;
       
       header {
         height: 15rem;
@@ -36,7 +37,7 @@ page-kol-profile {
         border-top-right-radius: .5rem;
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 4rem;
+            font-size: 3rem;
             text-align: left;
         }
         img {
@@ -46,7 +47,7 @@ page-kol-profile {
           margin: 0 0 0 2rem;
         }
         ion-icon {
-            font-size: 4rem;
+            font-size: 3rem;
         }
       }
       section {
@@ -62,6 +63,13 @@ page-kol-profile {
           color: #333;
           padding-bottom: 1rem;
           border-bottom: 1px solid #979797;
+        }
+        .rating {
+          margin-top: -5rem;
+          font-size: 2.3rem;
+          color: orange;
+          float: right;
+          text-align: right;
         }
         h6 {
           font-size: 1.5rem;
