@@ -1,19 +1,18 @@
 <ion-header class="custom-top-nav">
-     <ion-navbar>
-       <ion-title>Back</ion-title>
-     </ion-navbar>
-   </ion-header>
-<!--{{kol.koldetails.firstName}} {{kol.koldetails.lastName}}-->
+  <ion-navbar>
+    <ion-title>Back</ion-title>
+  </ion-navbar>
+</ion-header>
 
 <ion-content padding>
 
-<div class="kol-container">
+<div *ngIf="kols" class="kol-container">
 <div class="kol-card">
         <header>
           <ion-row>
               <ion-col width-80>
-                <h1>{{firstParam}} {{secondParam}}</h1>
-                <img src="../assets/custom/doctor-2.png" />
+                <h1> {{kols.firstName}} {{kols.lastName}} </h1>
+                <img src="{{kols.imgPath}}" /> 
               </ion-col>
               <ion-col width-20>
                 <ion-icon name="md-star" item-left></ion-icon>

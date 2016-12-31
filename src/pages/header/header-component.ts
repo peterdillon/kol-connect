@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { PopoverController, ViewController } from 'ionic-angular';
 
-// <form #form="ngForm" (ngSubmit)="logForm(form)"></form>
-
 @Component({
   template: `
     <ion-grid class="custom-grid">
@@ -39,7 +37,8 @@ export class PopoverPage {
   close() {
     this.viewCtrl.dismiss();
   }
-}
+
+} // END PopoverPage
 
 
 @Component({
@@ -59,6 +58,7 @@ export class HeaderComponent {
 
     overlayHidden: boolean = true;
     public hideOverlay() { this.overlayHidden = true; }
-    public showOverlay() { this.overlayHidden = false; }
-}
+    public showOverlay() { this.overlayHidden = false; }   
+
+} // END HeaderComponent
 

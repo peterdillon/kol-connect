@@ -3,7 +3,7 @@
     "kols":[
         
         {
-            "id": "0001",
+            "id": "0",
             "koldetails":
             {
                 "firstName": "Dr. Joan",
@@ -29,15 +29,20 @@
                     "state": "NY",
                     "postalCode": "10001"
                 },
-                "phoneNumber":
-                    {
-                    "type": "cell",
-                    "number": "123 555-3333"
-                    }
+                "publications": [{
+                    "id": "A567", 
+                    "title": "Some pub title", 
+                    "journal": "ABC" 
+                },
+                {
+                    "id": "A567", 
+                    "title": "Some pub title", 
+                    "journal": "123" 
+                }]
             }
         },
          {
-            "id": "0002",
+            "id": "1",
             "koldetails":
             {
                 "firstName": "Dr. Wilson",
@@ -63,15 +68,20 @@
                     "state": "NY",
                     "postalCode": "10001"
                 },
-                "phoneNumber":
-                    {
-                    "type": "cell",
-                    "number": "123 555-3333"
-                    }
+                 "publications": [{
+                    "id": "A567", 
+                    "title": "Some pub title", 
+                    "journal": "DEF" 
+                },
+                {
+                    "id": "A567", 
+                    "title": "Some pub title", 
+                    "journal": "456" 
+                }]
             }
         },
         {
-            "id": "0003",
+            "id": "2",
             "koldetails":
             {
                 "firstName": "Dr. Charles",
@@ -97,14 +107,21 @@
                     "state": "NY",
                     "postalCode": "10001"
                 },
-                "phoneNumber":
-                    {
-                    "type": "cell",
-                    "number": "123 555-3333"
-                    }
+                "publications": [{
+                    "id": "A567", 
+                    "title": "Some pub title", 
+                    "journal": "GHI" 
+                },
+                {
+                    "id": "A567", 
+                    "title": "Some pub title", 
+                    "journal": "789" 
+                }]
             }
         }
         
     ]
 }
 }
+
+

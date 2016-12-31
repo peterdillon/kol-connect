@@ -1,7 +1,7 @@
-<ion-content>
+<ion-content padding>
   <div class="card-container grid">
 
-    <div *ngFor="let kol of kols; let i = index" >
+    <div *ngFor="let kol of kols; let i=index" >
         <div class="kol-card element-item" data-category="transition">
             <header>
                 <ion-icon item-left class="check un-checked"
@@ -9,17 +9,18 @@
                     (click)="selectedStatus[i]=!selectedStatus[i]"
                     [class.checked]="selectedStatus[i]">
                  </ion-icon>
-                 <!--[attr.data-selected]="false" -->
-                <span (click)="goToKOL()"><img src="{{kol.koldetails.imgPath}}" /></span>
+                 <!--Currently this uses the ng index, needs to be adjusted to get an ID -->
+                <span (click)="goToKOL(i)"><img src="{{kol.koldetails.imgPath}}" /></span>
             
             </header>
             <section>
                 <h1 class="name">{{kol.koldetails.firstName}} {{kol.koldetails.lastName}} {{i}}</h1>
                 <p>Rank: <span class="rank">{{kol.koldetails.rank}}</span></p>
                 <p>ID: <span class="number">{{kol.id}}</span></p>
-                <p>{{kol.koldetails.position.current}}</p>
-                <p>{{kol.koldetails.position.cDetails}}</p>
-                <p>PH:{{kol.koldetails.phoneNumber.number}}</p>
+                <p *ngFor="let pub of kol.koldetails.publications">
+                    Pub: {{pub.journal}}
+                </p>
+                
             </section>
             <footer class="cf">
                 <div class="rating">
@@ -36,9 +37,14 @@
     </div>
   </div> <!-- END card-container-->
 
-    <button (click)="goToKOLCompare()">Compare 2</button>
-    <button (click)="goToKOLCompareThree()">Compare 3</button>
-
+  
+  <!--
+  // *** TESTING - to be removed ***
+      <h1>Add Values</h1>
+    <input #newHero
+      (keyup.enter)="addHero(newHero.value); newHero.value='' "
+      (blur)="addHero(newHero.value); newHero.value='' ">
+    <button (click)=addHero(newHero.value)>Add</button>
+    <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul>
+  -->
 </ion-content>
-
-

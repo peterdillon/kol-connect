@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-kol-profilejson',
@@ -8,16 +9,24 @@ import { NavController, NavParams } from 'ionic-angular';
 
 export class KOLProfileJson {
   
-  public firstParam:any;
-  public secondParam:any;
+  kols: any;
 
-  constructor(public navCtrl: NavController, public params: NavParams) {
-    this.firstParam = params.get("firstPassed");
-    this.secondParam = params.get("secondPassed");
-  }
+  constructor(public navCtrl: NavController, public params: NavParams, public loadingController: LoadingController, public http: Http) { }
+  
+  ionViewWillEnter(id) {
+    let loader = this.loadingController.create({
+      content: "Loading profile..."
+    });
 
-  ionViewDidLoad() {
-    console.log('KOLProfilejson did load');
+    id = this.params.get('id');
+
+    loader.present().then( () => {  
+      this.http.get('https://kol-app-ionic2.firebaseio.com/mydata/kols/'+ id +'/koldetails.json').map(res => res.json()).subscribe(data => {
+            this.kols = data;
+            console.log('https://kol-app-ionic2.firebaseio.com/mydata/kols/'+ id +'/koldetails.json');
+            loader.dismiss();
+      });
+    });
   }
 
 }
