@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { PopoverController, ViewController } from 'ionic-angular';
+
+import { FilterService } from '../../app/filter.service';
 // import { IsotopeFilter } from '../pages/isotope-filter/isotope-filter';
 
 @Component({
@@ -33,7 +35,7 @@ import { PopoverController, ViewController } from 'ionic-angular';
   `
 })
 export class PopoverPage {
-  constructor(public viewCtrl: ViewController) {}
+  constructor(public viewCtrl: ViewController) { }
 
   close() {
     this.viewCtrl.dismiss();
@@ -48,18 +50,22 @@ export class PopoverPage {
 })
 
 export class HeaderComponent {
-  constructor(public popoverCtrl: PopoverController) {}
+  constructor(public popoverCtrl: PopoverController, private fs: FilterService) { }
 
-    presentPopover(myEvent) {
-      let popover = this.popoverCtrl.create(PopoverPage);
-      popover.present({
-        ev: myEvent
-      });
-    }
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(PopoverPage);
+    popover.present({
+      ev: myEvent
+    });
+  }
 
-    overlayHidden: boolean = true;
-    public hideOverlay() { this.overlayHidden = true; }
-    public showOverlay() { this.overlayHidden = false; }   
+  overlayHidden: boolean = true;
+  public hideOverlay() { this.overlayHidden = true; }
+  public showOverlay() { this.overlayHidden = false; }
+
+  public toggleTop40() {
+    this.fs.toggleTop40();
+  }
 
 } // END HeaderComponent
 
