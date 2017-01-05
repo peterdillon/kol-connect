@@ -21,9 +21,8 @@ export class KOLProfileJson {
     id = this.params.get('id');
 
     loader.present().then( () => {  
-      this.http.get('https://kol-app-ionic2.firebaseio.com/mydata/kols/'+ id +'/koldetails.json').map(res => res.json()).subscribe(data => {
+      this.http.get('https://kol-app-ionic2.firebaseio.com/kols/'+ id +'.json').map(res => res.json()).subscribe(data => {
             this.kols = data;
-            console.log('https://kol-app-ionic2.firebaseio.com/mydata/kols/'+ id +'/koldetails.json');
             loader.dismiss();
       });
     });

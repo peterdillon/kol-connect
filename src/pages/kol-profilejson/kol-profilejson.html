@@ -6,6 +6,7 @@
 
 <ion-content padding>
 
+
 <div *ngIf="kols" class="kol-container">
 <div class="kol-card">
         <header>
@@ -28,7 +29,7 @@
           <ion-row>
               <ion-col width-33 padding>
                 <h1>Contact Info</h1>
-                <p>Rank: <span class="rank">121</span></p>
+                <p>Rank: <span class="rank">{{kols.rank}}</span></p>
                 <p>Number: <span class="number">8</span></p>
                 <p>1430 Tulane Avenue</p>
                 <p>New Orleans, LA 70112</p>

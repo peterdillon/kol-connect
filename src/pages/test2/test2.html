@@ -1,7 +1,7 @@
 <ion-content padding>
   <div class="card-container grid">
 
-    <div *ngFor="let kol of kols; let i=index" >
+    <div *ngFor="let kol of kols" >
         <div class="kol-card element-item" data-category="transition">
             <header>
                 <ion-icon item-left class="check un-checked"
@@ -10,15 +10,17 @@
                     [class.checked]="selectedStatus[i]">
                  </ion-icon>
                  <!--Currently this uses the ng index, needs to be adjusted to get an ID -->
-                <span (click)="goToKOL(i)"><img src="{{kol.koldetails.imgPath}}" /></span>
+                <span (click)="goToKOL(kol.id)"><img src="{{kol.imgPath}}" /></span>
             
             </header>
             <section>
-                <h1 class="name">{{kol.koldetails.firstName}} {{kol.koldetails.lastName}} {{i}}</h1>
-                <p>Rank: <span class="rank">{{kol.koldetails.rank}}</span></p>
+                <h1 class="name">{{kol.firstName}} {{kol.lastName}}</h1>
+                <p>Rank: <span class="rank">{{kol.rank}}</span></p>
                 <p>ID: <span class="number">{{kol.id}}</span></p>
-                <p *ngFor="let pub of kol.koldetails.publications">
-                    Pub: {{pub.journal}}
+                <p *ngFor="let pub of kol.publications">
+                    <b>Article:</b> {{pub.title}} 
+                    <br> 
+                    <b>Published in:</b> {{pub.journal}}
                 </p>
                 
             </section>

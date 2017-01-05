@@ -1,9 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { CardList } from '../pages/cardlist/cardlist';
+//import { CardList } from '../pages/cardlist/cardlist';
 import { Barchart } from '../pages/barchart/barchart';
 import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
+import { MyFilterPipe } from '../pages/cardlistjson/filter-pipe';
 import { Scatterplot } from '../pages/scatterplot/scatterplot';
 import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -16,15 +17,17 @@ import { KOLProfileCompareThree } from '../pages/kol-profile-compare-three/kol-p
 import { HighlightDirective } from '../pages/test/test';
 import { Test } from '../pages/test/test';
 import { Test2 } from '../pages/test2/test2';
+import { IsotopeFilter } from '../pages/isotope-filter/isotope-filter';
 // import { Test2Service } from '../pages/test2/test2.service';
 
 
 @NgModule({
   declarations: [
     MyApp,
-    CardList,
+    //CardList,
     Barchart,
     CardlistJSON,
+    MyFilterPipe,
     Scatterplot,
     HeaderComponent,
     PopoverPage,
@@ -35,16 +38,23 @@ import { Test2 } from '../pages/test2/test2';
     HighlightDirective,
     Test,
     Test2,
+    IsotopeFilter,
     nvD3,
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
-  ],
+   IonicModule.forRoot(MyApp, {}, {
+     links: [
+      { component: CardlistJSON, name: 'KOLs', segment: 'home' },
+      { component: Scatterplot, name: 'Scatterplot', segment: 'scatterplot' },
+      { component: Barchart, name: 'Barchart', segment: 'barchart' }
+    ]
+  })
+ ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    CardList,
+   // CardList,
     Barchart,
     CardlistJSON,
     Scatterplot,
@@ -56,6 +66,7 @@ import { Test2 } from '../pages/test2/test2';
     KOLProfileCompareThree,
     Test,
     Test2,
+    IsotopeFilter,
     nvD3,
     TabsPage
   ],

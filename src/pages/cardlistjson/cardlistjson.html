@@ -1,8 +1,23 @@
 <ion-content>
-  <div class="card-container grid">
+    
+  <isotope-filter></isotope-filter>
 
-    <div *ngFor="let kol of kols; let i = index" >
+<!--data-isotope='{ "itemSelector": ".element-item", "layoutMode": "fitRows",
+          "getSortData": {
+            "name": ".name",
+            "rank": ".rank parseInt",
+            "id": ".id parseInt",
+            "category": "[data-category]" } }'-->
+
+  <div class="card-container grid" >
+
+<ul>
+      <li *ngFor="let item of items | myfilter:filterargs"></li>
+</ul>
+
+    <div *ngFor="let kol of kols" >
         <div class="kol-card element-item" data-category="transition">
+            
             <header>
                 <ion-icon item-left class="check un-checked"
                     name="ios-checkmark-circle-outline"
@@ -10,16 +25,15 @@
                     [class.checked]="selectedStatus[i]">
                  </ion-icon>
                  <!--[attr.data-selected]="false" -->
-                <span (click)="goToKOL()"><img src="{{kol.koldetails.imgPath}}" /></span>
+                <span (click)="goToKOL(kol.id)"><img src="{{kol.imgPath}}" /></span>
             
             </header>
             <section>
-                <h1 class="name">{{kol.koldetails.firstName}} {{kol.koldetails.lastName}} {{i}}</h1>
-                <p>Rank: <span class="rank">{{kol.koldetails.rank}}</span></p>
-                <p>ID: <span class="number">{{kol.id}}</span></p>
-                <p>{{kol.koldetails.position.current}}</p>
-                <p>{{kol.koldetails.position.cDetails}}</p>
-                <p>PH:{{kol.koldetails.phoneNumber.number}}</p>
+                <h1 class="name">{{kol.firstName}} {{kol.lastName}}</h1>
+                <p>Rank: <span class="rank">{{kol.rank}}</span></p>
+                <p>ID: <span class="id">{{kol.id}}</span></p>
+                <p>{{kol.position.current}}</p>
+                <p>{{kol.position.cDetails}}</p>
             </section>
             <footer class="cf">
                 <div class="rating">

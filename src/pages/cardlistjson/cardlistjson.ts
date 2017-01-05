@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-import { LoadingController, NavController } from 'ionic-angular';
+import { Component, Injectable } from '@angular/core';
+import { LoadingController, NavParams, NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+// import { IsotopeFilter } from '../pages/isotope-filter/isotope-filter';
 import { KOLProfileJson } from '../kol-profilejson/kol-profilejson';
 import { KOLProfileCompare } from '../kol-profile-compare/kol-profile-compare';
 import { KOLProfileCompareThree } from '../kol-profile-compare-three/kol-profile-compare-three';
+import { MyFilterPipe } from './filter-pipe';
 
 @Component({
   selector: 'page-cardlistjson',
@@ -15,36 +17,48 @@ import { KOLProfileCompareThree } from '../kol-profile-compare-three/kol-profile
 export class CardlistJSON {
 
   selectedStatus: Array<boolean> = [];
-
   kols: any;
-  constructor(public navCtrl: NavController, public http: Http, private loadingController: LoadingController) { }
+  id: any;
+  
+ filterargs = {title: 'hello'};
+ items = [{title: 'hello world'}, {title: 'hello kitty'}, {title: 'foo bar'}];
+  
+  constructor(public navCtrl: NavController, public params: NavParams,  private loadingController: LoadingController, private http: Http) { }
 
-  ionViewDidLoad() {
+// Load full list
+  ionViewWillEnter() {
     let loader = this.loadingController.create({
       content: "Getting KOLS..."
     });
 
+    // curl 'https://kol-app-ionic2.firebaseio.com/kols.json?orderBy="id"&startAt=0'
     loader.present().then( () => {
-      this.http.get('https://kol-app-ionic2.firebaseio.com/mydata.json').map(res => res.json()).subscribe(data => {
-            this.kols = data.kols;
+      this.http.get('https://kol-app-ionic2.firebaseio.com/kols.json').map(res => res.json()).subscribe(data => {
+            this.kols = data;
             loader.dismiss();
-            console.log(this.kols);
       });
     });
   }
 
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
-    return Promise.reject(error.message || error);
-  }
 
-// With data passed
-  // goToKOL(f,l) {
-  //   this.navCtrl.push(KOLProfileJson, {
-  //     firstPassed: "Firstname",
-  //     secondPassed: "Lastname"
-  //   });
-  // }
+ionViewDidEnter() {
+  console.log("did enter");
+}
+
+
+
+ionViewWillUnload() {
+  console.log("why unloaded?");
+}
+
+
+// Go load a single KOL
+  goToKOL(id) {
+    console.log(id);
+    this.navCtrl.push(KOLProfileJson, {
+      id: id
+    });
+  }
 
 // -----------------------
 // Static - to be removed

@@ -1,127 +1,92 @@
 { 
-"mydata":{  
-    "kols":[
-        
-        {
-            "id": "0",
-            "koldetails":
-            {
-                "firstName": "Dr. Joan",
-                "lastName": "Smith",
-                "title": "Ph.D.",
-                "imgPath": "../assets/custom/doctor-1.png",
-                "favIconClass": "ios-heart",
-                "age": 47,
-                "rank": 3,
-                "isFavorite": true,
-                "isTop40": true,
-                "position":
-                {
-                    "current": "Director of Oncology NYU",
-                    "cDetails": "Head of Cancer Center, New York",
-                    "previous": "Lead Cancer Research Technician NYU",
-                    "pDetails": "The Cancer Center New York City"
-                },
-                "address":
-                {
-                    "streetAddress": "16 Grand Street",
-                    "city": "New York",
-                    "state": "NY",
-                    "postalCode": "10001"
-                },
-                "publications": [{
-                    "id": "A567", 
-                    "title": "Some pub title", 
-                    "journal": "ABC" 
-                },
-                {
-                    "id": "A567", 
-                    "title": "Some pub title", 
-                    "journal": "123" 
-                }]
-            }
-        },
-         {
-            "id": "1",
-            "koldetails":
-            {
-                "firstName": "Dr. Wilson",
-                "lastName": "Phillips",
-                "title": "Ph.D.",
-                "imgPath": "../assets/custom/doctor-2.png",
-                "favIconClass": "ios-heart",
-                "age": 47,
-                "rank": 3,
-                "isFavorite": true,
-                "isTop40": true,
-                "position":
-                {
-                    "current": "Director of Oncology NYU",
-                    "cDetails": "Head of Cancer Center, New York",
-                    "previous": "Lead Cancer Research Technician NYU",
-                    "pDetails": "The Cancer Center New York City"
-                },
-                "address":
-                {
-                    "streetAddress": "16 Grand Street",
-                    "city": "New York",
-                    "state": "NY",
-                    "postalCode": "10001"
-                },
-                 "publications": [{
-                    "id": "A567", 
-                    "title": "Some pub title", 
-                    "journal": "DEF" 
-                },
-                {
-                    "id": "A567", 
-                    "title": "Some pub title", 
-                    "journal": "456" 
-                }]
-            }
-        },
-        {
-            "id": "2",
-            "koldetails":
-            {
-                "firstName": "Dr. Charles",
-                "lastName": "Kepler",
-                "title": "Ph.D.",
-                "imgPath": "../assets/custom/doctor-3.png",
-                "favIconClass": "ios-heart",
-                "age": 47,
-                "rank": 3,
-                "isFavorite": true,
-                "isTop40": true,
-                "position":
-                {
-                    "current": "Director of Oncology NYU",
-                    "cDetails": "Head of Cancer Center, New York",
-                    "previous": "Lead Cancer Research Technician NYU",
-                    "pDetails": "The Cancer Center New York City"
-                },
-                "address":
-                {
-                    "streetAddress": "Address",
-                    "city": "New York",
-                    "state": "NY",
-                    "postalCode": "10001"
-                },
-                "publications": [{
-                    "id": "A567", 
-                    "title": "Some pub title", 
-                    "journal": "GHI" 
-                },
-                {
-                    "id": "A567", 
-                    "title": "Some pub title", 
-                    "journal": "789" 
-                }]
-            }
-        }
-        
+"kols":[{
+    "id": 0,
+    "firstName": "Dr. Joan",
+    "lastName": "Smith",
+    "title": "Ph.D.",
+    "imgPath": "../assets/custom/doctor-1.png",
+    "favIconClass": "ios-heart",
+    "age": 47,
+    "rank": 23,
+    "isFavorite": true,
+    "isTop40": true,
+    "position":
+    {
+        "current": "Director of Oncology NYU",
+        "cDetails": "Head of Cancer Center, New York",
+        "previous": "Lead Cancer Research Technician NYU",
+        "pDetails": "The Cancer Center New York City"
+    },
+    "address":
+    {
+        "streetAddress": "16 Grand Street",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10001"
+    },
+    "publications": [
+        { "id": "A123", "title": "Hypothyroidism in Adolescents", "journal": "JMIR" },
+        { "id": "B456", "title": "Hypothyroidism Treatment Options", "journal": "AMJM" }
     ]
-}
-}
-
-
+},
+    {
+    "id": 1,
+    "firstName": "Dr. Wilson",
+    "lastName": "Phillips",
+    "title": "Ph.D.",
+    "imgPath": "../assets/custom/doctor-2.png",
+    "favIconClass": "ios-heart",
+    "age": 47,
+    "rank": 3,
+    "isFavorite": true,
+    "isTop40": true,
+    "position":
+    {
+        "current": "Director of Oncology NYU",
+        "cDetails": "Head of Cancer Center, New York",
+        "previous": "Lead Cancer Research Technician NYU",
+        "pDetails": "The Cancer Center New York City"
+    },
+    "address":
+    {
+        "streetAddress": "16 Grand Street",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10001"
+    },
+        "publications": [
+        { "id": "C123", "title": "Squamous cell skin carcinoma", "journal": "JSC" },
+        { "id": "D456", "title": "Basal cell cancer", "journal": "CSC" }
+    ]
+},
+    {
+    "id": 2,
+    "firstName": "Dr. Charles",
+    "lastName": "Kepler",
+    "title": "Ph.D.",
+    "imgPath": "../assets/custom/doctor-3.png",
+    "favIconClass": "ios-heart",
+    "age": 47,
+    "rank": 12,
+    "isFavorite": true,
+    "isTop40": true,
+    "position":
+    {
+        "current": "Director of Oncology NYU",
+        "cDetails": "Head of Cancer Center, New York",
+        "previous": "Lead Cancer Research Technician NYU",
+        "pDetails": "The Cancer Center New York City"
+    },
+    "address":
+    {
+        "streetAddress": "Address",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10001"
+    },
+        "publications": [
+            { "id": "E123", "title": "Atherosclerosis", "journal": "AJC" },
+            { "id": "F456", "title": "Atrial Fibrillation", "journal": "JACC" }
+        ]
+    }
+]}

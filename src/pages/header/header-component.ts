@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PopoverController, ViewController } from 'ionic-angular';
+// import { IsotopeFilter } from '../pages/isotope-filter/isotope-filter';
 
 @Component({
   template: `

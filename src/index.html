@@ -44,37 +44,52 @@
 
 
   <!-- Isotope Sorting Dependencies (Get into main build...) -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
+ <!--<script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>-->
   <script>
-      var $grid = $('.grid').isotope({
-          itemSelector: '.element-item',
-          layoutMode: 'fitRows',
-          getSortData: {
-          name: '.name',
-          userImage: '.user-icon',
-          number: '.number parseInt',
-          category: '[data-category]',
-          rank: function( itemElem ) {
-              var rank = $( itemElem ).find('.rank').text();
-              return parseFloat( rank.replace( /[\(\)]/g, '') );
-            }
-          }
-        });
 
-        $('#sorts').on('click', 'a', function() {
-          var sortByValue = $(this).attr('data-sort-by');
-          $grid.isotope({ sortBy: sortByValue });
-        });
+        //   // init Isotope
+        // var iso = new Isotope( '.grid', {
+        //   itemSelector: '.element-item',
+        //   layoutMode: 'fitRows',
+        //   getSortData: {
+        //     name: '.name',
+        //     rank: '.rank parseInt',
+        //     id: '.id parseInt',
+        //     category: '[data-category]',
+        //   }
+        // });
 
-        // change is-checked class on buttons
-        $('.button-group').each(function(i, buttonGroup) {
-          var $buttonGroup = $(buttonGroup);
-          $buttonGroup.on('click', 'a', function() {
-            $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $(this).addClass('is-checked');
-          });
-        });
+        // //iso.addItems( elements )
+        // //iso('insert', itemSelector);
+
+        // // bind sort button click
+        // var sortByGroup = document.querySelector('.sort-by-button-group');
+        // sortByGroup.addEventListener( 'click', function( event ) {
+        //   // only button clicks
+        //   alert("in " + this.target);
+        //   if ( !matchesSelector( event.target, '.button' ) ) {
+        //     return;
+        //   }
+        //   var sortValue = event.target.getAttribute('data-sort-value');
+        //   iso.arrange({ sortBy: sortValue });
+        // });
+
+        // // change is-checked class on buttons
+        // var buttonGroups = document.querySelectorAll('.button-group');
+        // for ( var i=0; i < buttonGroups.length; i++ ) {
+        //   buttonGroups[i].addEventListener( 'click', onButtonGroupClick );
+        // }
+
+        // function onButtonGroupClick( event ) {
+        //   // only button clicks
+        //   if ( !matchesSelector( event.target, '.button' ) ) {
+        //     return;
+        //   }
+        //   var button = event.target;
+        //   button.parentNode.querySelector('.is-checked').classList.remove('is-checked');
+        //   button.classList.add('is-checked');
+        // }
   </script>
 </body>
 </html>

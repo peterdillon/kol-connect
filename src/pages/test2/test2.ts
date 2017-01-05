@@ -18,19 +18,26 @@ export class Test2  {
   constructor(public navCtrl: NavController, public params: NavParams,  private loadingController: LoadingController, private http: Http) { }
 
 // Load full list
-  ionViewWillEnter() {
+  ionViewDidEnter() {
     let loader = this.loadingController.create({
       content: "Getting KOLS..."
     });
 
+// curl 'https://kol-app-ionic2.firebaseio.com/kols.json?orderBy="id"&startAt=0'
+
     loader.present().then( () => {
-      this.http.get('https://kol-app-ionic2.firebaseio.com/mydata.json').map(res => res.json()).subscribe(data => {
-            this.kols = data.kols;
+      this.http.get('https://kol-app-ionic2.firebaseio.com/kols.json').map(res => res.json()).subscribe(data => {
+            this.kols = data;
             loader.dismiss();
-            console.log(this.kols);
+            console.log("kols: " + this.kols);
       });
     });
   }
+
+ionViewWillUnload() {
+  console.log("why unloaded?");
+}
+
 
 // Go load a single KOL
   goToKOL(id) {
