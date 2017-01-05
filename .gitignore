@@ -26,7 +26,11 @@ platforms/
 plugins/
 plugins/android.json
 plugins/ios.json
-www/
+www/build
+www/img
+www/index.html
+www/manifest.json
+www/service-worker.js
 $RECYCLE.BIN/
 
 .DS_Store
