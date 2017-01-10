@@ -16,10 +16,17 @@ export class KOLsFilterPipe implements PipeTransform {
             return items;
         }
 
+        function doesItemContainPublication(item: any, title: any) {
+            return item.publications.filter(p => p.title == 'Atrial Fibrillation').length > 0
+        }
+
         return items.filter(item => {
             if (this.fs.filter.top40) {
                 //Pretend this means "top 40"
-                return item.rank < 15;
+                // return item.rank < 15;
+
+                //Demo of filtering an array
+                return doesItemContainPublication(item, 'Atrial Fibrillation');
             }
             return true;
         });
