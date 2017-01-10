@@ -30,4 +30,12 @@ export class KOLsService {
         //     ]
         // }];
     }
+
+    getKOLsForScatter() {
+        return [
+            { name: "Johnson Lau", key: 'key1', values: [{ x: 31, y: 73 }, { x: 54, y: 39 }, { x: 35, y: 11 }, { x: 93, y: 73 }, { x: 90, y: 21 }] },
+            { name: "Jane Lau", key: 'key2', values: [{ x: 88, y: 52 }, { x: 23, y: 43 }, { x: 13, y: 33 }, { x: 98, y: 76 }, { x: 5, y: 69 }] },
+            { name: "Jimmy Lau", key: 'key3', values: [{ x: 10, y: 10 }, { x: 20, y: 20 }, { x: 30, y: 30 }, { x: 40, y: 40 }, { x: 50, y: 50 }] }
+        ];
+    }
 }
