@@ -9,7 +9,8 @@ import { Scatterplot } from '../pages/scatterplot/scatterplot';
 import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HeaderComponent } from '../pages/header/header-component';
-import { PopoverPage } from '../pages/header/header-component';
+import { FilterComponent } from '../pages/filter-component/filter-component';
+import { SaveFilterSets } from '../pages/filter-component/filter-component';
 import { KOLProfilePage } from '../pages/kol-profile/kol-profile';
 import { KOLProfileJson } from '../pages/kol-profilejson/kol-profilejson';
 import { KOLProfileCompare } from '../pages/kol-profile-compare/kol-profile-compare';
@@ -28,7 +29,8 @@ import { FilterService } from '../app/filter.service';
     KOLsFilterPipe,
     Scatterplot,
     HeaderComponent,
-    PopoverPage,
+    FilterComponent,
+    SaveFilterSets,
     KOLProfilePage,
     KOLProfileJson,
     KOLProfileCompare,
@@ -53,7 +55,8 @@ import { FilterService } from '../app/filter.service';
     CardlistJSON,
     Scatterplot,
     HeaderComponent,
-    PopoverPage,
+    FilterComponent,
+    SaveFilterSets,
     KOLProfilePage,
     KOLProfileJson,
     KOLProfileCompare,
