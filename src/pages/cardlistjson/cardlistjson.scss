@@ -1,23 +1,8 @@
 page-cardlistjson {
 
- button {
-    font-size: 1.7rem;
-    font-weight: bold;
-    font-family: 'Varela Round', sans-serif;
-    color: #fff;
-    padding: .9rem 2rem;
-    border-radius: 2rem;;
-    border: 2px solid #B286D9;
-    background: rgba(255, 255, 255, 0.1);
-    transition: all 300ms ease;
-    &:first-of-type { margin-right: 1rem; }
-    &:hover { background: rgba(255, 255, 255, 0.3); }
-    &.active { background: rgba(255, 255, 0, .8); color: #B286D9 }
-}
-
 .card-container {
    max-width: 1024px;
-   margin: 15rem auto;
+   margin: 15rem auto 0 auto;
    display: flex;
    flex-flow: row wrap;
    align-content: flex-end;
@@ -27,7 +12,6 @@ page-cardlistjson {
       margin: 0 0 3rem 3rem;
       width: 22rem;
       
-
       header {
         background: linear-gradient(177deg, #9152C8 40%, #9152C8 60%, #fff 61%, #fff 100%);
         color: #FFFFFF;

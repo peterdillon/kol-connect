@@ -1,5 +1,4 @@
-<ng-content>
-</ng-content>
+<ng-content></ng-content>
 
 <div class="header-component">
     <div class="global-container">
@@ -13,7 +12,7 @@
                         <ion-icon name="md-heart"></ion-icon>
                     </a>
                 </li>
-                <li>
+                <li [ngClass]="['active']">
                     <a (click)="toggleTop40()">
                         <ion-icon name="ios-ribbon"></ion-icon> Top 40
                     </a>
@@ -22,11 +21,37 @@
                 <li><a href="#">Export List</a></li>
             </ul>
             <div class="actions">
-                <button>Compare KOLs</button>
-                <button (click)="showOverlay()">Adjust Filters</button>
+                <button (click)="goToKOLCompare()">Compare KOLs</button>
+                <button (click)="showOverlay()">Filter KOLs</button>
             </div>
         </div>
+        <div class="filter-nav cf button-group">
+            <div class="filter-title"> Viewing: </div>
+            <div class="filter-list" id="sorts">
+                <div class="filter-item"><a href="#" data-sort-by="name">Name</a></div>
+                <div class="filter-item"><a href="#" data-sort-by="rank">Rank</a></div>
+                <div class="filter-item"><a href="#" data-sort-by="number">Number</a></div>
+                <div class="filter-item">
+                     <ion-list>
+                        <ion-item>
+                            <ion-label>Sort by:</ion-label>
+                            <ion-select [(ngModel)]="sort-values">
+                            <ion-option value="1">Value 1</ion-option>
+                            <ion-option value="2">Value 2</ion-option>
+                            <ion-option value="3">Value 3</ion-option>
+                            </ion-select>
+                        </ion-item>
+                        </ion-list>
+                </div>
+            </div>
+           <div>
+              
+
+           </div>
+        </div>
+        
     </div>
+    
 
 
     <div class="overlay" padding [hidden]="overlayHidden">
@@ -260,7 +285,7 @@
                     </ul>
                 </nav>
 
-                <nav>
+                <!--<nav>
                     <ul>
                         <li class="active">
                             <a href="#">
@@ -275,7 +300,7 @@
                                 <ion-icon name="checkmark"></ion-icon> Relationship Owner</a>
                         </li>
                     </ul>
-                </nav>
+                </nav>-->
 
             </section>
 

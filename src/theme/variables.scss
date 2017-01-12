@@ -11,7 +11,9 @@
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
 
-
+$alert:#EB6660;
+$highlight:#5B38B9;
+$positive:  #1ab394;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -22,9 +24,9 @@
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
-  secondary:  #32db64,
-  danger:     #f53d3d,
+  primary:    #5B38B9,
+  secondary:  #1ab394,
+  danger:     #EB6660,
   light:      #f4f4f4,
   dark:       #222,
   custom-save-button:(

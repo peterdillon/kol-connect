@@ -3,7 +3,6 @@ import { LoadingController, NavParams, NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-// import { IsotopeFilter } from '../pages/isotope-filter/isotope-filter';
 import { KOLProfileJson } from '../kol-profilejson/kol-profilejson';
 import { KOLProfileCompare } from '../kol-profile-compare/kol-profile-compare';
 import { KOLProfileCompareThree } from '../kol-profile-compare-three/kol-profile-compare-three';
@@ -38,18 +37,17 @@ export class CardlistJSON {
     });
   }
 
+ selectedKOLs(i) {
+   this.selectedStatus[i]=!this.selectedStatus[i];
+ }
+
 
   ionViewDidEnter() {
     console.log("did enter");
   }
-
-
-
   ionViewWillUnload() {
     console.log("why unloaded?");
   }
-
-
   // Go load a single KOL
   goToKOL(id) {
     console.log(id);
@@ -60,9 +58,6 @@ export class CardlistJSON {
 
   // -----------------------
   // Static - to be removed
-  goToKOLCompare() {
-    this.navCtrl.push(KOLProfileCompare);
-  }
   goToKOLCompareThree() {
     this.navCtrl.push(KOLProfileCompareThree);
   }
@@ -70,4 +65,5 @@ export class CardlistJSON {
 
 
 } // END class CardlistJSON
+
 

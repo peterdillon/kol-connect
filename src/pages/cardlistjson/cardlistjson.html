@@ -1,21 +1,16 @@
+<header-component></header-component>
 <ion-content>
-
-    <isotope-filter></isotope-filter>
-
-    <!--data-isotope='{ "itemSelector": ".element-item", "layoutMode": "fitRows",
-          "getSortData": {
-            "name": ".name",
-            "rank": ".rank parseInt",
-            "id": ".id parseInt",
-            "category": "[data-category]" } }'-->
-
     <div class="card-container grid">
-        <div *ngFor="let kol of kols | kolsFilter">
+        <div *ngFor="let kol of kols | kolsFilter; let i = index">
             <div class="kol-card element-item" data-category="transition">
 
                 <header>
-                    <ion-icon item-left class="check un-checked" name="ios-checkmark-circle-outline" (click)="selectedStatus[i]=!selectedStatus[i]"
-                        [class.checked]="selectedStatus[i]">
+                    <ion-icon item-left 
+                        class="check un-checked" 
+                        name="ios-checkmark-circle-outline" 
+                        (click)="selectedKOLs(i)"
+                        [class.checked]="selectedStatus[i]"
+                        id="{{kol.id}}">
                     </ion-icon>
                     <!--[attr.data-selected]="false" -->
                     <span (click)="goToKOL(kol.id)"><img src="{{kol.imgPath}}" /></span>
@@ -23,8 +18,6 @@
                 </header>
                 <section>
                     <h1 class="name">{{kol.firstName}} {{kol.lastName}}</h1>
-                    <p>Rank: <span class="rank">{{kol.rank}}</span></p>
-                    <p>ID: <span class="id">{{kol.id}}</span></p>
                     <p>{{kol.position.current}}</p>
                     <p>{{kol.position.cDetails}}</p>
                 </section>
@@ -35,7 +28,6 @@
                         <ion-icon name="md-star-half" item-left></ion-icon>
                     </div>
                     <div class="info">
-                        <ion-icon name="ios-flag-outline" item-left></ion-icon>
                         <ion-icon name="{{kol.favIconClass}}" item-left></ion-icon>
                     </div>
                 </footer>
@@ -44,7 +36,5 @@
     </div>
     <!-- END card-container-->
 
-    <button (click)="goToKOLCompare()">Compare 2</button>
     <button (click)="goToKOLCompareThree()">Compare 3</button>
-
 </ion-content>

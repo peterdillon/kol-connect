@@ -20,7 +20,7 @@
                 <ion-icon name="md-star" item-left></ion-icon>
                 <ion-icon name="md-star-half" item-left></ion-icon>
                 <br>
-                <ion-icon name="ios-flag-outline" item-left></ion-icon>
+                <ion-icon name="mail"></ion-icon>
                 <ion-icon name="ios-heart" item-left></ion-icon>
               </ion-col>
           </ion-row>
@@ -36,6 +36,86 @@
                 <p>Telephone: +1 504 988 7869</p>
                 <p>Fax: +1 504 988 5059</p>
                 <p>E-mail: email@email.edu</p>
+
+                <!-- notes -->
+                <h1>Notes</h1>
+                
+                <div class="alt-note">
+                  <ion-row>
+                      <ion-col>
+                        <p class="public-note">A public note about a KOL.</p>
+                      </ion-col>
+                  </ion-row>
+                  <ion-row> 
+                      <ion-col width-50>
+                        <small>Barny Hoeffler</small>
+                      </ion-col>
+                      <ion-col width-50  class="tx-rt">
+                        <small>January 01, 2016</small>
+                      </ion-col>
+                  </ion-row>
+                </div>
+
+                <div class="alt-note">
+                  <ion-row>
+                      <ion-col>
+                        <p class="public-note">A public note about a KOL.</p>
+                      </ion-col>
+                  </ion-row>
+                  <ion-row> 
+                      <ion-col width-50>
+                        <small>John Wilson</small>
+                      </ion-col>
+                      <ion-col width-50  class="tx-rt">
+                        <small>December 21, 2016</small>
+                      </ion-col>
+                  </ion-row>
+                </div>
+
+                <div class="alt-note">
+                   <ion-row>
+                    <ion-col color="danger">
+                      <p class="private-note">A private note about a KOL.</p>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col width-50>
+                      <small>Jane Doe</small>
+                    </ion-col>
+                    <ion-col width-50  class="tx-rt">
+                      <small>October 1, 2016</small>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                
+                <br>
+                <ion-input placeholder="Add note..."></ion-input>
+                <ion-row radio-group>
+                  <ion-col width-50>
+                    <ion-item>
+                      <ion-label>Private</ion-label>
+                      <ion-radio color="danger"></ion-radio>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col width-50>
+                    <ion-item>
+                      <ion-label>Public</ion-label>
+                      <ion-radio color="secondary"></ion-radio>
+                    </ion-item>
+                  </ion-col>
+
+                </ion-row>
+
+                <ion-row>
+                  <ion-col class="tx-rt">
+                     <button ion-button icon-left small outline color="primary">
+                      <ion-icon name="checkmark"></ion-icon> Save
+                     </button>
+                  </ion-col>
+              </ion-row>
+               
+                <!-- / notes -->
+
               </ion-col>
               <ion-col width-33 padding> 
                 <h1>Bio</h1>
@@ -116,6 +196,32 @@
                       <p>Q3</p>
                     </ion-col>
                   </ion-row>
+
+                  <h1>Engagement Plan</h1>
+                  <ion-row class="plan-row">
+                    <ion-col width-33 class="plan-time">
+                      <ion-icon name="call" class="plan-icon"></ion-icon>
+                      <p>7:00 am</p>
+                      <small>3 hours ago</small>
+                    </ion-col>
+                    <ion-col width-67 class="plan-desc">
+                      <h6>Follow up phone call</h6>
+                      <p>Duis faucibus felis molestie metus bibendum, cursus egestas.</p>
+                    </ion-col>
+                  </ion-row>
+
+                  <ion-row class="plan-row">
+                    <ion-col width-33 class="plan-time">
+                      <ion-icon name="navigate" class="plan-icon"></ion-icon>
+                      <p>12:00 pm</p>
+                      <small>Tomorrow</small>
+                    </ion-col>
+                    <ion-col width-67 class="plan-desc">
+                      <h6>Lunch meeting</h6>
+                      <p>Duis faucibus felis molestie metus bibendum, cursus egestas.</p>
+                    </ion-col>
+                  </ion-row>
+                  
 
 
 

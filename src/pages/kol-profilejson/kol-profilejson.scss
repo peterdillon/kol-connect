@@ -8,14 +8,33 @@ page-kol-profilejson {
     float: right;
     width: 25%;
 }
-
 .custom-top-nav {
-    margin-top: 11rem;
+    z-index: 200;
     background-color: #120A15;
+}
+ion-input {
+  border: 1px solid #ccc;
+}
+.item-inner {
+    border-bottom: 0 !important;
+}
+ion-label {
+  font-size: 1.4rem;
+}
+.alt-note {
+  &:nth-last-of-type(even) {
+    background: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+  }
+}
+.private-note {
+  color: $alert;
+}
+.public-note {
+  color: $highlight;
 }
 
 .kol-container {
-   margin: 9.5rem auto;
    display: flex;
    flex-flow: row wrap;
    align-content: flex-end;
@@ -54,12 +73,13 @@ page-kol-profilejson {
         padding: 5rem 2rem 2rem 3rem;
         border-bottom-left-radius: .5rem;
         border-bottom-right-radius: .5rem;
+        color: #444;
         
         h1 {
           font-family: 'Montserrat', sans-serif;
           text-transform: uppercase;
           font-size: 1.8rem;
-          color: #333;
+          color: #444;
           padding-bottom: 1rem;
           border-bottom: 1px solid #979797;
         }
@@ -69,6 +89,38 @@ page-kol-profilejson {
         p {
           margin: 0;
           line-height: 2rem;
+        }
+        .plan-row {
+          border-top: 1px solid #e7eaec;
+        }
+        .plan-time {
+          position: relative;
+          padding-top: .6rem;
+          border-right: 1px solid #e7eaec;
+          small { color: $positive; }
+        }
+        .plan-icon {
+          font-size: 1.5rem;
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 3px;
+          width: 25px;
+          text-align: center;
+          border-bottom: 1px solid #e7eaec;
+          border-left: 1px solid #e7eaec;
+          background: #f8f8f8;
+        }
+        .plan-desc {
+          padding-left: 1rem;
+          padding-top: 1rem;
+          h6 {
+            margin-bottom: .3rem;
+          }
+          p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
         }
         
         .tx-rt { text-align: right; }

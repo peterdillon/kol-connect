@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { PopoverController, ViewController } from 'ionic-angular';
+import { PopoverController, ViewController, NavParams, NavController } from 'ionic-angular';
 
+import { KOLProfileCompare } from '../kol-profile-compare/kol-profile-compare';
 import { FilterService } from '../../app/filter.service';
-// import { IsotopeFilter } from '../pages/isotope-filter/isotope-filter';
 
 @Component({
   template: `
@@ -35,7 +35,7 @@ import { FilterService } from '../../app/filter.service';
   `
 })
 export class PopoverPage {
-  constructor(public viewCtrl: ViewController) { }
+  constructor(public viewCtrl: ViewController, ) { }
 
   close() {
     this.viewCtrl.dismiss();
@@ -43,14 +43,17 @@ export class PopoverPage {
 
 } // END PopoverPage
 
-
 @Component({
   selector: 'header-component',
   templateUrl: 'header-component.html'
 })
 
 export class HeaderComponent {
-  constructor(public popoverCtrl: PopoverController, private fs: FilterService) { }
+  constructor(public navCtrl: NavController, public params: NavParams, public popoverCtrl: PopoverController, private fs: FilterService) { }
+
+  goToKOLCompare() {
+      this.navCtrl.push(KOLProfileCompare);
+    }
 
   presentPopover(myEvent) {
     let popover = this.popoverCtrl.create(PopoverPage);
@@ -66,6 +69,8 @@ export class HeaderComponent {
   public toggleTop40() {
     this.fs.toggleTop40();
   }
+
+    
 
 } // END HeaderComponent
 
