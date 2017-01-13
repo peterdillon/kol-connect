@@ -1,0 +1,42 @@
+ saved-filter {
+    
+        
+        ion-label {
+            font-size: 2.5rem;
+        }
+        .custom-grid {
+            background-color: #f2f2f2;
+            margin: 1rem;
+            width: 95%;
+        }
+        .custom-text-align {
+            text-align: center;
+        }
+        .custom-ion-row {
+            border-bottom: 2px solid #ddd;
+        }
+        .custom-top-margin {
+            margin-top: 2rem;
+        }
+        .custom-save-input {
+            border: 2px solid #ddd;
+            font-size: 2rem;
+            background-color: #fff;
+        }
+        .custom-save-button {
+            border-radius: 0;
+            border: 2px solid #84C344;
+            padding: 2.5rem 1rem;
+            font-size: 3rem;
+            box-shadow: 0 0 transparent;
+            margin: 0;
+        }
+        .saved-filter-name {
+            font-size: 2.5rem;
+        }
+        .saved-filter-icon {
+            font-size: 2.5rem;
+            color: red;
+        }
+    
+}
