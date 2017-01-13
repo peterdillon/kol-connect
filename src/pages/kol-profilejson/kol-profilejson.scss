@@ -22,16 +22,17 @@ ion-label {
   font-size: 1.4rem;
 }
 .alt-note {
-  &:nth-last-of-type(even) {
-    background: #f2f2f2;
+  //&:nth-last-of-type(even) {
+    //background: #f2f2f2;
+    background: linear-gradient(0deg, #f2f2f2 0%, #fff 80%);
     border-bottom: 1px solid #ccc;
-  }
+  //}
 }
 .private-note {
   color: $alert;
 }
 .public-note {
-  color: $highlight;
+  color: $positive;
 }
 
 .kol-container {

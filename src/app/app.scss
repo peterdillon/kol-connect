@@ -10,7 +10,6 @@
 
 @import "_mixins";
 @import "_nvd3-css";
-@import "_overlay-filters";
 
 // Shared Sass variables, which can be used to adjust Ionic's
 // default Sass variables, belong in "theme/variables.scss".
@@ -35,4 +34,11 @@ ion-content {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.popover-md .popover-content {
+        top: 60px !important;
+        left: 45% !important;
+        width: 40rem;
+        border-radius: 0;
 }

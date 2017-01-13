@@ -1,10 +1,8 @@
-<ng-content></ng-content>
-
 <div class="filter-component">
-<div class="overlay" padding [hidden]="overlayHidden">
+<div class="overlay" padding>
     <div class="overlay__ct">
 
-        <header class="cf">
+        <header>
             <!-- clearfix -->
             <div class="w-75 flex-head">
                 <h1>Adjust Filters</h1>
@@ -22,7 +20,7 @@
             </div>
         </header>
 
-        <section class="w-75">
+        <section class="filter-container">
             <div class="filter-section">
                 <h5>Specialty</h5>
                 <ul>
@@ -178,7 +176,7 @@
 
         </section>
 
-        <section class="w-25">
+        <div class="filter-nav">
             <nav>
                 <ul>
                     <li class="active">
@@ -232,24 +230,7 @@
                 </ul>
             </nav>
 
-            <!--<nav>
-                <ul>
-                    <li class="active">
-                        <a href="#">
-                            <ion-icon name="checkmark"></ion-icon> Promotional Speaker</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <ion-icon name="checkmark"></ion-icon> Investigator</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <ion-icon name="checkmark"></ion-icon> Relationship Owner</a>
-                    </li>
-                </ul>
-            </nav>-->
-
-        </section>
+        </div>
     </div>
 </div>
 </div>

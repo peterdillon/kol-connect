@@ -19,12 +19,19 @@ export class HeaderComponent {
     private viewCtrl: ViewController ) { }
 
   goToKOLCompare() {
-      this.navCtrl.push(KOLProfileCompare);
-    }
+    this.navCtrl.push(KOLProfileCompare);
+  }
 
   presentModal() {
     let modal = this.modalCtrl.create(FilterComponent);
     modal.present();
   }
+
+  toggleTop40() {
+    console.log("in top 40");
+    // this.fs.top40 = !this.fs.top40;
+  }
+
+
 }
 
