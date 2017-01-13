@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Content, ModalController, Platform, PopoverController, ViewController, NavParams, NavController } from 'ionic-angular';
 import { FilterService } from '../../app/filter.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'filter-component',
@@ -45,10 +46,22 @@ export class FilterComponent {
 
 // --------------------------------------------------------
 // SaveFilterSets template - opens in popover object above
+
 @Component({
   selector: 'saved-filter',
   templateUrl: 'saved-filters.html'
 })
 export class SaveFilterSets {
   constructor(public viewCtrl: ViewController ) { }
+
+  rows = [];
+  filterName = "";
+  addRow() {
+    this.rows.push({filterName: this.filterName});
+    this.filterName = '';
+  }
+  removeRow(index) {
+   this.rows.splice(index, 1);
+  }
+  
 } 

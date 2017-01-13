@@ -1,28 +1,27 @@
 <div class="saved-filter">
-<ion-grid class="custom-grid">
+<ion-grid class="sf-grid">
     <ion-list>
-    <ion-row class="custom-ion-row">
-        <ion-col width-80><span class="saved-filter-name">1. My saved filter set</span></ion-col>
-        <ion-col width-20 class="custom-text-align"><span class="saved-filter-icon"><ion-icon name="close"></ion-icon></span></ion-col>
-    </ion-row>
-    <ion-row class="custom-ion-row">
-        <ion-col width-80><span class="saved-filter-name">2. My saved filter set</span></ion-col>
-        <ion-col width-20 class="custom-text-align"><span class="saved-filter-icon"><ion-icon name="close"></ion-icon></span></ion-col>
-    </ion-row>
-    <ion-row class="custom-ion-row">
-        <ion-col width-80><span class="saved-filter-name">3. My saved filter set</span></ion-col>
-        <ion-col width-20 class="custom-text-align"><span class="saved-filter-icon"><ion-icon name="close"></ion-icon></span></ion-col>
-    </ion-row>
-    <ion-row class="custom-top-margin">
+
+    <ol>
+        <li *ngFor="let row of rows; let i=index" class="sf-row">
+            {{row.filterName}}
+            <span class="sf-icon" (click)="removeRow(i)">
+                <ion-icon name="close"></ion-icon>
+            </span>
+        </li>
+    </ol>
+
+    <ion-row class="sf-top-margin">
         <ion-col>
-        <ion-input type="text" class="custom-save-input" placeholder="New"></ion-input>
+            <ion-input type="text" [(ngModel)]="filterName" (keyup.enter)="addRow()" class="sf-save-input" placeholder="Save filter set..."></ion-input>
         </ion-col>
-        <ion-col width-20 class="custom-text-align">
-        <button ion-button type="submit" color="custom-save-button" class="custom-save-button">
+        <ion-col width-20 class="icon-ct">
+        <button ion-button type="submit" color="sf-save-button" class="sf-save-button" (click)="addRow()" value="Submit">
             <ion-icon name="md-checkmark"></ion-icon>
         </button>
         </ion-col>
     </ion-row>
+
     </ion-list>
 </ion-grid>
 </div>
