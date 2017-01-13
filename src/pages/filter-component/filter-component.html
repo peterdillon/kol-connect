@@ -1,3 +1,4 @@
+
 <div class="filter-component">
 <div class="overlay" padding>
     <div class="overlay__ct">
@@ -21,7 +22,8 @@
         </header>
 
         <section class="filter-container">
-            <div class="filter-section">
+            <ion-content>
+            <div class="filter-section" id="specialty">
                 <h5>Specialty</h5>
                 <ul>
                     <li>
@@ -32,7 +34,7 @@
                         <ion-icon name="checkmark-circle"></ion-icon>Endocrinology</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="degree">
                 <h5>Degree</h5>
                 <ul>
                     <li>
@@ -45,7 +47,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>M.A.</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="associations">
                 <h5>Associations</h5>
                 <ul>
                     <li>
@@ -58,7 +60,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="tier-category">
                 <h5>Tier/Category</h5>
                 <ul>
                     <li>
@@ -71,7 +73,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="region">
                 <h5>Region</h5>
                 <ul>
                     <li>
@@ -84,7 +86,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="affiliations">
                 <h5>Affiliations</h5>
                 <ul>
                     <li>
@@ -97,7 +99,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="publications">
                 <h5>Publications</h5>
                 <ul>
                     <li>
@@ -110,7 +112,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="clinical-trials">
                 <h5>Clinical Trials</h5>
                 <ul>
                     <li>
@@ -123,7 +125,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="congresses">
                 <h5>Congresses</h5>
                 <ul>
                     <li>
@@ -136,7 +138,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="peer-referrals">
                 <h5>Peer Referrals</h5>
                 <ul>
                     <li>
@@ -149,7 +151,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section"  id="cme-presentations">
                 <h5>CME Presentations</h5>
                 <ul>
                     <li>
@@ -162,7 +164,7 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
-            <div class="filter-section">
+            <div class="filter-section" id="age">
                 <h5>Age</h5>
                 <ul>
                     <li>
@@ -173,58 +175,58 @@
                         <ion-icon name="ios-checkmark-circle-outline"></ion-icon>60-70+</li>
                 </ul>
             </div>
-
+            </ion-content>
         </section>
 
         <div class="filter-nav">
             <nav>
                 <ul>
                     <li class="active">
-                        <a href="#">
+                        <a (click)="scrollTo('specialty')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Specialty</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('degree')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Degree</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('associations')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Associations</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('tier-category')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Tier/Category</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('region')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Region</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('affiliations')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Affiliations</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('publications')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Publications</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('clinical-trials')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Clinical Trials</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('congresses')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Congresses</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('peer-referrals')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Peer Referrals</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('cme-presentations')">
                             <ion-icon name="ios-arrow-back"></ion-icon> CME Presentations</a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a (click)="scrollTo('age')">
                             <ion-icon name="ios-arrow-back"></ion-icon> Age</a>
                     </li>
                 </ul>

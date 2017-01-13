@@ -23,7 +23,7 @@
 text { fill: #fff; }
 
 // --------------------------------------------------
-// Global app background styles
+// Global overrides
 ion-content {
     background-image: url('../assets/custom/blurred-bg.gif');
     background-size: cover;
@@ -37,8 +37,8 @@ ion-content {
 }
 
 .popover-md .popover-content {
-        top: 60px !important;
-        left: 45% !important;
-        width: 40rem;
-        border-radius: 0;
+    top: 60px !important;
+    left: 45% !important;
+    width: 40rem;
+    border-radius: 0;
 }

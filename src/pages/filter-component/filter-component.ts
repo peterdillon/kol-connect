@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ModalController, Platform, PopoverController, ViewController, NavParams, NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Content, ModalController, Platform, PopoverController, ViewController, NavParams, NavController } from 'ionic-angular';
 import { FilterService } from '../../app/filter.service';
 
 @Component({
@@ -8,16 +8,24 @@ import { FilterService } from '../../app/filter.service';
 })
 export class FilterComponent {
 
+  @ViewChild(Content) content: Content;
+
   constructor(
     public modalCtrl: ModalController, 
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
+    public viewCtrl: ViewController,
     public params: NavParams, 
     public popoverCtrl: PopoverController, 
-    private fs: FilterService,
-    public viewCtrl: ViewController ) { }
+    private fs: FilterService ) { }
 
   ionViewDidLoad() {
-    console.log('Hello FilterOverlayPage Page');
+    console.log('FilterOverlayPage ViewDidLoad');
+  }
+
+  // Scroll to sections
+  scrollTo(element) {
+    let yOffset = document.getElementById(element).offsetTop;
+    this.content.scrollTo(0, yOffset, 2000);
   }
   
   // Dismiss filter overlay
@@ -35,8 +43,8 @@ export class FilterComponent {
 
 }
 
-
-// SaveFilterSets template
+// --------------------------------------------------------
+// SaveFilterSets template - opens in popover object above
 @Component({
   selector: 'saved-filter',
   templateUrl: 'saved-filters.html'

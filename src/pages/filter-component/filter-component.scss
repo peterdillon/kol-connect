@@ -1,6 +1,5 @@
 filter-component {
     .overlay {
-
         position: fixed;
         width: 100%;
         height: 100%;
@@ -9,12 +8,12 @@ filter-component {
         top: 0;
         left: 0;
         color: #f2f2f2;
-        overflow-y: auto;
+        
 
      &__ct {
-        
         margin: 0 auto;
         max-width: 1000px;
+        overflow: hidden;
 
         .w-75 {
             float: left;
@@ -71,19 +70,14 @@ filter-component {
 
     } // END header
 
-
     .filter-nav {
-
         position: fixed;
         right: 0;
-        top: 4rem;
+        top: 12rem;
         width: 22rem;
 
         nav {
-            //border-bottom: 2px solid #666;
-            margin-top: 7rem;
-
-            ul {
+          ul {
                 margin: 0;
                 padding: 0;
 
@@ -105,21 +99,33 @@ filter-component {
                 }
                 }
             }
-            }
+          }
         } // END nav
     }
 
 
     section {
-
         &.filter-container {
             margin: 8rem 0 0 0;
             width: 77%;
+            
+            ion-content {    
+                background: transparent;
+                min-height: 75rem;
+                color: #fff;
+                
+                .scroll-content {
+                    padding: 0 !important;
+                }
+            }
         }
         
         .filter-section {
             border-bottom: 2px solid #666;
             padding: 1rem;
+            &:last-of-type {
+                padding-bottom: 75rem;
+            }
 
             h5 {
                 margin: 1rem 0;
