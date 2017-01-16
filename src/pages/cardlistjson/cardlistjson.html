@@ -1,8 +1,8 @@
 <header-component></header-component>
 
 <ion-content>
-    <div class="card-container grid">
-        <div *ngFor="let kol of kols | kolsFilter; let i = index">
+    <div class="card-container grid">  <!--| kolsFilter-->
+        <div *ngFor="let kol of kols; let i = index">
             <div class="kol-card element-item" data-category="transition">
 
                 <header>
@@ -11,16 +11,20 @@
                         name="ios-checkmark-circle-outline" 
                         (click)="selectedKOLs(i)"
                         [class.checked]="selectedStatus[i]"
-                        id="{{kol.id}}">
+                        id="{{kol.Id}}">
                     </ion-icon>
-                    <!--[attr.data-selected]="false" -->
-                    <span (click)="goToKOL(kol.id)"><img src="{{kol.imgPath}}" /></span>
+                    <!--[attr.data-selected]="false" {{kol.imgPath}} -->
+                    <span (click)="goToKOL(kol.Id)"><img src="" /></span>
 
                 </header>
                 <section>
-                    <h1 class="name">{{kol.firstName}} {{kol.lastName}}</h1>
-                    <p>{{kol.position.current}}</p>
-                    <p>{{kol.position.cDetails}}</p>
+                    <h1 class="name">{{kol.FirstName}} {{kol.LastName}}</h1>
+                    <div *ngIf="kol.Publications__pr">
+                        <b>Journals: ({{kol.Publications__pr.totalSize}}) </b>
+                        <div *ngFor="let pub of kol.Publications__pr.records">
+                            {{pub.Journal_Name__c}}
+                        </div>
+                    </div>
                 </section>
                 <footer class="cf">
                     <div class="rating">

@@ -33,6 +33,7 @@ export class CardlistJSON {
     loader.present().then(() => {
       this.kolService.getKOLs().subscribe(data => {
         this.kols = data;
+        console.log(this.kols);
         loader.dismiss();
       });
     });

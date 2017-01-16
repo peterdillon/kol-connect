@@ -5,18 +5,19 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class KOLsService {
     constructor(private http: Http) { }
-
+    
     getKOLs() {
         //Filter ex:
         // * are starred
         // * has publications from Journal named "Jbr"
-        // * score > 50         
-        return this.http.get('https://kol-app-ionic2.firebaseio.com/kols.json').map(res => res.json());
+        // * score > 50
+        return this.http.get('http://localhost:8100/assets/custom/data/kols.json').map(res => res.json());
     }
 
     getKOL(id: String) {
+        
         return this.http.get('https://kol-app-ionic2.firebaseio.com/kols/' + id + '.json').map(res => res.json());
-
+        
         // return [{
         //     id: id,
         //     score: 23,
