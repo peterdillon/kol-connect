@@ -20,6 +20,8 @@ export class KOLsFilterPipe implements PipeTransform {
             return item.publications.filter(p => p.title == 'Atrial Fibrillation').length > 0
         }
 
+        
+        
         return items.filter(item => {
             if (this.fs.filter.top40) {
                 //Pretend this means "top 40"

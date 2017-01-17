@@ -101,15 +101,15 @@
             </div>
             <div class="filter-section" id="publications">
                 <h5>Publications</h5>
-                <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                <ul class="cf">
+                    <li *ngFor="let kol of kols">
+                        <span *ngIf="kol.Publications__pr">          
+                            <a class="clip" *ngFor="let pub of kol.Publications__pr.records">
+                                <ion-icon name="ios-checkmark-circle-outline"></ion-icon>
+                                {{pub.Journal_Name__c}}
+                            </a>
+                        </span>
+                    </li>
                 </ul>
             </div>
             <div class="filter-section" id="clinical-trials">

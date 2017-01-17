@@ -27,7 +27,7 @@ export class HeaderComponent {
     modal.present();
   }
 
-  toggleTop40() {
+  doesItemContainPublication() {
     console.log("in top 40");
     // this.fs.top40 = !this.fs.top40;
   }

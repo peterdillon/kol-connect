@@ -21,7 +21,12 @@ export class CardlistJSON {
   id: any;
   showFilters: false;
 
-  constructor(public navCtrl: NavController, public params: NavParams, private loadingController: LoadingController, private http: Http, private kolService: KOLsService) { }
+  constructor(
+    public navCtrl: NavController, 
+    public params: NavParams, 
+    private loadingController: LoadingController, 
+    private http: Http, 
+    private kolService: KOLsService ) { }
 
   // Load full list
   ionViewWillEnter() {
@@ -29,20 +34,17 @@ export class CardlistJSON {
       content: "Getting KOLS..."
     });
 
-    // curl 'https://kol-app-ionic2.firebaseio.com/kols.json?orderBy="id"&startAt=0'
     loader.present().then(() => {
       this.kolService.getKOLs().subscribe(data => {
         this.kols = data;
-        console.log(this.kols);
         loader.dismiss();
       });
     });
   }
 
- selectedKOLs(i) {
-   this.selectedStatus[i]=!this.selectedStatus[i];
- }
-
+  selectedKOLs(i) {
+    this.selectedStatus[i] = !this.selectedStatus[i];
+  }
 
   ionViewDidEnter() {
     console.log("CardlistJSON ViewDidEnter");

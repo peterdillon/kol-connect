@@ -10,13 +10,13 @@
                         <ion-icon name="md-heart"></ion-icon>
                     </a>
                 </li>
+                <li><a href="#"><ion-icon name="share"></ion-icon></a></li>
                 <li [ngClass]="['active']">
-                    <a (click)="toggleTop40()">
+                    <a (click)="doesItemContainPublication()">
                         <ion-icon name="ios-ribbon"></ion-icon> Top 40
                     </a>
                 </li>
                 <li><a href="#">Rising Stars</a> </li>
-                <li><a href="#">Export List</a></li>
             </ul>
             <div class="actions">
                 <button (click)="goToKOLCompare()">Compare KOLs</button>

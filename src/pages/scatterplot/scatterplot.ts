@@ -31,9 +31,9 @@ export class Scatterplot implements OnInit {
     this.options = {
       chart: {
         type: 'scatterChart',
-        height: 550,
+        height: 650,
         margin: {
-          top: 150,
+          top: 10,
           right: 20,
           bottom: 50,
           left: 60
@@ -45,9 +45,10 @@ export class Scatterplot implements OnInit {
             elementClick: function (e) { console.log('clicked: ', e); }
           }
         },
+        pointRange: [200, 700],
         showDistX: true,
         showDistY: true,
-        duration: 350,
+        duration: 650,
         xAxis: {
           axisLabel: 'X Axis',
           tickFormat: function (d) {
@@ -66,7 +67,7 @@ export class Scatterplot implements OnInit {
             var series = e.series[0];
             if (series.value === null) return;
 
-            return "<h1>" + series.name + "</h1>";
+            return "<div class='kol-card'><header><img src='" + series.imgPath + "' /></span></header><section><h1 class='name'>" + series.name + "</h1><p>" + series.status + "</p><a href='#'>View KOL</a></section></div>";
           }
         }
       }

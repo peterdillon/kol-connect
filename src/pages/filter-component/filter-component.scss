@@ -135,12 +135,16 @@ filter-component {
             ul {
                 margin: 0;
                 padding: 0;
-
+                
             li {
                 display: inline;
                 list-style: none;
                 margin-right: 2rem;
                 font-size: 1.75rem;
+                
+                a {
+                    color: white;
+                }
 
                 ion-icon {
                     vertical-align: middle;
@@ -152,7 +156,15 @@ filter-component {
                     color: yellow;
                 }
             }
+            a.clip {
+                padding: .5rem .5rem .5rem .1rem;
+                float: left;
+                width: 33.333%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
+          }
         } // END filter-section
       } // END section
 
