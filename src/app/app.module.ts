@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { Barchart } from '../pages/barchart/barchart';
 import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
 import { KOLsFilterPipe } from '../pages/cardlistjson/filter-pipe';
+import { CategoryFilterPipe } from '../pages/filter-component/category-pipe';
 import { Scatterplot } from '../pages/scatterplot/scatterplot';
 import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -36,7 +37,8 @@ import { FilterService } from '../app/filter.service';
     KOLProfileCompare,
     KOLProfileCompareThree,
     nvD3,
-    TabsPage
+    TabsPage,
+    CategoryFilterPipe
   ],
   imports: [
     IonicModule.forRoot(MyApp, {}, {

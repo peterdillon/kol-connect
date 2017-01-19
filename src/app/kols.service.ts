@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class KOLsService {
     constructor(private http: Http) { }
     
- public baseURL = 'http://localhost:8100/assets/data/kols.json';
+    public baseURL = 'http://localhost:8100/assets/data/kols.json';    
 
     getKOLs() {
         return this.http.get(this.baseURL).map(res => res.json());
     }
 
-    getKOL(id: String) {
-        console.log(this.baseURL + '?Id=' +  id);
-        return this.http.get(this.baseURL + '?Id=' +  id).map(res => res.json());
+    getKOL(id: String) {        
+        console.log('getKOL: ', id);
+        //items.filter(item => item.id.indexOf(args[0]) !== -1);
+        return this.http.get(this.baseURL).map(res => res.json()).subscribe(data => {
+            var filteredData = data.filter(item => {
+                return item.Id == id;
+            });
+            console.log(filteredData);
+        });
     }
 
     getKOLsForScatter() {

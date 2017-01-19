@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Content, ModalController, Platform, PopoverController, ViewController, NavParams, NavController, LoadingController } from 'ionic-angular';
 import { FilterService } from '../../app/filter.service';
-import { KOLsFilterPipe } from './filter-pipe';
+import { CategoryFilterPipe } from './category-pipe';
 import { KOLsService } from '../../app/kols.service';
 
 @Component({
@@ -22,7 +22,7 @@ export class FilterComponent {
     public popoverCtrl: PopoverController,
     private loadingController: LoadingController, 
     private kolService: KOLsService,
-    private fs: FilterService ) { }
+    public fs: FilterService ) { }
 
   ionViewDidLoad() {
     console.log('FilterOverlayPage ViewDidLoad');
@@ -41,30 +41,9 @@ export class FilterComponent {
     });
   }
 
-
-
-// filterMedical(items: any[]): any {
-//         // filter items array, items which match and 
-//         // return true will be kept, false will be filtered out
-//         if (typeof items === 'undefined') {
-//             return items;
-//         }
-//         function doesItemContainPublication(item: any, title: any) {
-//             return item.publications.filter(p => p.title == 'Medical').length > 0
-//         }
-//         return items.filter(item => {
-//             if (this.fs.filter.top40) {
-//                 //Pretend this means "top 40"
-//                 // return item.rank < 15;
-//                 //Demo of filtering an array
-//                 return doesItemContainPublication(item, 'Medical');
-//             }
-//             return true;
-//         });
-// }
-
-
-
+  setJournalNumber(value) {
+    this.fs.setJournalNumber(value);
+  }
 
   // Scroll to sections
   scrollTo(element) {

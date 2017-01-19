@@ -47,6 +47,12 @@ page-cardlistjson {
         p {
           margin: 0;
           font-size: 1.3rem;
+          padding: .2rem; 
+          float: left;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
        }
         footer {

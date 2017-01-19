@@ -4,7 +4,6 @@ import { KOLsService } from '../../app/kols.service'
 
 
 @Component({
-  selector: 'page-scatterplot',
   templateUrl: 'scatterplot.html'
 })
 export class Main {

@@ -7,107 +7,90 @@
             <!-- clearfix -->
             <div class="w-75 flex-head">
                 <h1>Adjust Filters</h1>
-                <span class="subtitle">(Showing 93 KOLs)</span>
+                <span class="subtitle">(Total...)</span>
                 <span class="toggle-sets">
                 <button ion-button round outline icon-right (click)="presentPopover($event)">Filter Sets <ion-icon name="arrow-dropdown"></ion-icon></button>
             </span>
             </div>
             <div class="w-25">
                 <div class="close" (click)="dismiss()">
-                    <div full>
-                        <ion-icon name="close"></ion-icon>
+                    <div full><ion-icon name="close"></ion-icon>
                     </div>
                 </div>
             </div>
         </header>
 
         <section class="filter-container">
-            <ion-content>
+        <ion-content>
             <div class="filter-section" id="specialty">
                 <h5>Specialty</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Primary Care</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Surgery</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Endocrinology</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Primary Care</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Surgery</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Endocrinology</li>
+                </ul>
+            </div>
+             <div class="filter-section" id="degree">
+                <h5>Journals Number</h5>
+                <ul>
+                    <li [class.active]="filter.selected" *ngFor="let filter of fs.filters | categoryFilter:'pubsCount'" (click)="filter.toggle()">
+                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon> {{filter.name}}
+                    </li>
                 </ul>
             </div>
             <div class="filter-section" id="degree">
                 <h5>Degree</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Ph.D.</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>M.D.</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Ed.D.</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>M.A.</li>
+                    <li [class.active]="filter.selected" *ngFor="let filter of fs.filters | categoryFilter:'degree'" (click)="filter.toggle()">
+                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon> {{filter.name}}
+                    </li>
                 </ul>
             </div>
             <div class="filter-section" id="associations">
                 <h5>Associations</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
             <div class="filter-section" id="tier-category">
                 <h5>Tier/Category</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
             <div class="filter-section" id="region">
                 <h5>Region</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
             <div class="filter-section" id="affiliations">
                 <h5>Affiliations</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
             <div class="filter-section" id="publications">
                 <h5>Publications</h5>
                 <ul class="cf">
                     <li *ngFor="let kol of kols">
-                        <span *ngIf="kol.Publications__pr">          
-                            <a class="clip" *ngFor="let pub of kol.Publications__pr.records">
-                                <ion-icon name="ios-checkmark-circle-outline"></ion-icon>
-                                {{pub.Journal_Name__c}}
-                            </a>
+                        <span *ngIf="kol.Publications__pr">
+                        <a class="clip" *ngFor="let pub of kol.Publications__pr.records">
+                            <ion-icon name="ios-checkmark-circle-outline"></ion-icon>
+                            {{pub.Journal_Name__c}}
+                        </a>
                         </span>
                     </li>
                 </ul>
@@ -115,64 +98,45 @@
             <div class="filter-section" id="clinical-trials">
                 <h5>Clinical Trials</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
             <div class="filter-section" id="congresses">
                 <h5>Congresses</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
             <div class="filter-section" id="peer-referrals">
                 <h5>Peer Referrals</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
             <div class="filter-section"  id="cme-presentations">
                 <h5>CME Presentations</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
-                    <li class="active">
-                        <ion-icon name="checkmark-circle"></ion-icon>Filter</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Filter</li>
                 </ul>
             </div>
             <div class="filter-section" id="age">
                 <h5>Age</h5>
                 <ul>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>30-40</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>40-50</li>
-                    <li>
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon>60-70+</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>30-40</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>40-50</li>
+                    <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>60-70+</li>
                 </ul>
             </div>
             </ion-content>
@@ -181,54 +145,18 @@
         <div class="filter-nav">
             <nav>
                 <ul>
-                    <li class="active">
-                        <a (click)="scrollTo('specialty')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Specialty</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('degree')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Degree</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('associations')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Associations</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('tier-category')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Tier/Category</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('region')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Region</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('affiliations')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Affiliations</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('publications')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Publications</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('clinical-trials')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Clinical Trials</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('congresses')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Congresses</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('peer-referrals')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Peer Referrals</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('cme-presentations')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> CME Presentations</a>
-                    </li>
-                    <li>
-                        <a (click)="scrollTo('age')">
-                            <ion-icon name="ios-arrow-back"></ion-icon> Age</a>
-                    </li>
+                    <li><a (click)="scrollTo('specialty')"><ion-icon name="ios-arrow-back"></ion-icon> Specialty</a></li>
+                    <li [class.active]="active"><a (click)="scrollTo('degree')"><ion-icon name="ios-arrow-back"></ion-icon> Degree</a></li>
+                    <li><a (click)="scrollTo('associations')"><ion-icon name="ios-arrow-back"></ion-icon> Associations</a></li>
+                    <li><a (click)="scrollTo('tier-category')"><ion-icon name="ios-arrow-back"></ion-icon> Tier/Category</a></li>
+                    <li><a (click)="scrollTo('region')"><ion-icon name="ios-arrow-back"></ion-icon> Region</a></li>
+                    <li><a (click)="scrollTo('affiliations')"><ion-icon name="ios-arrow-back"></ion-icon> Affiliations</a></li>
+                    <li><a (click)="scrollTo('publications')"><ion-icon name="ios-arrow-back"></ion-icon> Publications</a></li>
+                    <li><a (click)="scrollTo('clinical-trials')"><ion-icon name="ios-arrow-back"></ion-icon> Clinical Trials</a></li>
+                    <li><a (click)="scrollTo('congresses')"><ion-icon name="ios-arrow-back"></ion-icon> Congresses</a></li>
+                    <li><a (click)="scrollTo('peer-referrals')"><ion-icon name="ios-arrow-back"></ion-icon> Peer Referrals</a></li>
+                    <li><a (click)="scrollTo('cme-presentations')"><ion-icon name="ios-arrow-back"></ion-icon> CME Presentations</a></li>
+                    <li><a (click)="scrollTo('age')"><ion-icon name="ios-arrow-back"></ion-icon> Age</a></li>
                 </ul>
             </nav>
 

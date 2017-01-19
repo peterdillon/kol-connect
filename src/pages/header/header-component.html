@@ -5,30 +5,26 @@
                 <img src="../assets/custom/logo.png" />
             </div>
             <ul>
-                <li>
-                    <a href="#">
+                <li [ngClass]="['active']">
+                    <a (click)="toggleTop40()">
                         <ion-icon name="md-heart"></ion-icon>
                     </a>
                 </li>
                 <li><a href="#"><ion-icon name="share"></ion-icon></a></li>
-                <li [ngClass]="['active']">
-                    <a (click)="doesItemContainPublication()">
-                        <ion-icon name="ios-ribbon"></ion-icon> Top 40
-                    </a>
-                </li>
                 <li><a href="#">Rising Stars</a> </li>
             </ul>
-            <div class="actions">
-                <button (click)="goToKOLCompare()">Compare KOLs</button>
-                <button (click)="presentModal()">Filter KOLs</button>
+            <div class="actions"> <!-- [class.active]="isClassVisible" [class.active]="isClassVisible ? 'active' : 'inactive'"  -->
+                <button (click)="goToKOLCompare()" [ngClass]="{'active': false}"> Compare KOLs</button>
+                <button (click)="presentModal()"> Filter KOLs</button>
             </div>
         </div>
         <div class="filter-nav cf button-group">
-            <div class="filter-title"> Viewing: </div>
+            <div class="filter-title"> Filters: </div>
             <div class="filter-list" id="sorts">
-                <div class="filter-item"><a href="#" data-sort-by="name">Name</a></div>
-                <div class="filter-item"><a href="#" data-sort-by="rank">Rank</a></div>
-                <div class="filter-item"><a href="#" data-sort-by="number">ID</a></div>
+                <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
+                    {{filter.name}}
+                </div>
+                
                 <div class="filter-item">
                      <ion-list>
                         <ion-item>

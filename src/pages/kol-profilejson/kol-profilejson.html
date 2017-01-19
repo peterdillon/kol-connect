@@ -6,14 +6,13 @@
 
 <ion-content padding>
 
-
-<div *ngIf="kols" class="kol-container">
+<div class="kol-container">
 <div class="kol-card">
         <header>
           <ion-row>
               <ion-col width-80>
-                <h1> {{kols.FirstName}} {{kols.LastName}} </h1>
-                <img src="{{kols.imgPath}}" /> 
+                <h1> {{kol.FirstName}} {{kol.LastName}} </h1>
+                <img src="{{kol.imgPath}}" /> 
               </ion-col>
               <ion-col width-20>
                 <ion-icon name="md-star" item-left></ion-icon>
@@ -29,7 +28,7 @@
           <ion-row>
               <ion-col width-33 padding>
                 <h1>Contact Info</h1>
-                <p>Rank: <span class="rank">{{kols.rank}}</span></p>
+                <p>Rank: <span class="rank">{{kol.rank}}</span></p>
                 <p>Number: <span class="number">8</span></p>
                 <p>1430 Tulane Avenue</p>
                 <p>New Orleans, LA 70112</p>
@@ -39,8 +38,6 @@
 
                 <!-- notes -->
                 <h1>Notes</h1>
-                
-                <div class="alt-note">
                   <ion-row>
                       <ion-col>
                         <p class="public-note">A public note about a KOL.</p>
@@ -54,9 +51,7 @@
                         <small>January 01, 2016</small>
                       </ion-col>
                   </ion-row>
-                </div>
-
-                <div class="alt-note">
+                <hr>
                   <ion-row>
                       <ion-col>
                         <p class="public-note">A public note about a KOL.</p>
@@ -70,24 +65,20 @@
                         <small>December 21, 2016</small>
                       </ion-col>
                   </ion-row>
-                </div>
-
-                <div class="alt-note">
+                <hr>
                    <ion-row>
                     <ion-col color="danger">
                       <p class="private-note">A private note about a KOL.</p>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col width-50>
+                    <ion-col width-50 class="private-note">
                       <small>Jane Doe</small>
                     </ion-col>
-                    <ion-col width-50  class="tx-rt">
+                    <ion-col width-50  class="tx-rt private-note">
                       <small>October 1, 2016</small>
                     </ion-col>
                   </ion-row>
-                </div>
-                
                 <br>
                 <ion-input placeholder="Add note..."></ion-input>
                 <ion-row radio-group>
@@ -121,9 +112,18 @@
                 <h1>Bio</h1>
                 <ion-row>
                   <ion-col>
-                    <p>Duis faucibus felis molestie metus bibendum, cursus egestas lorem scelerisque. Sed et consectetur ante. Curabitur auctor magna ligula, in scelerisque lacus pharetra quis. Praesent imperdiet augue id purus blandit, eu bibendum turpis venenatis. Nulla tristique consequat elit ac facilisis. Nam ultricies neque ut orci pharetra aliquam. Proin vitae dignissim massa, a laoreet erat.</p>
+                    <p>Duis faucibus felis molestie metus bibendum, cursus egestas lorem scelerisque. Sed et consectetur ante. Curabitur auctor magna ligula, in scelerisque lacus pharetra quis.</p>
                   </ion-col>
                 </ion-row>
+
+                <span class="journal-section" *ngIf="kol.Publications__pr">
+                  <h1>Journals ({{kol.Publications__pr.totalSize}}) </h1>
+                  <ion-row>
+                    <ion-col>
+                      <p class="journal" title="{{pub.Journal_Name__c}}" *ngFor="let pub of kol.Publications__pr.records">{{pub.Journal_Name__c}}</p>
+                    </ion-col>
+                  </ion-row>
+                </span>
 
                 <h1>Recent Accomplishments</h1>
                 <ion-row>
@@ -136,7 +136,7 @@
                 </ion-row>
                 <ion-row>
                   <ion-col>
-                    <p>Duis faucibus felis molestie metus bibendum, cursus egestas lorem scelerisque. Sed et consectetur ante. Curabitur auctor magna ligula, in scelerisque lacus pharetra quis. Praesent imperdiet augue id purus blandit, eu bibendum turpis venenatis. Nulla tristique consequat elit ac facilisis. Nam ultricies neque ut orci pharetra aliquam. Proin vitae dignissim massa, a laoreet erat.</p>
+                    <p>Duis faucibus felis molestie metus bibendum, cursus egestas lorem scelerisque. Sed et consectetur ante.</p>
                   </ion-col>
                 </ion-row>
                 <hr>
@@ -150,7 +150,7 @@
                 </ion-row>
                 <ion-row>
                   <ion-col>
-                    <p>Duis faucibus felis molestie metus bibendum, cursus egestas lorem scelerisque. Sed et consectetur ante. Curabitur auctor magna ligula, in scelerisque lacus pharetra quis. Praesent imperdiet augue id purus blandit, eu bibendum turpis venenatis. Nulla tristique consequat elit ac facilisis. Nam ultricies neque ut orci pharetra aliquam. Proin vitae dignissim massa, a laoreet erat.</p>
+                    <p>Duis faucibus felis molestie metus bibendum, cursus egestas lorem scelerisque. Sed et consectetur ante.</p>
                   </ion-col>
                 </ion-row>
 

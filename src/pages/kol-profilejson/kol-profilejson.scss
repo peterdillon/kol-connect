@@ -21,20 +21,9 @@ ion-input {
 ion-label {
   font-size: 1.4rem;
 }
-.alt-note {
-  //&:nth-last-of-type(even) {
-    //background: #f2f2f2;
-    background: linear-gradient(0deg, #f2f2f2 0%, #fff 80%);
-    border-bottom: 1px solid #ccc;
-  //}
-}
 .private-note {
   color: $alert;
 }
-.public-note {
-  color: $positive;
-}
-
 .kol-container {
    display: flex;
    flex-flow: row wrap;
@@ -87,9 +76,21 @@ ion-label {
         h6 {
           font-size: 1.5rem;
         }
+        span.journal-section {
+          display: block;
+          padding-top: 2rem;
+        }
         p {
           margin: 0;
           line-height: 2rem;
+
+          &.journal {
+            padding: .2rem;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         }
         .plan-row {
           border-top: 1px solid #e7eaec;

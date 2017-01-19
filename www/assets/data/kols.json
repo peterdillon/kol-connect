@@ -3,10 +3,14 @@
         "Id": "001j000000MVrIKAA1",
         "FirstName": "John",
         "LastName": "Anderson",
+        "Degree": "PhD",
+        "pubsCount": 2,
         "PersonContactId": "003j000000HysvSAAR",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-1.png",
         "Publications__pr": {
-            "totalSize": 2,
-            "done": true,
+            "pubsCount": 1,
+            "done": false,
             "records": [
                 {
                     "Contact__c": "003j000000HysvSAAR",
@@ -22,9 +26,13 @@
         "Id": "001j000000MVrIMAA1",
         "FirstName": "Jonathan",
         "LastName": "Bernstein",
+        "Degree": "PhD",
+        "pubsCount": 10,
         "PersonContactId": "003j000000HysvUAAR",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-2.png",
         "Publications__pr": {
-            "totalSize": 10,
+            "pubsCount": 10,
             "done": true,
             "records": [
                 {
@@ -104,9 +112,13 @@
         "Id": "001j000000MVrIUAA1",
         "FirstName": "Joshua",
         "LastName": "Jacobs",
+        "Degree": "PhD",
+        "pubsCount": 1,
         "PersonContactId": "003j000000HysvcAAB",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-3.png",
         "Publications__pr": {
-            "totalSize": 1,
+            "pubsCount": 1,
             "done": true,
             "records": [
                 {
@@ -123,9 +135,13 @@
         "Id": "001j000000MVrIaAAL",
         "FirstName": "William",
         "LastName": "Lumry",
+        "Degree": "PhD",
+        "pubsCount": 10,
         "PersonContactId": "003j000000HysviAAB",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-4.png",
         "Publications__pr": {
-            "totalSize": 10,
+            "pubsCount": 10,
             "done": true,
             "records": [
                 {
@@ -205,9 +221,13 @@
         "Id": "001j000000iapRnAAI",
         "FirstName": "Allen",
         "LastName": "Kaplan",
+        "Degree": "Ed.D.",
+        "pubsCount": 10,
         "PersonContactId": "003j000000rPAlTAAW",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-5.png",
         "Publications__pr": {
-            "totalSize": 10,
+            "pubsCount": 10,
             "done": true,
             "records": [
                 {
@@ -288,15 +308,22 @@
         "Id": "001j000000MVrIWAA1",
         "FirstName": "Douglas",
         "LastName": "Jones",
+        "pubsCount": 0,
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-2.png",
+        "Degree": "Ed.D.",
         "PersonContactId": "003j000000HysveAAB"
     },
     {
         "Id": "001j000000MVrIhAAL",
         "FirstName": "Marc",
         "LastName": "Riedl",
+        "pubsCount": 10,
         "PersonContactId": "003j000000HysvpAAB",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-6.png",
         "Publications__pr": {
-            "totalSize": 10,
+            "pubsCount": 10,
             "done": true,
             "records": [
                 {
@@ -376,15 +403,22 @@
         "Id": "001j000000j0nFrAAI",
         "FirstName": "Karen",
         "LastName": "Blatman",
+        "pubsCount": 0,
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-2.png",
+        "Degree": "M.A.",
         "PersonContactId": "003j000000rtwbqAAA"
     },
     {
         "Id": "001j000000MVrIPAA1",
         "FirstName": "Timothy",
         "LastName": "Craig",
+        "pubsCount": 10,
         "PersonContactId": "003j000000HysvXAAR",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-1.png",
         "Publications__pr": {
-            "totalSize": 10,
+            "pubsCount": 10,
             "done": true,
             "records": [
                 {
@@ -464,9 +498,13 @@
         "Id": "001j000000NhZVuAAN",
         "FirstName": "Huamin",
         "LastName": "Li",
+        "Degree": "MD",
+        "pubsCount": 10,
         "PersonContactId": "003j000000IzhgIAAR",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-2.png",
         "Publications__pr": {
-            "totalSize": 10,
+            "pubsCount": 10,
             "done": true,
             "records": [
                 {
@@ -546,9 +584,13 @@
         "Id": "001j000000MVrImAAL",
         "FirstName": "Daniel",
         "LastName": "Soteres",
+        "Degree": "M.D.",
+        "pubsCount": 2,
         "PersonContactId": "003j000000HysvuAAB",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-3.png",
         "Publications__pr": {
-            "totalSize": 2,
+            "pubsCount": 2,
             "done": true,
             "records": [
                 {
@@ -572,15 +614,23 @@
         "Id": "001j000000j0nOYAAY",
         "FirstName": "Isaac",
         "LastName": "Melamed",
+        "pubsCount": 0,
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-2.png",
+        "Degree": "M.D.",
         "PersonContactId": "003j000000rtwkTAAQ"
     },
     {
         "Id": "001j000000MVrIpAAL",
         "FirstName": "Katharine",
         "LastName": "Woessner",
+        "Degree": "PhD",
+        "pubsCount": 2,
         "PersonContactId": "003j000000HysvxAAB",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-4.png",
         "Publications__pr": {
-            "totalSize": 2,
+            "pubsCount": 2,
             "done": true,
             "records": [
                 {
@@ -604,9 +654,13 @@
         "Id": "001j000000ZtGXNAA3",
         "FirstName": "Aleena",
         "LastName": "Banerji",
+        "Degree": "M.A.",
+        "pubsCount": 10,
         "PersonContactId": "003j000000bcuksAAA",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-5.png",
         "Publications__pr": {
-            "totalSize": 10,
+            "pubsCount": 10,
             "done": true,
             "records": [
                 {
@@ -686,9 +740,13 @@
         "Id": "001j000000MVrITAA1",
         "FirstName": "Richard",
         "LastName": "Gower",
+        "Degree": "M.A.",
+        "pubsCount": 7,
         "PersonContactId": "003j000000HysvbAAB",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-6.png",
         "Publications__pr": {
-            "totalSize": 7,
+            "pubsCount": 7,
             "done": true,
             "records": [
                 {
@@ -747,9 +805,13 @@
         "Id": "001j000000MVrIcAAL",
         "FirstName": "Michael",
         "LastName": "Manning",
+        "Degree": "PhD",
+        "pubsCount": 4,
         "PersonContactId": "003j000000HysvkAAB",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-1.png",
         "Publications__pr": {
-            "totalSize": 4,
+            "pubsCount": 4,
             "done": true,
             "records": [
                 {
@@ -787,9 +849,13 @@
         "Id": "001j000000MVrIQAA1",
         "FirstName": "Mark",
         "LastName": "Davis-Lorton",
+        "Degree": "PhD",
+        "pubsCount": 2,
         "PersonContactId": "003j000000HysvYAAR",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-2.png",
         "Publications__pr": {
-            "totalSize": 2,
+            "pubsCount": 2,
             "done": true,
             "records": [
                 {
@@ -813,15 +879,22 @@
         "Id": "001j000000MVrIXAA1",
         "FirstName": "Jay",
         "LastName": "Kashkin",
+        "pubsCount": 0,
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-2.png",
+        "Degree": "M.D.",
         "PersonContactId": "003j000000HysvfAAB"
     },
     {
         "Id": "001j000000iapaBAAQ",
         "FirstName": "Richard",
         "LastName": "Lockey",
+        "pubsCount": 8,
         "PersonContactId": "003j000000rPAtrAAG",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-3.png",
         "Publications__pr": {
-            "totalSize": 8,
+            "pubsCount": 8,
             "done": true,
             "records": [
                 {
@@ -890,9 +963,13 @@
         "Id": "001j000000ZtGnCAAV",
         "FirstName": "Bruce",
         "LastName": "Zuraw",
+        "Degree": "M.D.",
+        "pubsCount": 10,
         "PersonContactId": "003j000000bcv5bAAA",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-4.png",
         "Publications__pr": {
-            "totalSize": 10,
+            "pubsCount": 10,
             "done": true,
             "records": [
                 {
@@ -972,27 +1049,43 @@
         "Id": "001j000000MVrINAA1",
         "FirstName": "Autumn",
         "LastName": "Burnette",
-        "PersonContactId": "003j000000HysvVAAR"
+        "Degree": "M.D.",
+        "pubsCount": 0,
+        "PersonContactId": "003j000000HysvVAAR",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-3.png"
     },
     {
         "Id": "001j000000j0n94AAA",
         "FirstName": "John",
         "LastName": "Cohn",
-        "PersonContactId": "003j000000rtwVnAAI"
+        "Degree": "M.D.",
+        "pubsCount": 0,
+        "PersonContactId": "003j000000rtwVnAAI",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-4.png"
     },
     {
         "Id": "001j000000j0nBAAAY",
         "FirstName": "Anna",
         "LastName": "Feldweg",
-        "PersonContactId": "003j000000rtwY8AAI"
+        "Degree": "M.D.",
+        "pubsCount": 0,
+        "PersonContactId": "003j000000rtwY8AAI",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-5.png"
     },
     {
         "Id": "001j000000MVrILAA1",
         "FirstName": "James",
         "LastName": "Baker",
+        "Degree": "M.D.",
+        "pubsCount": 3,
         "PersonContactId": "003j000000HysvTAAR",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-5.png",
         "Publications__pr": {
-            "totalSize": 3,
+            "pubsCount": 3,
             "done": true,
             "records": [
                 {
@@ -1023,9 +1116,13 @@
         "Id": "001j000000ZtGVvAAN",
         "FirstName": "Paula",
         "LastName": "Busse",
+        "Degree": "M.D.",
+        "pubsCount": 8,
         "PersonContactId": "003j000000bcujBAAQ",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-6.png",
         "Publications__pr": {
-            "totalSize": 8,
+            "pubsCount": 8,
             "done": true,
             "records": [
                 {
@@ -1091,9 +1188,13 @@
         "Id": "001j000000MVrIVAA1",
         "FirstName": "Douglas",
         "LastName": "Johnston",
+        "Degree": "M.D.",
+        "pubsCount": 4,
         "PersonContactId": "003j000000HysvdAAB",
+        "top40": true,
+        "imgPath": "../assets/custom/doctor-1.png",
         "Publications__pr": {
-            "totalSize": 4,
+            "pubsCount": 4,
             "done": true,
             "records": [
                 {
@@ -1131,9 +1232,12 @@
         "Id": "001j000000MVrInAAL",
         "FirstName": "Raffi",
         "LastName": "Tachdjian",
+        "pubsCount": 6,
         "PersonContactId": "003j000000HysvvAAB",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-2.png",
         "Publications__pr": {
-            "totalSize": 6,
+            "pubsCount": 6,
             "done": true,
             "records": [
                 {
@@ -1185,9 +1289,13 @@
         "Id": "001j000000MVrIrAAL",
         "FirstName": "Rafael",
         "LastName": "Zaragoza Urdaz",
+        "Degree": "PhD",
+        "pubsCount": 2,
         "PersonContactId": "003j000000HysvzAAB",
+        "top40": false,
+        "imgPath": "../assets/custom/doctor-3.png",
         "Publications__pr": {
-            "totalSize": 2,
+            "pubsCount": 2,
             "done": true,
             "records": [
                 {
