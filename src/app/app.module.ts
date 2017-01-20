@@ -2,11 +2,12 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 //import { CardList } from '../pages/cardlist/cardlist';
-import { Barchart } from '../pages/barchart/barchart';
+import { Barchart } from '../pages/chart-bar/barchart';
+import { Scatterplot } from '../pages/chart-scatterplot/scatterplot';
+import { Relationship } from '../pages/chart-relationship/relationship';
 import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
 import { KOLsFilterPipe } from '../pages/cardlistjson/filter-pipe';
 import { CategoryFilterPipe } from '../pages/filter-component/category-pipe';
-import { Scatterplot } from '../pages/scatterplot/scatterplot';
 import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HeaderComponent } from '../pages/header/header-component';
@@ -20,12 +21,12 @@ import { KOLsService } from '../app/kols.service';
 import { FilterService } from '../app/filter.service';
 
 
-
 @NgModule({
   declarations: [
     MyApp,
     //CardList,
     Barchart,
+    Relationship,
     CardlistJSON,
     KOLsFilterPipe,
     Scatterplot,
@@ -54,6 +55,7 @@ import { FilterService } from '../app/filter.service';
     MyApp,
     // CardList,
     Barchart,
+    Relationship,
     CardlistJSON,
     Scatterplot,
     HeaderComponent,

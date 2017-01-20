@@ -32,4 +32,7 @@ export class KOLsService {
             { status: "Allergy Research, NY",imgPath: "../assets/custom/doctor-3.png", name: "Dr. Kurt Schmidt", key: 'key3', values: [{ x: 10, y: 10 }, { x: 20, y: 20 }, { x: 30, y: 30 }, { x: 40, y: 40 }, { x: 50, y: 50 }] }
         ];
     }
+
+
+
 }

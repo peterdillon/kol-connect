@@ -1,5 +1,4 @@
 <header-component></header-component>
-
 <ion-content>
     <div class="card-container grid">  <!--| kolsFilter-->
         <div *ngFor="let kol of kols | kolsFilter; let i = index" [@bounce]="bounceState" >
@@ -19,12 +18,12 @@
                 </header>
                 <section>
                     <h1 class="name">{{kol.FirstName}} {{kol.LastName}} {{kol.Degree}}</h1>
-                    <div *ngIf="kol.Publications__pr">
+                    <span *ngIf="kol.Publications__pr">
                         <b>Journals: ({{kol.Publications__pr.totalSize}}) </b>
                         <p *ngFor="let pub of kol.Publications__pr.records">
                             {{pub.Journal_Name__c}}
                         </p>
-                    </div>
+                    </span>
                 </section>
                 <footer class="cf">
                     <div class="rating">

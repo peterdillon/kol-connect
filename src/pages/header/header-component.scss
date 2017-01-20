@@ -81,6 +81,8 @@ header-component {
 
     // Global filter navigation styules
     .filter-nav {
+        font-family: 'Varela Round', sans-serif;
+        font-size: 1.5rem;
         color: #fff;
         background-color: #909090;
         padding: 1rem;
@@ -88,8 +90,7 @@ header-component {
         float: left;
 
         .filter-title {
-            width: 8rem;
-            font-family: 'Varela Round', sans-serif;
+            width: 7rem;
             float: left;
             font-weight: bold;
             text-transform: uppercase;
@@ -139,19 +140,14 @@ header-component {
         .filter-item {
             flex-wrap: wrap;
             border-right: 1px solid #ccc;
-            
-            text-align: center;
-            &:last-of-type { 
-              border-right:0;
-              width: 100%;
+            color: #fff;
+            padding: 0 1rem;
+            &:last-of-type {
+                flex-grow: 1;
+                border-right:0;
             }
-            a {
-                font-family: 'Varela Round', sans-serif;
-                color: #fff;
-                text-decoration: none;
-                font-size: 1.5rem; 
-                padding: .5rem;
-                margin: 0 .5rem;
+            &:nth-last-of-type(2) { 
+              border-right:0;
             }
         }
         .is-checked {
