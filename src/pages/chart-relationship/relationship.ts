@@ -25,6 +25,7 @@ export class Relationship implements OnInit {
   ngOnInit() {
     console.log('init');
     var color = d3.scale.category20();
+    
     this.options = {
       
       chart: {
@@ -66,6 +67,14 @@ export class Relationship implements OnInit {
             enabled: true,
             hideDelay: 1000
           },
+      legend: {
+                    margin: {
+                        top: 5,
+                        right: 35,
+                        bottom: 5,
+                        left: 0
+                    }
+                },
           
           nodeExtras: function(node) {
               node && node
@@ -78,6 +87,7 @@ export class Relationship implements OnInit {
           }
       }
     }
+   
     // tooltip.headerFormatter(function(d) {return "Node";});
     // this.data = this.kolService.getKOLsForScatter();
 

@@ -2,7 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 //import { CardList } from '../pages/cardlist/cardlist';
-import { Barchart } from '../pages/chart-bar/barchart';
+// import { Barchart } from '../pages/chart-bar/barchart';
 import { Scatterplot } from '../pages/chart-scatterplot/scatterplot';
 import { Relationship } from '../pages/chart-relationship/relationship';
 import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
@@ -25,7 +25,7 @@ import { FilterService } from '../app/filter.service';
   declarations: [
     MyApp,
     //CardList,
-    Barchart,
+    // Barchart,
     Relationship,
     CardlistJSON,
     KOLsFilterPipe,
@@ -46,7 +46,7 @@ import { FilterService } from '../app/filter.service';
       links: [
         { component: CardlistJSON, name: 'KOLs', segment: 'home' },
         { component: Scatterplot, name: 'Scatterplot', segment: 'scatterplot' },
-        { component: Barchart, name: 'Barchart', segment: 'barchart' }
+       // { component: Barchart, name: 'Barchart', segment: 'barchart' }
       ]
     })
   ],
@@ -54,7 +54,7 @@ import { FilterService } from '../app/filter.service';
   entryComponents: [
     MyApp,
     // CardList,
-    Barchart,
+   // Barchart,
     Relationship,
     CardlistJSON,
     Scatterplot,

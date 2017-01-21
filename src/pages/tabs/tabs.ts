@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CardlistJSON } from '../cardlistjson/cardlistjson';
-import { Barchart } from '../chart-bar/barchart';
+// import { Barchart } from '../chart-bar/barchart';
 import { Scatterplot } from '../chart-scatterplot/scatterplot';
 import { Relationship } from '../chart-relationship/relationship';
 
@@ -10,9 +10,9 @@ import { Relationship } from '../chart-relationship/relationship';
 })
 export class TabsPage {
   tab1Root: any = CardlistJSON;
-  tab2Root: any = Barchart;
-  tab3Root: any = Scatterplot;
-  tab4Root: any = Relationship;
+  // tab2Root: any = Barchart;
+  tab2Root: any = Scatterplot;
+  tab3Root: any = Relationship;
   constructor() {
 
   }

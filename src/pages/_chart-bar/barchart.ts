@@ -52,8 +52,7 @@ export class Barchart implements OnInit {
         },
          tooltip: {
             contentGenerator: function (data) {
-              // var series = data[0].values[0];
-              // if (series.value === null) return;
+              
                 return "<div class='kol-card'><header><img src='" + data.name + "' /></span></header><section><h1 class='name'>" + data.name + "</h1><p>" + data.region + "</p><a href='#'>View KOL</a></section></div>";
             }
           },
