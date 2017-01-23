@@ -6,7 +6,7 @@ import { KOLProfileCompareThree } from '../kol-profile-compare-three/kol-profile
 
 @Component({
   selector: 'page-cardlist',
-  templateUrl: 'cardlist.html',
+  templateUrl: './cardlist.html',
 })
 export class CardList {
 

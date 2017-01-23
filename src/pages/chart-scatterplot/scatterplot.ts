@@ -4,7 +4,7 @@ import { KOLsService } from '../../app/kols.service'
 
 
 @Component({
-  templateUrl: 'scatterplot.html'
+  templateUrl: './scatterplot.html'
 })
 export class Main {
   constructor(public navCtrl: NavController) {
@@ -14,7 +14,7 @@ export class Main {
 declare let d3: any;
 
 @Component({
-  templateUrl: 'scatterplot.html',
+  templateUrl: './scatterplot.html',
   selector: 'scatterplot'
 })
 

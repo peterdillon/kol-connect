@@ -8,7 +8,7 @@ import { KOLsFilterPipe } from './filter-pipe';
 
 @Component({
   selector: 'header-component',
-  templateUrl: 'header-component.html'
+  templateUrl: './header-component.html'
 })
 
 export class HeaderComponent {

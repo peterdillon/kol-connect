@@ -12,7 +12,7 @@ import { HeaderComponent } from '../header/header-component';
 
 @Component({
   selector: 'page-cardlistjson',
-  templateUrl: 'cardlistjson.html',
+  templateUrl: './cardlistjson.html',
   providers: [HeaderComponent],
   animations: [
     trigger('flip', [
@@ -47,9 +47,9 @@ import { HeaderComponent } from '../header/header-component';
       })),
       transition('* => bouncing', [
         animate('300ms ease-in', keyframes([
-          style({transform: 'translate3d(0,0,0)', offset: 0}),
-          style({transform: 'translate3d(0,-10px,0)', offset: 0.5}),
-          style({transform: 'translate3d(0,0,0)', offset: 1}) 
+          style({ transform: 'translate3d(0,0,0)', offset: 0 }),
+          style({ transform: 'translate3d(0,-10px,0)', offset: 0.5 }),
+          style({ transform: 'translate3d(0,0,0)', offset: 1 })
         ]))
       ])
     ])
@@ -70,26 +70,26 @@ export class CardlistJSON {
   bounceState: String = 'noBounce';
 
   constructor(
-    public navCtrl: NavController, 
-    public params: NavParams, 
-    private loadingController: LoadingController, 
-    private http: Http, 
+    public navCtrl: NavController,
+    public params: NavParams,
+    private loadingController: LoadingController,
+    private http: Http,
     private kolService: KOLsService,
-    public hc: HeaderComponent ) { }
+    public hc: HeaderComponent) { }
 
-//------------------------------
+  //------------------------------
   counter: number = 0;
   selectedKOLs(i, counter) {
-      this.selectedStatus[i] = !this.selectedStatus[i];
-      
-      if (this.counter > 0 ) {
-        // alert("i: " + this.counter);
-        this.hc.applyClass();
-      }
-      this.counter++;
-      return this.counter;
+    this.selectedStatus[i] = !this.selectedStatus[i];
+
+    if (this.counter > 0) {
+      // alert("i: " + this.counter);
+      this.hc.applyClass();
+    }
+    this.counter++;
+    return this.counter;
   }
-//------------------------------
+  //------------------------------
 
 
 
@@ -128,23 +128,23 @@ export class CardlistJSON {
   }
   // -----------------------
 
-   // Testing Animations
-  toggleFlip(){
+  // Testing Animations
+  toggleFlip() {
     this.flipState = (this.flipState == 'notFlipped') ? 'flipped' : 'notFlipped';
   }
-  toggleFlyInOut(){
+  toggleFlyInOut() {
     this.flyInOutState = 'out';
     setInterval(() => {
       this.flyInOutState = 'in';
     }, 2000);
   }
   toggleFade() {
-    this.fadeState = (this.fadeState == 'visible') ? 'invisible' : 'visible';    
+    this.fadeState = (this.fadeState == 'visible') ? 'invisible' : 'visible';
   }
-  toggleBounce(){
-    this.bounceState = (this.bounceState == 'noBounce') ? 'bouncing' : 'noBounce';   
+  toggleBounce() {
+    this.bounceState = (this.bounceState == 'noBounce') ? 'bouncing' : 'noBounce';
   }
- //------------------------------
+  //------------------------------
 
 
 

@@ -6,7 +6,7 @@ import { KOLsService } from '../../app/kols.service';
 
 @Component({
   selector: 'filter-component',
-  templateUrl: 'filter-component.html'
+  templateUrl: './filter-component.html'
 })
 export class FilterComponent {
 
@@ -67,7 +67,7 @@ export class FilterComponent {
 
 @Component({
   selector: 'saved-filter',
-  templateUrl: 'saved-filters.html'
+  templateUrl: './saved-filters.html'
 })
 export class SaveFilterSets {
   constructor(public viewCtrl: ViewController) { }

@@ -6,7 +6,7 @@ import { Relationship } from '../chart-relationship/relationship';
 
 
 @Component({
-  templateUrl: 'tabs.html'
+  templateUrl: './tabs.html'
 })
 export class TabsPage {
   tab1Root: any = CardlistJSON;
