@@ -10,10 +10,15 @@
                         <ion-icon name="md-heart"></ion-icon>
                     </a>
                 </li>
-                <li><a href="#"><ion-icon name="share"></ion-icon></a></li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="share"></ion-icon>
+                    </a>
+                </li>
                 <li><a href="#">Rising Stars</a> </li>
             </ul>
-            <div class="actions"> <!-- [class.active]="isClassVisible" [class.active]="isClassVisible ? 'active' : 'inactive'"  -->
+            <div class="actions">
+                <!-- [class.active]="isClassVisible" [class.active]="isClassVisible ? 'active' : 'inactive'"  -->
                 <button (click)="goToKOLCompare()" [ngClass]="{'active': false}"> Compare KOLs</button>
                 <button (click)="presentModal()"> Filter KOLs</button>
             </div>
@@ -24,18 +29,18 @@
                 <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
                     {{filter.name}}
                 </div>
-                
+
                 <div class="filter-item">
-                     <ion-list>
+                    <ion-list>
                         <ion-item>
                             <ion-label>Sorted by:</ion-label>
                             <ion-select [(ngModel)]="sort-values">
-                            <ion-option value="1">Value 1</ion-option>
-                            <ion-option value="2">Value 2</ion-option>
-                            <ion-option value="3">Value 3</ion-option>
+                                <ion-option value="1">Value 1</ion-option>
+                                <ion-option value="2">Value 2</ion-option>
+                                <ion-option value="3">Value 3</ion-option>
                             </ion-select>
                         </ion-item>
-                        </ion-list>
+                    </ion-list>
                 </div>
             </div>
         </div>

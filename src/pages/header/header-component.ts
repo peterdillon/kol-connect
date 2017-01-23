@@ -11,10 +11,8 @@ import { KOLsFilterPipe } from './filter-pipe';
   templateUrl: 'header-component.html'
 })
 
-
-
 export class HeaderComponent {
-  
+
   constructor(
     public modalCtrl: ModalController,
     public navCtrl: NavController,
@@ -37,20 +35,6 @@ export class HeaderComponent {
     let modal = this.modalCtrl.create(FilterComponent);
     modal.present();
   }
-
-  public toggleTop40() {
-    // this.fs.filter.top40 = !this.fs.filter.top40;
-  }
-
-  removeDegreeFilter(degree) {
-    this.fs.toggleDegreeFilter(degree);
-  }
-
-  // doesItemContainPublication() {
-  //   console.log("in top 40");
-  //  // this.fs.top40 = !this.fs.top40;
-  // }
-
 
 }
 

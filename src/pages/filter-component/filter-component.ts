@@ -15,14 +15,14 @@ export class FilterComponent {
   @ViewChild(Content) content: Content;
 
   constructor(
-    public modalCtrl: ModalController, 
+    public modalCtrl: ModalController,
     public navCtrl: NavController,
     public viewCtrl: ViewController,
-    public params: NavParams, 
+    public params: NavParams,
     public popoverCtrl: PopoverController,
-    private loadingController: LoadingController, 
+    private loadingController: LoadingController,
     private kolService: KOLsService,
-    public fs: FilterService ) { }
+    public fs: FilterService) { }
 
   ionViewDidLoad() {
     console.log('FilterOverlayPage ViewDidLoad');
@@ -41,16 +41,12 @@ export class FilterComponent {
     });
   }
 
-  setJournalNumber(value) {
-    this.fs.setJournalNumber(value);
-  }
-
   // Scroll to sections
   scrollTo(element) {
     let yOffset = document.getElementById(element).offsetTop;
     this.content.scrollTo(0, yOffset, 2000);
   }
-  
+
   // Dismiss filter overlay
   dismiss() {
     this.viewCtrl.dismiss();
@@ -74,16 +70,16 @@ export class FilterComponent {
   templateUrl: 'saved-filters.html'
 })
 export class SaveFilterSets {
-  constructor(public viewCtrl: ViewController ) { }
+  constructor(public viewCtrl: ViewController) { }
 
   rows = [];
   filterName = "";
   addRow() {
-    this.rows.push({filterName: this.filterName});
+    this.rows.push({ filterName: this.filterName });
     this.filterName = '';
   }
   removeRow(index) {
-   this.rows.splice(index, 1);
+    this.rows.splice(index, 1);
   }
-  
+
 } 
