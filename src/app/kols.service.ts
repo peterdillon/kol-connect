@@ -25,7 +25,7 @@ export class KOLsService {
                 "pubsCount": 2,
                 "PersonContactId": "003j000000HysvSAAR",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-1.png",
+                "imgPath": "./assets/custom/doctor-1.png",
                 "Publications__pr": {
                     "pubsCount": 1,
                     "done": false,
@@ -48,7 +48,7 @@ export class KOLsService {
                 "pubsCount": 10,
                 "PersonContactId": "003j000000HysvUAAR",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-2.png",
+                "imgPath": "./assets/custom/doctor-2.png",
                 "Publications__pr": {
                     "pubsCount": 10,
                     "done": true,
@@ -134,7 +134,7 @@ export class KOLsService {
                 "pubsCount": 1,
                 "PersonContactId": "003j000000HysvcAAB",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-3.png",
+                "imgPath": "./assets/custom/doctor-3.png",
                 "Publications__pr": {
                     "pubsCount": 1,
                     "done": true,
@@ -157,7 +157,7 @@ export class KOLsService {
                 "pubsCount": 10,
                 "PersonContactId": "003j000000HysviAAB",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-4.png",
+                "imgPath": "./assets/custom/doctor-4.png",
                 "Publications__pr": {
                     "pubsCount": 10,
                     "done": true,
@@ -243,7 +243,7 @@ export class KOLsService {
                 "pubsCount": 10,
                 "PersonContactId": "003j000000rPAlTAAW",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-5.png",
+                "imgPath": "./assets/custom/doctor-5.png",
                 "Publications__pr": {
                     "pubsCount": 10,
                     "done": true,
@@ -328,7 +328,7 @@ export class KOLsService {
                 "LastName": "Jones",
                 "pubsCount": 0,
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-2.png",
+                "imgPath": "./assets/custom/doctor-2.png",
                 "Degree": "Ed.D.",
                 "PersonContactId": "003j000000HysveAAB"
             },
@@ -339,7 +339,7 @@ export class KOLsService {
                 "pubsCount": 10,
                 "PersonContactId": "003j000000HysvpAAB",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-6.png",
+                "imgPath": "./assets/custom/doctor-6.png",
                 "Publications__pr": {
                     "pubsCount": 10,
                     "done": true,
@@ -423,7 +423,7 @@ export class KOLsService {
                 "LastName": "Blatman",
                 "pubsCount": 0,
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-2.png",
+                "imgPath": "./assets/custom/doctor-2.png",
                 "Degree": "M.A.",
                 "PersonContactId": "003j000000rtwbqAAA"
             },
@@ -434,7 +434,7 @@ export class KOLsService {
                 "pubsCount": 10,
                 "PersonContactId": "003j000000HysvXAAR",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-1.png",
+                "imgPath": "./assets/custom/doctor-1.png",
                 "Publications__pr": {
                     "pubsCount": 10,
                     "done": true,
@@ -520,7 +520,7 @@ export class KOLsService {
                 "pubsCount": 10,
                 "PersonContactId": "003j000000IzhgIAAR",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-2.png",
+                "imgPath": "./assets/custom/doctor-2.png",
                 "Publications__pr": {
                     "pubsCount": 10,
                     "done": true,
@@ -606,7 +606,7 @@ export class KOLsService {
                 "pubsCount": 2,
                 "PersonContactId": "003j000000HysvuAAB",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-3.png",
+                "imgPath": "./assets/custom/doctor-3.png",
                 "Publications__pr": {
                     "pubsCount": 2,
                     "done": true,
@@ -634,7 +634,7 @@ export class KOLsService {
                 "LastName": "Melamed",
                 "pubsCount": 0,
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-2.png",
+                "imgPath": "./assets/custom/doctor-2.png",
                 "Degree": "M.D.",
                 "PersonContactId": "003j000000rtwkTAAQ"
             },
@@ -646,7 +646,7 @@ export class KOLsService {
                 "pubsCount": 2,
                 "PersonContactId": "003j000000HysvxAAB",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-4.png",
+                "imgPath": "./assets/custom/doctor-4.png",
                 "Publications__pr": {
                     "pubsCount": 2,
                     "done": true,
@@ -676,7 +676,7 @@ export class KOLsService {
                 "pubsCount": 10,
                 "PersonContactId": "003j000000bcuksAAA",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-5.png",
+                "imgPath": "./assets/custom/doctor-5.png",
                 "Publications__pr": {
                     "pubsCount": 10,
                     "done": true,
@@ -762,7 +762,7 @@ export class KOLsService {
                 "pubsCount": 7,
                 "PersonContactId": "003j000000HysvbAAB",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-6.png",
+                "imgPath": "./assets/custom/doctor-6.png",
                 "Publications__pr": {
                     "pubsCount": 7,
                     "done": true,
@@ -827,7 +827,7 @@ export class KOLsService {
                 "pubsCount": 4,
                 "PersonContactId": "003j000000HysvkAAB",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-1.png",
+                "imgPath": "./assets/custom/doctor-1.png",
                 "Publications__pr": {
                     "pubsCount": 4,
                     "done": true,
@@ -871,7 +871,7 @@ export class KOLsService {
                 "pubsCount": 2,
                 "PersonContactId": "003j000000HysvYAAR",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-2.png",
+                "imgPath": "./assets/custom/doctor-2.png",
                 "Publications__pr": {
                     "pubsCount": 2,
                     "done": true,
@@ -899,7 +899,7 @@ export class KOLsService {
                 "LastName": "Kashkin",
                 "pubsCount": 0,
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-2.png",
+                "imgPath": "./assets/custom/doctor-2.png",
                 "Degree": "M.D.",
                 "PersonContactId": "003j000000HysvfAAB"
             },
@@ -910,7 +910,7 @@ export class KOLsService {
                 "pubsCount": 8,
                 "PersonContactId": "003j000000rPAtrAAG",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-3.png",
+                "imgPath": "./assets/custom/doctor-3.png",
                 "Publications__pr": {
                     "pubsCount": 8,
                     "done": true,
@@ -985,7 +985,7 @@ export class KOLsService {
                 "pubsCount": 10,
                 "PersonContactId": "003j000000bcv5bAAA",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-4.png",
+                "imgPath": "./assets/custom/doctor-4.png",
                 "Publications__pr": {
                     "pubsCount": 10,
                     "done": true,
@@ -1071,7 +1071,7 @@ export class KOLsService {
                 "pubsCount": 0,
                 "PersonContactId": "003j000000HysvVAAR",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-3.png"
+                "imgPath": "./assets/custom/doctor-3.png"
             },
             {
                 "Id": "001j000000j0n94AAA",
@@ -1081,7 +1081,7 @@ export class KOLsService {
                 "pubsCount": 0,
                 "PersonContactId": "003j000000rtwVnAAI",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-4.png"
+                "imgPath": "./assets/custom/doctor-4.png"
             },
             {
                 "Id": "001j000000j0nBAAAY",
@@ -1091,7 +1091,7 @@ export class KOLsService {
                 "pubsCount": 0,
                 "PersonContactId": "003j000000rtwY8AAI",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-5.png"
+                "imgPath": "./assets/custom/doctor-5.png"
             },
             {
                 "Id": "001j000000MVrILAA1",
@@ -1101,7 +1101,7 @@ export class KOLsService {
                 "pubsCount": 3,
                 "PersonContactId": "003j000000HysvTAAR",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-5.png",
+                "imgPath": "./assets/custom/doctor-5.png",
                 "Publications__pr": {
                     "pubsCount": 3,
                     "done": true,
@@ -1138,7 +1138,7 @@ export class KOLsService {
                 "pubsCount": 8,
                 "PersonContactId": "003j000000bcujBAAQ",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-6.png",
+                "imgPath": "./assets/custom/doctor-6.png",
                 "Publications__pr": {
                     "pubsCount": 8,
                     "done": true,
@@ -1210,7 +1210,7 @@ export class KOLsService {
                 "pubsCount": 4,
                 "PersonContactId": "003j000000HysvdAAB",
                 "top40": true,
-                "imgPath": "../assets/custom/doctor-1.png",
+                "imgPath": "./assets/custom/doctor-1.png",
                 "Publications__pr": {
                     "pubsCount": 4,
                     "done": true,
@@ -1253,7 +1253,7 @@ export class KOLsService {
                 "pubsCount": 6,
                 "PersonContactId": "003j000000HysvvAAB",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-2.png",
+                "imgPath": "./assets/custom/doctor-2.png",
                 "Publications__pr": {
                     "pubsCount": 6,
                     "done": true,
@@ -1311,7 +1311,7 @@ export class KOLsService {
                 "pubsCount": 2,
                 "PersonContactId": "003j000000HysvzAAB",
                 "top40": false,
-                "imgPath": "../assets/custom/doctor-3.png",
+                "imgPath": "./assets/custom/doctor-3.png",
                 "Publications__pr": {
                     "pubsCount": 2,
                     "done": true,

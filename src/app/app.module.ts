@@ -19,6 +19,7 @@ import { KOLProfileCompare } from '../pages/kol-profile-compare/kol-profile-comp
 import { KOLProfileCompareThree } from '../pages/kol-profile-compare-three/kol-profile-compare-three';
 import { KOLsService } from '../app/kols.service';
 import { FilterService } from '../app/filter.service';
+import { SocialSharing } from 'ionic-native';
 
 
 @NgModule({

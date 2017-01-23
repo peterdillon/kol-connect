@@ -153,13 +153,16 @@ filter-component {
                 }
 
                 &.active {
-                    color: yellow;
+                    a, ion-icon {
+                        color: yellow;
+                    }
                 }
             }
             a.clip {
-                padding: .5rem .5rem .5rem .1rem;
-                float: left;
-                width: 50%;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                width: 43%;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
