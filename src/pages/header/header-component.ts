@@ -23,17 +23,17 @@ export class HeaderComponent {
     public fs: FilterService,
     private viewCtrl: ViewController) { }
 
-
-
 emailShare() {
   SocialSharing.canShareViaEmail().then(() => {
     // Sharing via email is possible
+    alert('can share');
   }).catch(() => {
     // Sharing via email is not possible
   });
 
   // Share via email
   SocialSharing.shareViaEmail('Body', 'Subject', null).then(() => {
+    alert('is sharing');
     // Success!
   }).catch(() => {
     // Error!

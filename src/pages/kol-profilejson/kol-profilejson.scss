@@ -1,5 +1,11 @@
 page-kol-profilejson {
 
+svg.nvd3-svg {
+  background-color: #f1f1f1;
+}
+text { fill: #000; }
+// ---------------------------
+
 .w-75 {
     float: left;
     width: 75%;
@@ -64,6 +70,10 @@ ion-label {
         border-bottom-left-radius: .5rem;
         border-bottom-right-radius: .5rem;
         color: #444;
+
+        &:nth-of-type(2) {
+          padding-top: 0;
+        }
         
         h1 {
           font-family: 'Montserrat', sans-serif;
