@@ -7,6 +7,7 @@ header-component {
     will-change: transform, top;
     width: 100%;
     z-index: 10;
+    padding-top: 1rem;
 
     .global-nav {
         padding: 1.8rem;
@@ -90,7 +91,7 @@ header-component {
         float: left;
 
         .filter-title {
-            width: 7rem;
+            //width: 7rem;
             float: left;
             font-weight: bold;
             text-transform: uppercase;
@@ -110,6 +111,7 @@ header-component {
               ion-item {
                 background-color: transparent !important;
                 text-align: right;
+                border: 0;
 
                 .item-inner, .item-cover, .input-wrapper {
                   height: 20px;
@@ -131,7 +133,7 @@ header-component {
                 .select-text {
                   font-family: 'Varela Round', sans-serif;
                   color: yellow;
-                  padding: 0 10px;
+                  padding: 0 .3rem 0 .6rem;
                 }
 
             }

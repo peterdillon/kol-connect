@@ -64,7 +64,8 @@ filter-component {
         .close {
             font-size: inherit;
             text-align: right;
-            font-size: 3rem;
+            padding-right: 2rem;
+            font-size: 5rem;
             cursor: pointer;
         }
 
@@ -106,7 +107,7 @@ filter-component {
 
     section {
         &.filter-container {
-            margin: 8rem 0 0 0;
+            margin: 9rem 0 0 0;
             width: 77%;
             
             ion-content {    
@@ -153,13 +154,16 @@ filter-component {
                 }
 
                 &.active {
-                    color: yellow;
+                    a, ion-icon {
+                        color: yellow;
+                    }
                 }
             }
             a.clip {
-                padding: .5rem .5rem .5rem .1rem;
-                float: left;
-                width: 50%;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                width: 43%;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;

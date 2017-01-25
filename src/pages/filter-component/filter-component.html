@@ -14,7 +14,7 @@
             </div>
             <div class="w-25">
                 <div class="close" (click)="dismiss()">
-                    <div full><ion-icon name="close"></ion-icon>
+                    <div full><ion-icon name="ios-close"></ion-icon>
                     </div>
                 </div>
             </div>
@@ -30,11 +30,11 @@
                     <li><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Endocrinology</li>
                 </ul>
             </div>
-             <div class="filter-section" id="degree">
+             <div class="filter-section" id="journal-number">
                 <h5>Journals Number</h5>
                 <ul>
                     <li [class.active]="filter.selected" *ngFor="let filter of fs.filters | categoryFilter:'pubsCount'" (click)="filter.toggle()">
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon> {{filter.name}}
+                        <span><a><ion-icon name="ios-checkmark-circle-outline"></ion-icon> {{filter.name}}</a></span>
                     </li>
                 </ul>
             </div>
@@ -42,7 +42,7 @@
                 <h5>Degree</h5>
                 <ul>
                     <li [class.active]="filter.selected" *ngFor="let filter of fs.filters | categoryFilter:'degree'" (click)="filter.toggle()">
-                        <ion-icon name="ios-checkmark-circle-outline"></ion-icon> {{filter.name}}
+                        <span><a><ion-icon name="ios-checkmark-circle-outline"></ion-icon> {{filter.name}}</a></span>
                     </li>
                 </ul>
             </div>
@@ -85,16 +85,51 @@
             <div class="filter-section" id="publications">
                 <h5>Publications</h5>
                 <ul class="cf">
+                    <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Academic emergency medicine</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Acta haematologica</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Allergy</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Allergy &amp; rhinology</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Allergy and asthma proceedings</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>American journal of rhinology &amp; allergy</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Annals of allergy, asthma &amp; immunology</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Cleveland Clinic journal of medicine</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Clinical and experimental allergy</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Clinical and experimental immunology</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Current opinion in allergy and clinical immunology</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Immunology and allergy clinics of North America</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Immunotherapy</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>International archives of allergy and immunology</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Journal of managed care &amp; specialty pharmacy</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Medical education</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Molecular immunology</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Pediatric allergy and immunology</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Pediatrics</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>PloS one</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Postgraduate medicine</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Puerto Rico health sciences journal</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>The American journal of managed care</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>The Journal of allergy and clinical immunology</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>The Journal of experimental medicine</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>The Journal of pediatrics</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>The Journal of the American Osteopathic Association</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>The New England journal of medicine</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>The World Allergy Organization journal</a></span></li>
+                        <li><span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon>Transfusion</a></span></li>
+                </ul>
+            </div>
+            <!--<div class="filter-section" id="publications">
+                <h5>Publications</h5>
+                <ul class="cf">
                     <li *ngFor="let kol of kols">
                         <span *ngIf="kol.Publications__pr">
                         <a class="clip" *ngFor="let pub of kol.Publications__pr.records">
-                            <ion-icon name="ios-checkmark-circle-outline"></ion-icon>
+                            <span><a class="clip"><ion-icon name="ios-checkmark-circle-outline"></ion-icon></a></span>
                             {{pub.Journal_Name__c}}
                         </a>
                         </span>
                     </li>
                 </ul>
-            </div>
+            </div>-->
             <div class="filter-section" id="clinical-trials">
                 <h5>Clinical Trials</h5>
                 <ul>
