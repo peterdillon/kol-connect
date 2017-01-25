@@ -30,7 +30,7 @@ export class Scatterplot implements OnInit {
     this.options = {
       chart: {
         type: 'scatterChart',
-        height: 650,
+        height: 600,
         margin: {
           top: 10,
           right: 20,

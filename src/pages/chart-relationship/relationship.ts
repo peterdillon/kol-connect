@@ -31,7 +31,7 @@ export class Relationship implements OnInit {
       chart: {
         type: 'forceDirectedGraph',
         width: 1182,
-        height: 650,
+        height: 600,
         radius: 9,
         linkDist: 400,
         margin: {

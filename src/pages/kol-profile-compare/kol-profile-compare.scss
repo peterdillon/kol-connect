@@ -75,6 +75,38 @@ page-kol-profile-compare {
           margin: 0;
           line-height: 2rem;
         }
+        .plan-row {
+          border-top: 1px solid #e7eaec;
+        }
+        .plan-time {
+          position: relative;
+          padding-top: .6rem;
+          border-right: 1px solid #e7eaec;
+          small { color: $positive; }
+        }
+        .plan-icon {
+          font-size: 1.5rem;
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 3px;
+          width: 25px;
+          text-align: center;
+          border-bottom: 1px solid #e7eaec;
+          border-left: 1px solid #e7eaec;
+          background: #f8f8f8;
+        }
+        .plan-desc {
+          padding-left: 1rem;
+          padding-top: 1rem;
+          h6 {
+            margin-bottom: .3rem;
+          }
+          p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+        }
         
         .tx-rt { text-align: right; }
         .tx-ct { text-align: center; }
