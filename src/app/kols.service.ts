@@ -1337,13 +1337,215 @@ export class KOLsService {
     }
 
     getKOLsForScatter() {
+        // return [
+        //     { status: "Oncology Research, CO", imgPath: "../assets/custom/doctor-1.png", name: "Dr. Margaret Holmes", key: 'key1', values: [{ x: 31, y: 73 }, { x: 54, y: 39 }, { x: -35, y: 11 }, { x: 93, y: 73 }, { x: 90, y: 21 }] },
+        //     { status: "Carodiolgy Research, CA", imgPath: "../assets/custom/doctor-2.png", name: "Dr. William O'Neil", key: 'key2', values: [{ x: 88, y: 52 }, { x: 23, y: 43 }, { x: 13, y: 33 }, { x: 98, y: 76 }, { x: 5, y: 69 }] },
+        //     { status: "Allergy Research, NY", imgPath: "../assets/custom/doctor-3.png", name: "Dr. Kurt Schmidt", key: 'key3', values: [{ x: 10, y: 10 }, { x: -20, y: 20 }, { x: 30, y: 30 }, { x: -40, y: 40 }, { x: 50, y: 50 }] },
+        //     { status: "Hepatology Research, WY", imgPath: "../assets/custom/doctor-4.png", name: "Dr. Jim Stewart", key: 'key4', values: [{ x: 81, y: 173 }, { x: 14, y: 39 }, { x: -15, y: 76 }, { x: 34, y: 92 }, { x: 10, y: 61 }] },
+        //     { status: "Urology Research, NV", imgPath: "../assets/custom/doctor-5.png", name: "Dr. Michele Jones", key: 'key5', values: [{ x: 38, y: 22 }, { x: 93, y: -43 }, { x: 13, y: 133 }, { x: 12, y: 66 }, { x: 2, y: 96 }] },
+        //     { status: "Cadiovascular Research, MI", imgPath: "../assets/custom/doctor-6.png", name: "Dr. Karen Lauchester", key: 'key6', values: [{ x: 3, y: 70 }, { x: -10, y: -60 }, { x: 30, y: 100 }, { x: -90, y: 56 }, { x: 21, y: 63 }] }
+        // ];
         return [
-            { status: "Oncology Research, CO", imgPath: "../assets/custom/doctor-1.png", name: "Dr. Margaret Holmes", key: 'key1', values: [{ x: 31, y: 73 }, { x: 54, y: 39 }, { x: -35, y: 11 }, { x: 93, y: 73 }, { x: 90, y: 21 }] },
-            { status: "Carodiolgy Research, CA", imgPath: "../assets/custom/doctor-2.png", name: "Dr. William O'Neil", key: 'key2', values: [{ x: 88, y: 52 }, { x: 23, y: 43 }, { x: 13, y: 33 }, { x: 98, y: 76 }, { x: 5, y: 69 }] },
-            { status: "Allergy Research, NY", imgPath: "../assets/custom/doctor-3.png", name: "Dr. Kurt Schmidt", key: 'key3', values: [{ x: 10, y: 10 }, { x: -20, y: 20 }, { x: 30, y: 30 }, { x: -40, y: 40 }, { x: 50, y: 50 }] },
-            { status: "Hepatology Research, WY", imgPath: "../assets/custom/doctor-4.png", name: "Dr. Jim Stewart", key: 'key4', values: [{ x: 81, y: 173 }, { x: 14, y: 39 }, { x: -15, y: 76 }, { x: 34, y: 92 }, { x: 10, y: 61 }] },
-            { status: "Urology Research, NV", imgPath: "../assets/custom/doctor-5.png", name: "Dr. Michele Jones", key: 'key5', values: [{ x: 38, y: 22 }, { x: 93, y: -43 }, { x: 13, y: 133 }, { x: 12, y: 66 }, { x: 2, y: 96 }] },
-            { status: "Cadiovascular Research, MI", imgPath: "../assets/custom/doctor-6.png", name: "Dr. Karen Lauchester", key: 'key6', values: [{ x: 3, y: 70 }, { x: -10, y: -60 }, { x: 30, y: 100 }, { x: -90, y: 56 }, { x: 21, y: 63 }] }
+            {
+                "Id": "001j000000MVrIKAA1",
+                "name": "John Anderson, PhD",
+                "values": [{ "x": 31, "y": 73 }],
+                "imgPath": "./assets/custom/doctor-1.png",
+                "status": "Oncology Research, CO",
+                "key": "key1"
+            },
+            {
+                "Id": "001j000000MVrIMAA1",
+                "name": "Jonathan Bernstein, PhD",
+                "values": [{ "x": -54, "y": 39 }],
+                "imgPath": "./assets/custom/doctor-2.png",
+                "status": "Carodiolgy Research, CA",
+                "key": "key2"
+            },
+            {
+                "Id": "001j000000MVrIUAA1",
+                "name": "Joshua Jacobs, PhD",
+                "values": [{ "x": -35, "y": 1 }],
+                "imgPath": "./assets/custom/doctor-3.png",
+                "status": "Allergy Research, NY",
+                "key": "key3"
+            },
+            {
+                "Id": "001j000000MVrIaAAL",
+                "name": "William Lumry, PhD",
+                "values": [{ "x": -93, "y": 73 }],
+                "imgPath": "./assets/custom/doctor-4.png",
+                "status": "Hepatology Research, WY",
+                "key": "key4"
+            },
+            {
+                "Id": "001j000000iapRnAAI",
+                "name": "Allen Kaplan, Ed.D.",
+                "values": [{ "x": 90, "y": 21 }],
+                "imgPath": "./assets/custom/doctor-5.png",
+                "status": "Urology Research, NV",
+                "key": "key5"
+            },
+            {
+                "Id": "001j000000MVrIhAAL",
+                "name": "Marc Riedl, MD",
+                "values": [{ "x": -88, "y": 52 }],
+                "imgPath": "./assets/custom/doctor-1.png",
+                "status": "Cadiovascular Research, MI",
+                "key": "key6"
+            },
+            {
+                "Id": "001j000000MVrIPAA1",
+                "name": "Timothy Craig, MD",
+                "values": [{ "x": -23, "y": -43 }],
+                "imgPath": "./assets/custom/doctor-5.png",
+                "status": "Oncology Research, CO",
+                "key": "key7"
+            },
+            {
+                "Id": "001j000000NhZVuAAN",
+                "name": "Huamin Li, MD",
+                "values": [{ "x": 13, "y": 33 }],
+                "imgPath": "./assets/custom/doctor-2.png",
+                "status": "Carodiolgy Research, CA",
+                "key": "key8"
+            },
+            {
+                "Id": "001j000000MVrImAAL",
+                "name": "Daniel Soteres, MD",
+                "values": [{ "x": 98, "y": 76 }],
+                "imgPath": "./assets/custom/doctor-3.png",
+                "status": "Allergy Research, NY",
+                "key": "key9"
+            },
+            {
+                "Id": "001j000000j0nOYAAY",
+                "name": "Isaac Melamed, MD",
+                "values": [{ "x": 5, "y": 69 }],
+                "imgPath": "./assets/custom/doctor-3.png",
+                "status": "Hepatology Research, WY",
+                "key": "key10"
+            },
+            {
+                "Id": "001j000000MVrIpAAL",
+                "name": "Katharine Woessner, PhD",
+                "values": [{ "x": 10, "y": 10 }],
+                "imgPath": "./assets/custom/doctor-4.png",
+                "status": "Urology Research, NV",
+                "key": "key11"
+            },
+            {
+                "Id": "001j000000ZtGXNAA3",
+                "name": "Aleena Banerji, M.A.",
+                "values": [{ "x": -20, "y": 2 }],
+                "imgPath": "./assets/custom/doctor-5.png",
+                "status": "Cadiovascular Research, MI",
+                "key": "key12"
+            },
+            {
+                "Id": "001j000000MVrITAA1",
+                "name": "Richard Gower, M.A.",
+                "values": [{ "x": 30, "y": -30 }],
+                "imgPath": "./assets/custom/doctor-6.png",
+                "status": "Oncology Research, CO",
+                "key": "key13"
+            },
+            {
+                "Id": "001j000000MVrIcAAL",
+                "name": "Michael Manning, PhD",
+                "values": [{ "x": -40, "y": 4 }],
+                "imgPath": "./assets/custom/doctor-1.png",
+                "status": "Carodiolgy Research, CA",
+                "key": "key14"
+            },
+            {
+                "Id": "001j000000MVrIQAA1",
+                "name": "Mark Davis-Lorton, PhD",
+                "values": [{ "x": 50, "y": -50 }],
+                "imgPath": "./assets/custom/doctor-2.png",
+                "status": "Allergy Research, NY",
+                "key": "key15"
+            },
+            {
+                "Id": "001j000000MVrIXAA1",
+                "name": "Jay Kashkin, MD",
+                "values": [{ "x": 81, "y": 173 }],
+                "imgPath": "./assets/custom/doctor-2.png",
+                "status": "Hepatology Research, WY",
+                "key": "key16"
+            },
+            {
+                "Id": "001j000000ZtGnCAAV",
+                "name": "Bruce Zuraw, MD",
+                "values": [{ "x": 14, "y": -39 }],
+                "imgPath": "./assets/custom/doctor-4.png",
+                "status": "Urology Research, NV",
+                "key": "key17"
+            },
+            {
+                "Id": "001j000000MVrINAA1",
+                "name": "Autumn Burnette, MD",
+                "values": [{ "x": -15, "y": 7 }],
+                "imgPath": "./assets/custom/doctor-3.png",
+                "status": "Cadiovascular Research, MI",
+                "key": "key18"
+            },
+            {
+                "Id": "001j000000j0n94AAA",
+                "name": "John Cohn, MD",
+                "values": [{ "x": 34, "y": -92 }],
+                "imgPath": "./assets/custom/doctor-4.png",
+                "status": "Oncology Research, CO",
+                "key": "key19"
+            },
+            {
+                "Id": "001j000000j0nBAAAY",
+                "name": "Anna Feldweg, MD",
+                "values": [{ "x": 10, "y": -61 }],
+                "imgPath": "./assets/custom/doctor-5.png",
+                "status": "Carodiolgy Research, CA",
+                "key": "key20"
+            },
+            {
+                "Id": "001j000000MVrILAA1",
+                "name": "James Baker, MD",
+                "values": [{ "x": -38, "y": -173 }],
+                "imgPath": "./assets/custom/doctor-5.png",
+                "status": "Allergy Research, NY",
+                "key": "key21"
+            },
+            {
+                "Id": "001j000000ZtGVvAAN",
+                "name": "Paula Busse, MD",
+                "values": [{ "x": -98, "y": -4 }],
+                "imgPath": "./assets/custom/doctor-6.png",
+                "status": "Hepatology Research, WY",
+                "key": "key22"
+            },
+            {
+                "Id": "001j000000MVrIVAA1",
+                "name": "Douglas Johnston, MD",
+                "values": [{ "x": 13, "y": 133 }],
+                "imgPath": "./assets/custom/doctor-1.png",
+                "status": "Urology Research, NV",
+                "key": "key23"
+            },
+            {
+                "Id": "001j000000MVrInAAL",
+                "name": "Raffi Tachdjian, MD",
+                "values": [{ "x": -12, "y": 66 }],
+                "imgPath": "./assets/custom/doctor-1.png",
+                "status": "Cadiovascular Research, MI",
+                "key": "key24"
+            },
+            {
+                "Id": "001j000000MVrIrAAL",
+                "name": "Rafael Zaragoza Urdaz, PhD",
+                "values": [{ "x": -2, "y": 96 }],
+                "imgPath": "./assets/custom/doctor-3.png",
+                "status": "Oncology Research, CO",
+                "key": "key25"
+            }
         ];
     }
 
