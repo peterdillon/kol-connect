@@ -19,7 +19,7 @@
                 <section>
                     <h1 class="name">{{kol.FirstName}} {{kol.LastName}} {{kol.Degree}}</h1>
                     <span *ngIf="kol.Publications__pr">
-                        <b>Journals: ({{kol.Publications__pr.totalSize}}) </b>
+                        <b>Journals: ({{kol.pubsCount}}) </b>
                         <p *ngFor="let pub of kol.Publications__pr.records">
                             {{pub.Journal_Name__c}}
                         </p>
