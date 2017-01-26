@@ -5,7 +5,7 @@
 
     <section>
       <ion-item>
-        <ion-label>Criteria 1
+        <ion-label>Publications
           <ion-badge item-right>{{criteria1}}</ion-badge>
         </ion-label>
         <ion-range min="0" max="100" step="5" snaps="true" color="light" [(ngModel)]="criteria1"></ion-range>
@@ -14,7 +14,7 @@
 
     <section>
       <ion-item>
-        <ion-label>Criteria 2
+        <ion-label text-left>Peer Recognition - Nominations
           <ion-badge item-right>{{criteria2}}</ion-badge>
         </ion-label>
         <ion-range min="0" max="100" step="5" snaps="true" color="light" [(ngModel)]="criteria2"></ion-range>
@@ -23,33 +23,56 @@
 
     <section>
       <ion-item>
-        <ion-label>Criteria 3
+        <ion-label>Peer Recognition - Referrals
           <ion-badge item-right>{{criteria3}}</ion-badge>
         </ion-label>
-        <ion-range [(ngModel)]="criteria3" color="light" pin="true"></ion-range>
+        <ion-range [(ngModel)]="criteria3" color="light"></ion-range>
       </ion-item>
     </section>
 
     <section>
       <ion-item>
-        <ion-label>Criteria 4
+        <ion-label>Congress Presentations
+          <ion-badge item-right>{{criteria5}}</ion-badge>
+        </ion-label>
+        <ion-range [(ngModel)]="criteria5" color="light"></ion-range>
+      </ion-item>
+    </section>
+
+    <section>
+      <ion-item>
+        <ion-label>Leadership
           <ion-badge item-right>{{criteria4}}</ion-badge>
         </ion-label>
-        <ion-range [(ngModel)]="criteria4" color="light" pin="true"></ion-range>
+        <ion-range [(ngModel)]="criteria4" color="light"></ion-range>
       </ion-item>
     </section>
 
     <section>
       <ion-item>
-        <ion-label>Criteria 5
+        <ion-label>Trials
+          <ion-badge item-right>{{criteria6}}</ion-badge>
+        </ion-label>
+        <ion-range [(ngModel)]="criteria6" color="light"></ion-range>
+      </ion-item>
+    </section>
+
+    <section>
+      <ion-item>
+        <ion-label>Clinical XP
           <ion-badge item-right color="danger">{{warmth}}</ion-badge>
         </ion-label>
-        <ion-range min="1000" max="2000" step="100" snaps="true" [(ngModel)]="warmth" color="danger">
-          <ion-icon range-left small color="danger" name="thumbs-down"></ion-icon>
-          <ion-icon range-right color="danger" name="thumbs-up"></ion-icon>
+        <ion-range min="0" max="200" step="10" snaps="true" [(ngModel)]="warmth" color="danger">
+          <ion-icon range-left small color="danger" name="medkit"></ion-icon>
+          <ion-icon range-right color="light" name="medkit"></ion-icon>
         </ion-range>
       </ion-item>
     </section>
+
+    <aside>
+      <button ion-button round outline color="light">Reset</button>
+      <button ion-button round outline color="light">Save</button>
+    </aside>
 
   </div>
 </ion-content>
