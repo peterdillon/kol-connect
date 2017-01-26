@@ -61,6 +61,7 @@ export class Scatterplot implements OnInit {
           },
           axisLabelDistance: -5
         },
+        showLegend: false,
         tooltip: {
           contentGenerator: function (e) {
             var series = e.series[0];
