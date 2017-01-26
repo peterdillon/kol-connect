@@ -9,9 +9,13 @@ export class FilterService {
     constructor() {
         this.filters = [
             new Filter("MD", false, 0, "degree"),
+            new Filter("MPH", false, 0, "degree"),
+            new Filter("MS", false, 0, "degree"),
             new Filter("PhD", false, 0, "degree"),
-            new Filter("1-5", false, 0, "pubsCount"),
-            new Filter("5+", false, 0, "pubsCount"),
+            new Filter("< 5", false, 0, "pubsCount"),
+            new Filter("< 10", false, 0, "pubsCount"),
+            new Filter("< 20", false, 0, "pubsCount"),
+            new Filter("20+", false, 0, "pubsCount"),
         ];
     }
 

@@ -45,7 +45,7 @@ export class FilterComponent {
   // Scroll to sections
   scrollTo(element) {
     let yOffset = document.getElementById(element).offsetTop;
-    this.content.scrollTo(0, yOffset, 2000);
+    this.content.scrollTo(0, yOffset, 1000);
   }
 
   // Dismiss filter overlay
