@@ -10,16 +10,16 @@
 <div class="kol-card">
         <header>
           <ion-row>
-              <ion-col width-80>
+              <ion-col width-70>
                 <h1> {{kol.FirstName}} {{kol.LastName}} </h1>
                 <img src="{{kol.imgPath}}" /> 
               </ion-col>
-              <ion-col width-20>
+              <ion-col width-30 class="tx-rt">
                 <ion-icon name="md-star" item-left></ion-icon>
                 <ion-icon name="md-star" item-left></ion-icon>
-                <ion-icon name="md-star-half" item-left></ion-icon>
-                <br>
-                <ion-icon name="mail"></ion-icon>
+                <ion-icon name="md-star-half" item-left></ion-icon>&nbsp; &nbsp;
+                
+                <ion-icon name="share"></ion-icon>&nbsp; &nbsp;
                 <ion-icon name="ios-heart" item-left></ion-icon>
               </ion-col>
           </ion-row>
@@ -82,24 +82,16 @@
                 <br>
                 <ion-input placeholder="Add note..."></ion-input>
                 <ion-row radio-group>
-                  <ion-col width-50>
-                    <ion-item>
-                      <ion-label>Private</ion-label>
-                      <ion-radio color="danger"></ion-radio>
-                    </ion-item>
-                  </ion-col>
-                  <ion-col width-50>
-                    <ion-item>
-                      <ion-label>Public</ion-label>
-                      <ion-radio color="secondary"></ion-radio>
-                    </ion-item>
-                  </ion-col>
-
-                </ion-row>
-
-                <ion-row>
-                  <ion-col class="tx-rt">
-                     <button ion-button icon-left small outline color="primary">
+                  <ion-list>
+                        <ion-item>
+                            <ion-label>Post as:</ion-label>
+                            <ion-select [(ngModel)]="privacy.kind">
+                              <ion-option *ngFor="let key of modeKeys">{{key}}</ion-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-list>
+                    <ion-col class="tx-rt">
+                     <button ion-button icon-left medium outline color="primary">
                       <ion-icon name="checkmark"></ion-icon> Save
                      </button>
                   </ion-col>

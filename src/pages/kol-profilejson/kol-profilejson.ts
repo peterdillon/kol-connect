@@ -16,7 +16,9 @@ export class KOLProfileJson implements OnInit {
 
   kols: any;
   kol: any;
-
+  privacy: any;
+  modeKeys: any;
+  
   constructor(
     public navCtrl: NavController,
     public params: NavParams,
@@ -24,6 +26,8 @@ export class KOLProfileJson implements OnInit {
     public http: Http,
     private kolService: KOLsService) {
     this.kol = {};
+    this.privacy = { "kind": "Public" }
+    this.modeKeys = [ "Private", "Public" ]
   }
 
   ionViewWillEnter(id) {
