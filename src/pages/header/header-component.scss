@@ -47,14 +47,15 @@ header-component {
             ion-icon {
                 color: white;
                 opacity: .7;
-                font-size: 1.8rem;
+                font-size: 1.9rem;
             }
             a {
+                vertical-align: middle;
                 color: white;
                 font-family: 'Varela Round', sans-serif;
                 opacity: .7;
                 text-decoration: none;
-                font-size: 1.5rem; 
+                font-size: 1.9rem; 
                 
             }
         }
@@ -150,6 +151,15 @@ header-component {
             }
             &:nth-last-of-type(2) { 
               border-right:0;
+            }
+            ion-icon {
+                margin-left: .5rem;
+                vertical-align: middle;
+                color: #ccc;
+                font-size: 1.5rem;
+            }
+            .select-ios {
+                margin: 11px 8px 11px 1px;
             }
         }
         .is-checked {

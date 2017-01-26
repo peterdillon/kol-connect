@@ -10,12 +10,12 @@
                         <ion-icon name="md-heart"></ion-icon>
                     </a>
                 </li>
-                <li>
+                <li><a href="#">Rising Stars</a> </li>
+                 <li>
                     <a (click)="emailShare()">
                         <ion-icon name="share"></ion-icon>
                     </a>
                 </li>
-                <li><a href="#">Rising Stars</a> </li>
             </ul>
             <div class="actions">
                 <!-- [class.active]="isClassVisible" [class.active]="isClassVisible ? 'active' : 'inactive'"  -->
@@ -27,18 +27,15 @@
             <div class="filter-title"> Filters: </div>
             <div class="filter-list" id="sorts">
                 <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
-                    {{filter.name}}
+                    {{filter.name}} <ion-icon name="close"></ion-icon>
                 </div>
 
                 <div class="filter-item">
                     <ion-list>
                         <ion-item>
-                            <ion-label>Sorted by:</ion-label>
-                            <ion-select [(ngModel)]="sort-values">
-                                <ion-option value="1">Recently Updated</ion-option>
-                                <ion-option value="2">Score</ion-option>
-                                <ion-option value="3">First Name</ion-option>
-                                <ion-option value="4">Last Name</ion-option>
+                            <ion-label>Sort by:</ion-label>
+                                <ion-select [(ngModel)]="sortBy.kind">
+                                <ion-option *ngFor="let key of sortChoice">{{key}}</ion-option>
                             </ion-select>
                         </ion-item>
                     </ion-list>

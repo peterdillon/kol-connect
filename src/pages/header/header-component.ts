@@ -15,13 +15,20 @@ import { KOLsFilterPipe } from './filter-pipe';
 
 export class HeaderComponent {
 
+  sortBy: any;
+  sortChoice: any;
+
   constructor(
     public modalCtrl: ModalController,
     public navCtrl: NavController,
     public params: NavParams,
     public popoverCtrl: PopoverController,
     public fs: FilterService,
-    private viewCtrl: ViewController) { }
+    private viewCtrl: ViewController) { 
+      this.sortBy = { "kind": "Score" }
+      this.sortChoice = [ "Recently Updated", "Score", "First name", "Last name" ]
+
+    }
 
 emailShare() {
   SocialSharing.canShareViaEmail().then(() => {
