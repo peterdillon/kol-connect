@@ -5,14 +5,29 @@ page-score {
    margin: 14rem auto 0 auto;
    display: flex;
    flex-flow: row wrap;
-   justify-content: space-between;
+   
+   aside {
+    display: flex;
+    flex-flow: row;
+    width: 49%;
+    height: 15rem;
+    margin: .5rem;
+    padding: 0;
+    justify-content: flex-end;
+    padding: 0 1rem 0 0;
+    button {
+        margin-top: auto;
+    }
+    
+   }
 
     section {
-        width: 46%;
+        
+        width: 49%;
         background-color: rgba(255, 255, 255, .2);
-        border-radius: .3rem; 
-        margin: 2rem;
-        padding: 2rem;
+        border-radius: .5rem; 
+        margin: .5rem;
+        padding: .5rem 1rem;
 
         .item-md.item-block .item-inner, 
         .item-block .item-inner {
@@ -25,10 +40,12 @@ page-score {
             font-size: 2rem;
             color: white;
         }
-        // .range-md .range-pin {
-        //     //color: #444;
-        // }
-        .badge-md {
+        ion-range  {
+            padding: 0;
+            margin: 0;
+        }
+        .badge {
+            padding: .5rem 1rem;
             font-size: 2rem;
             background-color: rgba(255, 255, 255, .2);
         }
