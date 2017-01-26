@@ -117,7 +117,7 @@
                 </ion-row>
 
                 <span class="journal-section" *ngIf="kol.Publications__pr">
-                  <h1>Journals ({{kol.Publications__pr.totalSize}}) </h1>
+                  <h1>Journals ( {{kol.Publications__pr.pubsCount}} ) </h1>
                   <ion-row>
                     <ion-col>
                       <p class="journal" title="{{pub.Journal_Name__c}}" *ngFor="let pub of kol.Publications__pr.records">{{pub.Journal_Name__c}}</p>
