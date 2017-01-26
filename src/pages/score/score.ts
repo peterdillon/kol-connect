@@ -16,8 +16,8 @@ export class Score {
   criteria4: number = 15;
   criteria5: number = 15;
   criteria6: number = 10;
-  criteria7: number = 80;
-  warmth: number = 15;
+  criteria7: number = 15;
+  // warmth: number = 15;
   // structure: any = {lower: 33, upper: 60};
 
   onChange(ev) {
