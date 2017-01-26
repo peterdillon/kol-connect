@@ -3,13 +3,13 @@ import { NavController } from 'ionic-angular';
 import { KOLsService } from '../../app/kols.service'
 
 
-@Component({
-  templateUrl: './scatterplot.html'
-})
-export class Main {
-  constructor(public navCtrl: NavController) {
-  }
-}
+// @Component({
+//   templateUrl: './scatterplot.html'
+// })
+// export class Main {
+//   constructor(public navCtrl: NavController) {
+//   }
+// }
 
 declare let d3: any;
 

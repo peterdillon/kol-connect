@@ -3,6 +3,7 @@ import { Content, ModalController, Platform, PopoverController, ViewController, 
 import { FilterService } from '../../app/filter.service';
 import { CategoryFilterPipe } from './category-pipe';
 import { KOLsService } from '../../app/kols.service';
+import { SaveFilterSets } from './saved-filter';
 
 @Component({
   selector: 'filter-component',
@@ -61,25 +62,3 @@ export class FilterComponent {
   }
 
 }
-
-// --------------------------------------------------------
-// SaveFilterSets template - opens in popover object above
-
-@Component({
-  selector: 'saved-filter',
-  templateUrl: './saved-filters.html'
-})
-export class SaveFilterSets {
-  constructor(public viewCtrl: ViewController) { }
-
-  rows = [];
-  filterName = "";
-  addRow() {
-    this.rows.push({ filterName: this.filterName });
-    this.filterName = '';
-  }
-  removeRow(index) {
-    this.rows.splice(index, 1);
-  }
-
-} 

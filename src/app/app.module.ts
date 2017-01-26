@@ -12,14 +12,14 @@ import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HeaderComponent } from '../pages/header/header-component';
 import { FilterComponent } from '../pages/filter-component/filter-component';
-import { SaveFilterSets } from '../pages/filter-component/filter-component';
+import { SaveFilterSets } from '../pages/filter-component/saved-filter';
 import { KOLProfilePage } from '../pages/kol-profile/kol-profile';
 import { KOLProfileJson } from '../pages/kol-profilejson/kol-profilejson';
 import { KOLProfileCompare } from '../pages/kol-profile-compare/kol-profile-compare';
 import { KOLProfileCompareThree } from '../pages/kol-profile-compare-three/kol-profile-compare-three';
 import { KOLsService } from '../app/kols.service';
 import { FilterService } from '../app/filter.service';
-import { SocialSharing } from 'ionic-native';
+// import { SocialSharing } from 'ionic-native';
 
 
 @NgModule({
@@ -47,7 +47,7 @@ import { SocialSharing } from 'ionic-native';
       links: [
         { component: CardlistJSON, name: 'KOLs', segment: 'home' },
         { component: Scatterplot, name: 'Scatterplot', segment: 'scatterplot' },
-       // { component: Barchart, name: 'Barchart', segment: 'barchart' }
+        // { component: Barchart, name: 'Barchart', segment: 'barchart' }
       ]
     })
   ],
@@ -55,7 +55,7 @@ import { SocialSharing } from 'ionic-native';
   entryComponents: [
     MyApp,
     // CardList,
-   // Barchart,
+    // Barchart,
     Relationship,
     CardlistJSON,
     Scatterplot,

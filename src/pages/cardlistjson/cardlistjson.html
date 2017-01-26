@@ -1,15 +1,12 @@
 <header-component></header-component>
 <ion-content>
-    <div class="card-container grid">  <!--| kolsFilter-->
-        <div *ngFor="let kol of kols | kolsFilter; let i = index" [@bounce]="bounceState" >
+    <div class="card-container grid">
+        <!--| kolsFilter-->
+        <div *ngFor="let kol of kols | kolsFilter; let i = index" [@bounce]="bounceState">
             <div class="kol-card element-item" data-category="transition">
 
                 <header>
-                    <ion-icon item-left 
-                        class="check un-checked" 
-                        name="ios-checkmark-circle-outline" 
-                        (click)="selectedKOLs(i,c)"
-                        [class.checked]="selectedStatus[i]"
+                    <ion-icon item-left class="check un-checked" name="ios-checkmark-circle-outline" (click)="selectedKOLs(i,c)" [class.checked]="selectedStatus[i]"
                         id="{{kol.Id}}">
                     </ion-icon>
                     <!--[attr.data-selected]="false"  -->
@@ -17,13 +14,20 @@
 
                 </header>
                 <section>
-                    <h1 class="name">{{kol.FirstName}} {{kol.LastName}} {{kol.Degree}}</h1>
-                    <span *ngIf="kol.Publications__pr">
+                    <h1 class="name">{{kol.FirstName}} {{kol.LastName}}, {{kol.Degree}}</h1>
+                    <p>
+                        {{kol.Specialty}}
+                    </p>
+                    <p>{{kol.Affiliation}}
+                        <br> {{kol.CityState}}</p>
+
+                    <p>{{kol.Phone}}<br>{{kol.Email}}</p>
+                    <!--<span *ngIf="kol.Publications__pr">
                         <b>Journals: ({{kol.pubsCount}}) </b>
                         <p *ngFor="let pub of kol.Publications__pr.records">
                             {{pub.Journal_Name__c}}
                         </p>
-                    </span>
+                    </span>-->
                 </section>
                 <footer class="cf">
                     <div class="rating">
@@ -33,7 +37,7 @@
                     </div>
                     <div class="info">
                         <ion-icon *ngIf="kol.top40" name="ios-heart"></ion-icon>
-                        <ion-icon *ngIf="!kol.top40"  name="ios-heart-outline"></ion-icon>
+                        <ion-icon *ngIf="!kol.top40" name="ios-heart-outline"></ion-icon>
                     </div>
                 </footer>
             </div>
