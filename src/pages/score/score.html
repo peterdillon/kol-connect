@@ -8,7 +8,7 @@
         <ion-label>Publications
           <ion-badge item-right>{{criteria1}}</ion-badge>
         </ion-label>
-        <ion-range min="0" max="100" step="5" snaps="true" color="light" [(ngModel)]="criteria1"></ion-range>
+        <ion-range color="light" [(ngModel)]="criteria1"></ion-range>
       </ion-item>
     </section>
 
@@ -17,7 +17,7 @@
         <ion-label text-left>Peer Recognition - Nominations
           <ion-badge item-right>{{criteria2}}</ion-badge>
         </ion-label>
-        <ion-range min="0" max="100" step="5" snaps="true" color="light" [(ngModel)]="criteria2"></ion-range>
+        <ion-range color="light" [(ngModel)]="criteria2"></ion-range>
       </ion-item>
     </section>
 
@@ -60,12 +60,9 @@
     <section>
       <ion-item>
         <ion-label>Clinical XP
-          <ion-badge item-right color="danger">{{warmth}}</ion-badge>
+          <ion-badge item-right>{{criteria7}}</ion-badge>
         </ion-label>
-        <ion-range min="0" max="200" step="10" snaps="true" [(ngModel)]="warmth" color="danger">
-          <ion-icon range-left small color="danger" name="medkit"></ion-icon>
-          <ion-icon range-right color="light" name="medkit"></ion-icon>
-        </ion-range>
+        <ion-range [(ngModel)]="criteria7" color="light"></ion-range>
       </ion-item>
     </section>
 
