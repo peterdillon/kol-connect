@@ -18,7 +18,7 @@ export class KOLProfileJson implements OnInit {
   kol: any;
   privacy: any;
   modeKeys: any;
-  
+
   constructor(
     public navCtrl: NavController,
     public params: NavParams,
@@ -27,7 +27,7 @@ export class KOLProfileJson implements OnInit {
     private kolService: KOLsService) {
     this.kol = {};
     this.privacy = { "kind": "Public" }
-    this.modeKeys = [ "Private", "Public" ]
+    this.modeKeys = ["Private", "Public"]
   }
 
   ionViewWillEnter(id) {
@@ -67,50 +67,54 @@ export class KOLProfileJson implements OnInit {
 
     this.options = {
       chart: {
-        type: 'scatterChart',
+        type: 'forceDirectedGraph',
+        width: 800,
         height: 650,
-        margin: {
-          top: 10,
-          right: 20,
-          bottom: 50,
-          left: 60
-        },
-        color: d3.scale.category10().range(),
-        scatter: {
-          onlyCircles: false,
-          dispatch: {
-            elementClick: function (e) { console.log('clicked: ', e); }
-          }
-        },
-        pointRange: [200, 700],
-        showDistX: true,
-        showDistY: true,
-        duration: 650,
-        xAxis: {
-          axisLabel: 'X Axis',
-          tickFormat: function (d) {
-            return d3.format('.02f')(d);
-          }
-        },
-        yAxis: {
-          axisLabel: 'Y Axis',
-          tickFormat: function (d) {
-            return d3.format('.02f')(d);
-          },
-          axisLabelDistance: -5
+        linkDist: 50,
+        margin: { top: 20, right: 20, bottom: 20, left: 20 },
+        color: function (d) {
+          return "orange";
         },
         tooltip: {
-          contentGenerator: function (e) {
-            var series = e.series[0];
+          contentGenerator: function (d) {
+            var series = d.series[0];
             if (series.value === null) return;
-
-            return "<div class='kol-card'><header><img src='" + series.imgPath + "' /></span></header><section><h1 class='name'>" + series.name + "</h1><p>" + series.status + "</p><a href='#'>View KOL</a></section></div>";
+            return "<div class='kol-card'><header><img src='" + d.imgPath + "' /></span></header><section><h1 class='name'>" + d.name + "</h1><p>Allergy and Immunology</p><a href='#'>View KOL</a></section></div>";
           }
+        },
+        nodeExtras: function (node) {
+          node && node
+            .append("text")
+            .attr("dx", ".8em")
+            .attr("dy", ".4em")
+            .text(function (d) { return d.name })
+            .style('font-size', '10px');
         }
       }
-    }
+    };
 
-    this.data = this.kolService.getKOLsForScatter();
+    this.data = {
+      "nodes": [
+        { "name": "Dr. Margaret Myriel", "group": 1, "imgPath": "./assets/custom/doctor-1.png" },
+        { "name": "Dr. Jim Bellow", "group": 1, "imgPath": "./assets/custom/doctor-2.png" },
+        { "name": "Dr. John Anderson, PhD", "group": 1, "imgPath": "./assets/custom/doctor-3.png" },
+        { "name": "Dr. Wilson Magloire", "group": 1, "imgPath": "./assets/custom/doctor-4.png" },
+        { "name": "Dr. Jim Jones", "group": 1, "imgPath": "./assets/custom/doctor-5.png" },
+        { "name": "Dr. Joyce Geborand", "group": 1, "imgPath": "./assets/custom/doctor-6.png" },
+        { "name": "Dr. Jonathan Bernstein", "group": 1, "imgPath": "./assets/custom/doctor-1.png" },
+        { "name": "Dr. Norma Cravatte", "group": 1, "imgPath": "./assets/custom/doctor-2.png" },
+        { "name": "Dr. Kathleen Waldman", "group": 1, "imgPath": "./assets/custom/doctor-3.png" },
+        { "name": "Dr. John Davis", "group": 1, "imgPath": "./assets/custom/doctor-4.png" }
+      ],
+      "links": [
+        { "source": 1, "target": 0, "value": 1 },
+        { "source": 3, "target": 0, "value": 10 },
+        { "source": 4, "target": 0, "value": 1 },
+        { "source": 5, "target": 0, "value": 1 },
+        { "source": 6, "target": 0, "value": 1 },
+        { "source": 7, "target": 0, "value": 1 },
+        { "source": 9, "target": 0, "value": 1 }]
+    }
   }
 
 

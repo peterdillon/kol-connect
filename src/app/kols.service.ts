@@ -378,6 +378,7 @@ export class KOLsService {
                 "Score": 85,
                 "Email": "mriedl@ucsd.edu",
                 "LastName": "Riedl",
+                "Degree": "MD",
                 "pubsCount": 10,
                 "PersonContactId": "003j000000HysvpAAB",
                 "top40": true,
