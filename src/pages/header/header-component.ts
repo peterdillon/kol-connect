@@ -26,38 +26,19 @@ export class HeaderComponent {
     public popoverCtrl: PopoverController,
     public fs: FilterService,
     private viewCtrl: ViewController) { 
-      this.sortBy = { "kind": "Score" }
-      this.sortChoice = [ "Recently Updated", "Score", "First name", "Last name" ]
-
+      this.sortBy = { "kind": "Score" };
+      this.sortChoice = [ "Recently Updated", "Score", "First name", "Last name" ];
     }
 
- share(attendee) {
-        let actionSheet: ActionSheet = this.actionSheetCtrl.create({
-            title: 'Share via',
-            buttons: [
-                {
-                    text: 'Twitter',
-                    handler: () => console.log('share via twitter')
-                },
-                {
-                    text: 'Facebook',
-                    handler: () => console.log('share via Facebook')
-                },
-                {
-                    text: 'Email',
-                    handler: () => console.log('share via email')
-                },
-                {
-                    text: 'Cancel',
-                    role: 'cancel',
-                    handler: () => console.log('cancel share')
-                }
-            ]
-        });
-
-        actionSheet.present();
-    }
-
+  generalShare(){
+    SocialSharing.share("Message",null, null, "Message 2")
+    .then(()=>{
+        alert("Success");
+      },
+      ()=>{
+         alert("failed")
+      })
+  }
 
   isClassVisible: boolean = false;
   applyClass() {
