@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SocialSharing } from 'ionic-native';
-import { ModalController, PopoverController, ViewController, NavParams, NavController } from 'ionic-angular';
+import { ActionSheetController, ActionSheet, ModalController, PopoverController, ViewController, NavParams, NavController } from 'ionic-angular';
 import { FilterComponent } from '../filter-component/filter-component';
 import { KOLProfileCompare } from '../kol-profile-compare/kol-profile-compare';
 import { FilterService } from '../../app/filter.service';
@@ -20,6 +20,7 @@ export class HeaderComponent {
 
   constructor(
     public modalCtrl: ModalController,
+    public actionSheetCtrl: ActionSheetController,
     public navCtrl: NavController,
     public params: NavParams,
     public popoverCtrl: PopoverController,
@@ -30,22 +31,32 @@ export class HeaderComponent {
 
     }
 
-emailShare() {
-  SocialSharing.canShareViaEmail().then(() => {
-    // Sharing via email is possible
-    alert('can share');
-  }).catch(() => {
-    // Sharing via email is not possible
-  });
+ share(attendee) {
+        let actionSheet: ActionSheet = this.actionSheetCtrl.create({
+            title: 'Share via',
+            buttons: [
+                {
+                    text: 'Twitter',
+                    handler: () => console.log('share via twitter')
+                },
+                {
+                    text: 'Facebook',
+                    handler: () => console.log('share via Facebook')
+                },
+                {
+                    text: 'Email',
+                    handler: () => console.log('share via email')
+                },
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    handler: () => console.log('cancel share')
+                }
+            ]
+        });
 
-  // Share via email
-  SocialSharing.shareViaEmail('Body', 'Subject', null).then(() => {
-    alert('is sharing');
-    // Success!
-  }).catch(() => {
-    // Error!
-  });
-}
+        actionSheet.present();
+    }
 
 
   isClassVisible: boolean = false;

@@ -22,7 +22,8 @@ ion-select {
   margin: 0;
   padding: 0;
 }
-.item-md.item-block .item-inner {
+.item-md.item-block .item-inner,
+.item-block .item-inner  {
   padding-right: 0;
 }
 .input-wrapper {
