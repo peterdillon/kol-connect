@@ -11,8 +11,8 @@
                     </a>
                 </li>
                 <li><a href="#">Rising Stars</a> </li>
-                <li>
-                    <a (click)="emailShare()">
+                 <li>
+                    <a (click)="share()">
                         <ion-icon name="share"></ion-icon>
                     </a>
                 </li>
@@ -26,28 +26,15 @@
         <div class="filter-nav cf button-group">
             <div class="filter-title"> Filters: </div>
             <div class="filter-list" id="sorts">
-                <!--<div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
+                <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
                     {{filter.name}} <ion-icon name="close"></ion-icon>
-                </div>-->
-                <div class="filter-item">
-                    MD
-                    <ion-icon name="close"></ion-icon>
-                </div>
-                <div class="filter-item">
-                    PhD
-                    <ion-icon name="close"></ion-icon>
-                </div>
-                <div class="filter-item">
-                    North
-                    <ion-icon name="close">
-                    </ion-icon>
                 </div>
 
                 <div class="filter-item">
                     <ion-list>
                         <ion-item>
                             <ion-label>Sort by:</ion-label>
-                            <ion-select [(ngModel)]="sortBy.kind">
+                                <ion-select [(ngModel)]="sortBy.kind">
                                 <ion-option *ngFor="let key of sortChoice">{{key}}</ion-option>
                             </ion-select>
                         </ion-item>
