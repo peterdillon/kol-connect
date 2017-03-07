@@ -15,6 +15,7 @@ import { HeaderComponent } from '../pages/header/header-component';
 import { FilterComponent } from '../pages/filter-component/filter-component';
 import { SaveFilterSets } from '../pages/filter-component/saved-filter';
 import { KOLProfilePage } from '../pages/kol-profile/kol-profile';
+import { EngagementDetails } from '../pages/engagement-details/engagement-details';
 import { KOLProfileJson } from '../pages/kol-profilejson/kol-profilejson';
 import { KOLProfileCompare } from '../pages/kol-profile-compare/kol-profile-compare';
 import { KOLProfileCompareThree } from '../pages/kol-profile-compare-three/kol-profile-compare-three';
@@ -38,6 +39,7 @@ import { FilterService } from '../app/filter.service';
     SaveFilterSets,
     KOLProfilePage,
     KOLProfileJson,
+    EngagementDetails,
     KOLProfileCompare,
     KOLProfileCompareThree,
     nvD3,
@@ -67,6 +69,7 @@ import { FilterService } from '../app/filter.service';
     SaveFilterSets,
     KOLProfilePage,
     KOLProfileJson,
+    EngagementDetails,
     KOLProfileCompare,
     KOLProfileCompareThree,
     nvD3,

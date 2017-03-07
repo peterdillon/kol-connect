@@ -524,7 +524,8 @@ svg.nvd3-svg {
     font-family: Arial, sans-serif;
     font-size: 13px;
     text-align: left;
-    pointer-events: none;
+    // Commented out to make links inside tooltip clickable;
+    // pointer-events: none;
 
     white-space: nowrap;
 

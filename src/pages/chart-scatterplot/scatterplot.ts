@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { KOLsService } from '../../app/kols.service'
+import { KOLsService } from '../../app/kols.service';
+import { KOLProfileJson } from '../kol-profilejson/kol-profilejson';
 
 
 // @Component({
@@ -21,8 +22,13 @@ declare let d3: any;
 export class Scatterplot implements OnInit {
   options;
   data;
+  kols: any[];
+  id: any;
 
-  constructor(private kolService: KOLsService) { }
+  constructor(
+    public navCtrl: NavController,
+    private kolService: KOLsService ) { }
+
 
   ngOnInit() {
     console.log('init');
@@ -67,13 +73,20 @@ export class Scatterplot implements OnInit {
             var series = e.series[0];
             if (series.value === null) return;
 
-            return "<div class='kol-card'><header><img src='" + series.imgPath + "' /></span></header><section><h1 class='name'>" + series.name + "</h1><p>" + series.status + "</p><a href='#'>View KOL</a></section></div>";
+            return "<div class='kol-card'><header><img src='" + series.imgPath + "' /></span></header><section><h1 class='name'>" + series.name + "</h1><p>" + series.status + "</p><a href='goToKOL("+series.Id+")'>View KOL</a></section></div>";
           }
         }
       }
     }
-
     this.data = this.kolService.getKOLsForScatter();
   }
 
+      // Go load a single KOL
+  goToKOL(id) {
+    console.log(id);
+    this.navCtrl.push(KOLProfileJson, {
+      id: id
+    });
+  }
+  
 }

@@ -9,24 +9,29 @@
 <div class="kol-container">
 <div class="kol-card">
         <header>
-          <ion-row>
-              <ion-col width-70>
-                <h1> {{kol.FirstName}} {{kol.LastName}} </h1>
-                <img src="{{kol.imgPath}}" /> 
+          <ion-row responsive-sm>
+              <ion-col width-80>
+                <h1><a (click)="generalShare()"><ion-icon name="share"></ion-icon></a> {{kol.FirstName}} {{kol.LastName}}</h1>
+                <ion-icon name="contact" class="icon-img"></ion-icon>
+                <!--<img src="{{kol.imgPath}}" /> -->
               </ion-col>
-              <ion-col width-30 class="tx-rt">
-                <ion-icon name="md-star" item-left></ion-icon>
-                <ion-icon name="md-star" item-left></ion-icon>
-                <ion-icon name="md-star-half" item-left></ion-icon>&nbsp; &nbsp;
-                
-                <ion-icon name="share"></ion-icon>&nbsp; &nbsp;
-                <ion-icon name="ios-heart" item-left></ion-icon>
+              <ion-col width-20>
+                <ion-row>
+                  <ion-col width-75 class="tx-rt">
+                    <h3>TIER 1</h3>
+                    <h4>Score: <span class="score">{{kol.Score}}</span></h4>
+                  </ion-col>
+                  <ion-col width-25 class="bookmark">
+                    <ion-icon *ngIf="kol.top40" name="ios-bookmark"></ion-icon>
+                    <ion-icon *ngIf="!kol.top40" name="ios-bookmark-outline"></ion-icon>
+                  </ion-col>
+                </ion-row>
               </ion-col>
           </ion-row>
         </header>
         <section>
-          <ion-row>
-              <ion-col width-33 padding>
+          <ion-row responsive-sm>
+              <ion-col width-60 padding>
                 <h1>Contact Info</h1>
                 <p>Rank: <span class="rank">{{kol.rank}}</span></p>
                 <p>Number: <span class="number">8</span></p>
@@ -36,71 +41,8 @@
                 <p>Fax: +1 504 988 5059</p>
                 <p>E-mail: email@email.edu</p>
 
-                <!-- notes -->
-                <h1>Notes</h1>
-                  <ion-row>
-                      <ion-col>
-                        <p class="public-note">A public note about a KOL.</p>
-                      </ion-col>
-                  </ion-row>
-                  <ion-row> 
-                      <ion-col width-50>
-                        <small>Barny Hoeffler</small>
-                      </ion-col>
-                      <ion-col width-50  class="tx-rt">
-                        <small>January 01, 2016</small>
-                      </ion-col>
-                  </ion-row>
-                <hr>
-                  <ion-row>
-                      <ion-col>
-                        <p class="public-note">A public note about a KOL.</p>
-                      </ion-col>
-                  </ion-row>
-                  <ion-row> 
-                      <ion-col width-50>
-                        <small>John Wilson</small>
-                      </ion-col>
-                      <ion-col width-50  class="tx-rt">
-                        <small>December 21, 2016</small>
-                      </ion-col>
-                  </ion-row>
-                <hr>
-                   <ion-row>
-                    <ion-col color="danger">
-                      <p class="private-note">A private note about a KOL.</p>
-                    </ion-col>
-                  </ion-row>
-                  <ion-row>
-                    <ion-col width-50 class="private-note">
-                      <small>Jane Doe</small>
-                    </ion-col>
-                    <ion-col width-50  class="tx-rt private-note">
-                      <small>October 1, 2016</small>
-                    </ion-col>
-                  </ion-row>
-                <br>
-                <ion-input placeholder="Add note..."></ion-input>
-                <ion-row radio-group>
-                  <ion-list>
-                        <ion-item>
-                            <ion-label>Post as:</ion-label>
-                            <ion-select [(ngModel)]="privacy.kind">
-                              <ion-option *ngFor="let key of modeKeys">{{key}}</ion-option>
-                            </ion-select>
-                        </ion-item>
-                    </ion-list>
-                    <ion-col class="tx-rt">
-                     <button ion-button icon-left small outline color="primary">
-                      <ion-icon name="checkmark"></ion-icon> Save
-                     </button>
-                  </ion-col>
-              </ion-row>
-               
-                <!-- / notes -->
-
-              </ion-col>
-              <ion-col width-33 padding> 
+                
+                <!-- bio -->
                 <h1>Bio</h1>
                 <ion-row>
                   <ion-col>
@@ -147,74 +89,148 @@
                 </ion-row>
 
               </ion-col>
-              <ion-col width-33 padding> 
-                <h1>Upcoming Activities</h1>
+     
+
+              <!-- engagements -->
+              <ion-col width-40 padding> 
+                <h1>Engagement Plan</h1>
                   <ion-row>
                     <ion-col width-75>
                       <h6>Live Speaker Training</h6>
                       <p>March 21, 2017, Orlando FL</p>
+                      <a (click)="viewDetails()">View Details</a> •
+                      <a (click)="addNoteTo(currentEngagement)">Add Note</a>
                     </ion-col>
                     <ion-col width-25  class="tx-ct">
-                      <p>Q1</p>
+                      <ion-badge color="grey">Upcoming</ion-badge>
                     </ion-col>
                   </ion-row>
                   <hr>
                   <ion-row>
                     <ion-col width-75>
-                      <h6>ASCO GU Ask The Experts Presenter</h6>
+                      <h6>ASCO Ask The Experts Presenter</h6>
                       <p>February 01, 2017, Orlando FL</p>
+                      <a (click)="viewDetails()">View Details</a> •
+                      <a (click)="addNoteTo(currentEngagement)">Add Note</a>
                     </ion-col>
-                    <ion-col width-25  class="tx-ct">
-                      <p>Q2</p>
+                    <ion-col width-25 class="tx-ct">
+                      <ion-badge color="secondary">Successful</ion-badge>
                     </ion-col>
                   </ion-row>
+                  
                   <hr>
                   <ion-row>
                     <ion-col width-75>
                       <h6>ASCO Product Theater</h6>
                       <p>January 21, 2017, Orlando FL</p>
+                      <a (click)="viewDetails()">View Details</a> •
+                      <a (click)="addNoteTo(currentEngagement)">Add Note</a>
                     </ion-col>
                     <ion-col width-25  class="tx-ct">
-                      <p>Q3</p>
+                      <ion-badge color="danger">Canceled</ion-badge>
                     </ion-col>
                   </ion-row>
-                  <hr>
+
+                  <ion-row class="tx-ct">
+                    <button ion-button icon-right clear block (click)="showEngagements()" color="primary">
+                       View All Engagements
+                      <ion-icon name="arrow-dropdown"></ion-icon>
+                    </button>
+                  </ion-row>
+
+                  <div [hidden]="shouldHide">
+                    <ion-row>
+                      <ion-col width-75>
+                        <h6>Another Engagement Plan</h6>
+                        <p>February 01, 2017, Orlando FL</p>
+                        <a (click)="viewDetails()">View Details</a> •
+                        <a (click)="addNoteTo(currentEngagement)">Add Note</a>
+                      </ion-col>
+                      <ion-col width-25 class="tx-ct">
+                        <ion-badge color="secondary">Successful</ion-badge>
+                      </ion-col>
+                    </ion-row>
+                    <hr>
+                    <ion-row>
+                      <ion-col width-75>
+                        <h6>Another Engagement Plan</h6>
+                        <p>January 21, 2017, Orlando FL</p>
+                        <a (click)="viewDetails()">View Details</a> •
+                        <a (click)="addNoteTo(currentEngagement)">Add Note</a>
+                      </ion-col>
+                      <ion-col width-25  class="tx-ct">
+                        <ion-badge color="danger">Canceled</ion-badge>
+                      </ion-col>
+                    </ion-row>
+                  </div>
+              <!-- / engagements -->
+
+              
+
+              <!-- notes -->
+                <h1>Notes</h1>
                   <ion-row>
-                    <ion-col width-75>
-                      <h6>Expert Panel Broadcast</h6>
-                      <p>October 24, 2017, Orlando FL</p>
-                    </ion-col>
-                    <ion-col width-25  class="tx-ct">
-                      <p>Q3</p>
+                      <ion-col>
+                        <p class="public-note">Dr. {{kol.FirstName}} {{kol.LastName}} was an incredible representative of our 
+                          product and interacted with attendees with sincere authenticity.</p>
+                      </ion-col>
+                  </ion-row>
+                  <ion-row> 
+                      <ion-col width-50>
+                        <small>PUBLIC - Barny Hoeffler</small>
+                      </ion-col>
+                      <ion-col width-50  class="tx-rt">
+                        <small>January 01, 2016</small>
+                      </ion-col>
+                  </ion-row>
+                <hr>
+                <div  class="private-bg">
+                   <ion-row>
+                    <ion-col color="danger">
+                      <p class="private-note">We should use Dr. {{kol.LastName}} again for future engagments,
+                        this KOL was knowledgable and congenial to producers and attendees.</p>
                     </ion-col>
                   </ion-row>
+                  <ion-row>
+                    <ion-col width-50 class="private-note">
+                      <small>PRIVATE - Joanne Wilson</small>
+                    </ion-col>
+                    <ion-col width-50  class="tx-rt private-note">
+                      <small>October 1, 2016</small>
+                    </ion-col>
+                  </ion-row>
+                </div>
+                <br>
+                <div class="add-note">
+                  <h1>Add Note</h1>
+                    <ion-list>
+                      <ion-input #addNoteInput placeholder="Add note..."> </ion-input>
+                          <ion-item>
+                              <ion-label>Post as:</ion-label>
+                              <ion-select [(ngModel)]="privacy.type">
+                                <ion-option *ngFor="let key of privacyKeys">{{key}}</ion-option>
+                              </ion-select>
+                          </ion-item>
+                          <ion-item>
+                              <ion-label>Engagement:</ion-label>
+                              <ion-select [(ngModel)]="engagement.name">
+                                <ion-option *ngFor="let key of engagementKeys">{{key}}</ion-option>
+                              </ion-select>
+                          </ion-item>
+                          <button ion-button icon-left block color="grey">
+                            <ion-icon name="checkmark"></ion-icon> Save
+                          </button>
+                      </ion-list>
+                  </div>
+                <!-- / notes -->
 
-                  <h1>Engagement Plan</h1>
-                  <ion-row class="plan-row">
-                    <ion-col width-33 class="plan-time">
-                      <ion-icon name="call" class="plan-icon"></ion-icon>
-                      <p>7:00 am</p>
-                      <small>3 hours ago</small>
-                    </ion-col>
-                    <ion-col width-67 class="plan-desc">
-                      <h6>Follow up phone call</h6>
-                      <p>Duis faucibus felis molestie metus bibendum, cursus egestas.</p>
-                    </ion-col>
-                  </ion-row>
-
-                  <ion-row class="plan-row">
-                    <ion-col width-33 class="plan-time">
-                      <ion-icon name="navigate" class="plan-icon"></ion-icon>
-                      <p>12:00 pm</p>
-                      <small>Tomorrow</small>
-                    </ion-col>
-                    <ion-col width-67 class="plan-desc">
-                      <h6>Lunch meeting</h6>
-                      <p>Duis faucibus felis molestie metus bibendum, cursus egestas.</p>
-                    </ion-col>
-                  </ion-row>
-              </ion-col>
+                </ion-col>
           </ion-row>
+
+          
+          
+  
+
         </section>
         <section>
           <h1>Relationship Data</h1>

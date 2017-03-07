@@ -25,7 +25,7 @@ text { fill: #fff; }
 // --------------------------------------------------
 // Global overrides
 ion-content {
-    background-image: url('../assets/custom/blurred-bg.gif');
+    background-image: url('../assets/custom/blurred-bg.png');
     background-size: cover;
 }
 
@@ -41,4 +41,18 @@ ion-content {
     left: 45% !important;
     width: 40rem;
     border-radius: 0;
+}
+
+// Entension of ionic grid
+ion-col[width-60] {
+  -webkit-flex: 0 0 60%;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+ion-col[width-40] {
+  -webkit-flex: 0 0 40%;
+  -ms-flex: 0 0 40%;
+  flex: 0 0 40%;
+  max-width: 40%;
 }

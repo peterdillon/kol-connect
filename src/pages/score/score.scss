@@ -4,26 +4,49 @@ page-score {
    max-width: 1024px;
    margin: 14rem auto 0 auto;
    display: flex;
-   flex-flow: row wrap;
    
-   aside {
-    display: flex;
-    flex-flow: row;
-    width: 49%;
-    height: 13rem;
-    margin: .5rem;
-    padding: 0;
-    justify-content: flex-end;
-    padding: 0 1rem 0 0;
-    //border: 1px solid #ccc;
-    button {
-        margin-top: auto;
-    }
+
+   .total {
+        color: white;
+        position: fixed;
+        background-color: rgba(255, 255, 255, .2);
+        border-radius: .5rem;
+        text-align: center;
+        overflow: auto;
+        width: 23%;
+        top: 15rem;
+        right: 1.5rem;
+       
+       h1 {
+           padding: 1rem 0;
+           margin: 1rem;
+           font-size: 2rem;
+           border-bottom: 1px solid #ccc;
+       }
+       .total-count {
+           background: transparent;
+           font-size: 11rem;
+           line-height: 9rem;
+           font-family: monospace;
+           width: 100%;
+           text-align: center;
+           border: 0;
+           &.invalidTotal {
+               color: $alert;
+           }
+       }
+       .errorMsg {
+           min-height: 5rem;
+           padding: 0 1rem;
+           font-size: 1.8rem;
+           
+       }
+       .button-container {
+           margin: 1rem 0;
+       }
    }
 
     section {
-        
-        width: 48%;
         background-color: rgba(255, 255, 255, .2);
         border-radius: .5rem; 
         margin: .8rem;

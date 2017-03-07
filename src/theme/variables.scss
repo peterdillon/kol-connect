@@ -12,8 +12,13 @@
 
 
 $alert:#EB6660;
-$highlight:#5B38B9;
-$ltPurple: mix(white, $highlight, 30%);
+$alert-bg: mix(white, $alert, 80%);
+// Blue from left nav of eConnect: #1C5D97
+// original purple: 5B38B9
+$highlight:#1C5D97;
+$darkened: mix(black, $highlight, 20%);
+$highlighted: mix(white, $highlight, 20%);
+$highlighted-x: mix(white, $highlight, 40%);
 $positive:  #1ab394;
 $yellow:  yellow;
 
@@ -26,9 +31,10 @@ $yellow:  yellow;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #5B38B9,
+  primary:    #1C5D97,
   secondary:  #1ab394,
   danger:     #EB6660,
+ grey:      #999,
   light:      #f4f4f4,
   dark:       #222,
   sf-save-button:(

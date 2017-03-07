@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { SocialSharing } from 'ionic-native';
+import { NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { KOLsService } from '../../app/kols.service';
-
-
+import { EngagementDetails } from '../engagement-details/engagement-details';
 
 declare let d3: any;
 
@@ -14,21 +14,55 @@ declare let d3: any;
 
 export class KOLProfileJson implements OnInit {
 
+  @ViewChild('addNoteInput') addNoteInput;
+
   kols: any;
   kol: any;
   privacy: any;
-  modeKeys: any;
+  privacyKeys: any;
+  engagement: any;
+  engagementKeys: any;
 
   constructor(
     public navCtrl: NavController,
     public params: NavParams,
+    public modalCtrl: ModalController,
     public loadingController: LoadingController,
     public http: Http,
     private kolService: KOLsService) {
     this.kol = {};
-    this.privacy = { "kind": "Public" }
-    this.modeKeys = ["Private", "Public"]
+    this.privacy = { "type": "Public" }
+    this.privacyKeys = ["Private", "Public"]
+    this.engagement = { "name": "General" }
+    this.engagementKeys = ["General", "Engagement 1", "Engagement 2", "Engagement 3",]
   }
+
+
+  addNoteTo(currentEngagement) {
+    alert("Get current engagement... add focus on note input.")
+      this.addNoteInput.setFocus();
+ }
+
+  generalShare(){
+    SocialSharing.share("Message",null, null, "Message 2")
+    .then(()=>{
+        alert("Success");
+      },
+      ()=>{
+         alert("failed")
+      })
+  }
+
+  viewDetails() {
+    let modal = this.modalCtrl.create(EngagementDetails);
+    modal.present();
+  }
+
+  shouldHide = true;
+  showEngagements() {
+    this.shouldHide = !this.shouldHide;
+  }
+ 
 
   ionViewWillEnter(id) {
     let loader = this.loadingController.create({

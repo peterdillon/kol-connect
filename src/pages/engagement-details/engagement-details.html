@@ -1,0 +1,43 @@
+
+<ion-header>
+<ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<section>
+  <h1>Engagement Details</h1>
+    <ion-row class="plan-row">
+    <ion-col width-33 class="plan-time">
+      <ion-icon name="call" class="plan-icon"></ion-icon>
+      <p>7:00 am</p>
+      <small>3 hours ago</small>
+    </ion-col>
+    <ion-col width-67 class="plan-desc">
+      <h6>Follow up phone call</h6>
+      <p>Duis faucibus felis molestie metus bibendum, cursus egestas.</p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="plan-row">
+    <ion-col width-33 class="plan-time">
+      <ion-icon name="navigate" class="plan-icon"></ion-icon>
+      <p>12:00 pm</p>
+      <small>Tomorrow</small>
+    </ion-col>
+    <ion-col width-67 class="plan-desc">
+      <h6>Lunch meeting</h6>
+      <p>Duis faucibus felis molestie metus bibendum, cursus egestas.</p>
+    </ion-col>
+  </ion-row>
+</section>
+
+</ion-content>
