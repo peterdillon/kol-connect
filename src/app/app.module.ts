@@ -3,6 +3,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 //import { CardList } from '../pages/cardlist/cardlist';
 // import { Barchart } from '../pages/chart-bar/barchart';
+import { Login } from '../pages/login/login';
 import { Scatterplot } from '../pages/chart-scatterplot/scatterplot';
 import { Relationship } from '../pages/chart-relationship/relationship';
 import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
@@ -29,6 +30,7 @@ import { FilterService } from '../app/filter.service';
     MyApp,
     //CardList,
     // Barchart,
+    Login,
     Score,
     Relationship,
     CardlistJSON,
@@ -60,6 +62,7 @@ import { FilterService } from '../app/filter.service';
     MyApp,
     // CardList,
     // Barchart,
+    Login,
     Score,
     Relationship,
     CardlistJSON,
