@@ -1,8 +1,11 @@
 page-score {
 
+.text-ios-primary {
+    color: white;
+}
+
 .score-container {
    max-width: 1024px;
-   margin: 14rem auto 0 auto;
    display: flex;
    
 
@@ -14,7 +17,7 @@ page-score {
         text-align: center;
         overflow: auto;
         width: 23%;
-        top: 15rem;
+        margin-top: .7rem;
         right: 1.5rem;
        
        h1 {

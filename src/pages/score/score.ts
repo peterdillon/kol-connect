@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController, ToastController } from 'ionic-angular';
+import { NavController, ToastController, ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'page-score',
@@ -11,7 +11,8 @@ export class Score {
 
   constructor(
     public navCtrl: NavController,
-    public toastCtrl: ToastController ) {}
+    public toastCtrl: ToastController,
+    public viewCtrl: ViewController ) {}
 
   criteria1: number = 5;
   criteria2: number = 25;
@@ -34,6 +35,10 @@ export class Score {
       this.isValidTotal = false;
       this.errorMsg = "The total weight must equal 100."
     }
+  }
+
+ dismiss() {
+    this.viewCtrl.dismiss();
   }
 
   getScoreTotal() {

@@ -3,15 +3,6 @@ import { NavController } from 'ionic-angular';
 import { KOLsService } from '../../app/kols.service';
 import { KOLProfileJson } from '../kol-profilejson/kol-profilejson';
 
-
-// @Component({
-//   templateUrl: './scatterplot.html'
-// })
-// export class Main {
-//   constructor(public navCtrl: NavController) {
-//   }
-// }
-
 declare let d3: any;
 
 @Component({
@@ -81,7 +72,7 @@ export class Scatterplot implements OnInit {
     this.data = this.kolService.getKOLsForScatter();
   }
 
-      // Go load a single KOL
+  // Load a single KOL
   goToKOL(id) {
     console.log(id);
     this.navCtrl.push(KOLProfileJson, {

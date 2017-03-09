@@ -1,46 +1,68 @@
 <div class="header-component">
     <div class="global-container">
-        <div class="global-nav cf">
-            <div class="logo">
-                <img src="./assets/custom/logo.png" />
-            </div>
-            <ul>
-                <li [ngClass]="['active']">
-                    <a (click)="toggleTop40()">
-                        <ion-icon name="ios-bookmark"></ion-icon>
-                    </a>
-                </li>
-                <li><a href="#">Rising Stars</a> </li>
-                <li>
-                    <a (click)="generalShare()">
-                        <ion-icon name="share"></ion-icon>
-                    </a>
-                </li>
-            </ul>
-            <div class="actions">
-                <!-- [class.active]="isClassVisible" [class.active]="isClassVisible ? 'active' : 'inactive'"  -->
-                <button (click)="goToKOLCompare()" [ngClass]="{'active': false}"> Compare KOLs</button>
-                <button (click)="presentModal()"> Filter KOLs</button>
-            </div>
-        </div>
-        <div class="filter-nav cf button-group">
-            <div class="filter-title"> Filters: </div>
-            <div class="filter-list" id="sorts">
-                <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
-                    {{filter.name}} <ion-icon name="close"></ion-icon>
-                </div>
 
-                <div class="filter-item">
-                    <ion-list>
+            <div class="search-container">
+                <!--
+                    <img src="./assets/custom/logo.png" />
+                    [(ngModel)]="myInput"
+                    (ionInput)="onInput($event)"
+                -->
+                <ion-searchbar
+                    [showCancelButton]="shouldShowCancel"
+                    (ionCancel)="onCancel($event)">
+                </ion-searchbar>
+            </div>
+
+            <div class="filter-nav-container">
+                 <div class="filter-nav button-group">
+                    <div class="filter-title" (click)="presentModal()"> 
+                        Filters:
+                        <span [ngClass]="['active']">
+                            <a (click)="toggleTop40()">
+                                <ion-icon name="ios-bookmark"></ion-icon>
+                            </a>
+                        </span>
+                        <span><a href="#">Rising Stars</a> </span>
+                    </div>
+
+                    <div class="filter-container">
+                        <div id="sorts">      
+                            <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
+                                {{filter.name}} <ion-icon name="close"></ion-icon>
+                            </div>  
+                            <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
+                                {{filter.name}} <ion-icon name="close"></ion-icon>
+                            </div>                    
+                        </div>
+                    </div>
+                    <div class="select-container">
+                        
                         <ion-item>
                             <ion-label>Sort by:</ion-label>
                                 <ion-select [(ngModel)]="sortBy.kind">
                                 <ion-option *ngFor="let key of sortChoice">{{key}}</ion-option>
                             </ion-select>
                         </ion-item>
-                    </ion-list>
+                        
+                    </div>
                 </div>
+
+        </div>
+
+            <div class="action-container">
+                <div class="action" (click)="generalShare()">
+                    <ion-icon name="share"></ion-icon>
+                </div>
+                <div class="action" (click)="goToKOLCompare()">
+                    <ion-icon name="ios-contacts"></ion-icon>
+                </div>
+                <div class="action" (click)="goToConfig()" >
+                    <ion-icon name="settings"></ion-icon>
+                </div>
+                
             </div>
         </div>
-    </div>
+
+       
+
 </div>
