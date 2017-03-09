@@ -1,5 +1,25 @@
 page-cardlistjson {
 
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  70%  { transform: scale(1.6); opacity: 0; }
+  100% { opacity: 0; }
+  }
+
+.pulse {
+   &:before {
+    content:'';
+    z-index: -1;
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    border-radius: 50%;
+    animation: pulse 2.5s ease-out infinite;
+    background-color: #aaa;
+    margin: .3rem 0 0 .3rem;
+  }
+}
+
 .card-container {
    max-width: 1024px;
    margin: 6rem auto 0 auto;

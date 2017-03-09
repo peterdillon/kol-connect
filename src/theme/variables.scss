@@ -14,7 +14,7 @@
 $alert:#EB6660;
 $alert-bg: mix(white, $alert, 80%);
 // Blue from left nav of eConnect: #1C5D97
-// original purple: 5B38B9
+// original purple: #5B38B9
 $highlight:#1C5D97;
 $darkened: mix(black, $highlight, 20%);
 $highlighted: mix(white, $highlight, 20%);
@@ -37,6 +37,7 @@ $colors: (
  grey:      #999,
   light:      #f4f4f4,
   dark:       #222,
+  yellow: #FFDE75,
   sf-save-button:(
     base: #B8E986,
     contrast: #84C344
