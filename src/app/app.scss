@@ -43,6 +43,13 @@ ion-content {
     border-radius: 0;
 }
 
+.tabs-ios .tabbar {
+    background: transparent;
+}
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+    color: white;
+}
+
 // Entension of ionic grid
 ion-col[width-60] {
   -webkit-flex: 0 0 60%;

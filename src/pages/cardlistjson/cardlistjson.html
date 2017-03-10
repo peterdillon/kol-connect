@@ -1,6 +1,5 @@
 <header-component></header-component>
 
-
 <ion-fab right middle #fab *ngIf="showCompare">
     <div class="pulse">
         <button ion-fab (click)="goToKOLCompare()" color="light">
@@ -9,12 +8,11 @@
     </div>
 </ion-fab>
 
-
 <ion-content>
-    <div class="card-container grid">
+    <div class="card-container">
         <!--| kolsFilter-->
         <div *ngFor="let kol of kols | kolsFilter; let i = index">
-            <div class="kol-card element-item" data-category="transition">
+            <div class="kol-card">
 
                 <header>
                     <!--[ngClass]="{'checked': isClassVisible }"-->

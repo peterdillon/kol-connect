@@ -1,5 +1,12 @@
 header-component {
 
+.statusbar {
+    height: 2rem;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    background-color: $highlight;
+}
 
 
     .global-container {
@@ -10,7 +17,8 @@ header-component {
         width: 100%;
         z-index: 10;
         display: flex;
-        height: 4.5rem;
+        height: 6.5rem;
+        padding-top: 2rem;
     }
 
     .search-container {
@@ -71,33 +79,34 @@ header-component {
             color: #fff;
             display: flex;
             
-
-            .filter-title {
-                width: 22rem;
-                font-weight: bold;
-                text-transform: uppercase;
-                box-shadow: -5px 0 20px 10px rgba(0,0,0,.6);
-                height: 4.5rem;
-                text-align: right;
-                padding: 1rem .5rem 0 0;
-                z-index: 1;
-                span {
-                    border-right: 1px solid #D2C5EB;
-                    &:last-of-type { border-right:0; }
+                .filter-title {
+                    width: 22rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    box-shadow: 3px 0px 15px 3px rgba(0,0,0,.5);
+                    height: 4.5rem;
+                    text-align: right;
+                    padding: 1.2rem .5rem 0 0;
+                    z-index: 1;
+                    
+                    span {
+                        border-right: 1px solid #D2C5EB;
+                        &:last-of-type { border-right:0; }
+                    }
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        padding: 0 1rem;
+                        text-transform: initial;
+                        font-weight: normal;
+                        line-height: .5rem;
+                    }   
                 }
-                a {
-                    color: white;
-                    text-decoration: none;
-                    padding: 0 1rem;
-                    text-transform: initial;
-                    font-weight: normal;
-                    line-height: .5rem;
-                }   
-            }
+            
             .filter-container {
                 background-color: $highlighted;
                 height: 4.5rem;
-                padding: 1.2rem 1rem 0 0;
+                padding: .7rem 1rem 0 0;
                 box-shadow: inset -15px 0px 15px -10px rgba(0,0,0,.6);
                 white-space: nowrap;
                 overflow-x: scroll;
@@ -111,10 +120,10 @@ header-component {
                 and (orientation : portrait) { width: 14rem; }
             }
             .filter-item {
-                border-right: 1px solid #ccc;
+                border-right: 1px solid rgba(255,255,255,.4);
                 color: #fff;
-                padding: 0 1rem;
-                width: 7rem;
+                padding: .5rem 1.5rem;
+                height: 3.3rem;
                 display: inline-block;
                 &:last-of-type {
                     border-right:0;

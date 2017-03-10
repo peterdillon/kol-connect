@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CardlistJSON } from '../cardlistjson/cardlistjson';
 import { Login } from '../login/login';
+import { RowList } from '../row-list/row-list';
 import { Scatterplot } from '../chart-scatterplot/scatterplot';
 import { Relationship } from '../chart-relationship/relationship';
 
@@ -11,8 +12,9 @@ import { Relationship } from '../chart-relationship/relationship';
 export class TabsPage {
   tab1Root: any = Login;
   tab2Root: any = CardlistJSON;
-  tab3Root: any = Scatterplot;
-  tab4Root: any = Relationship;
+  tab3Root: any = RowList;
+  tab4Root: any = Scatterplot;
+  tab5Root: any = Relationship;
   constructor() {
 
   }

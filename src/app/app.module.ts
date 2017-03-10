@@ -8,6 +8,7 @@ import { Scatterplot } from '../pages/chart-scatterplot/scatterplot';
 import { Relationship } from '../pages/chart-relationship/relationship';
 import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
 import { Score } from '../pages/score/score';
+import { RowList } from '../pages/row-list/row-list';
 import { KOLsFilterPipe } from '../pages/cardlistjson/filter-pipe';
 import { CategoryFilterPipe } from '../pages/filter-component/category-pipe';
 import { nvD3 } from 'ng2-nvd3';
@@ -32,6 +33,7 @@ import { FilterService } from '../app/filter.service';
     // Barchart,
     Login,
     Score,
+    RowList,
     Relationship,
     CardlistJSON,
     KOLsFilterPipe,
@@ -64,6 +66,7 @@ import { FilterService } from '../app/filter.service';
     // Barchart,
     Login,
     Score,
+    RowList,
     Relationship,
     CardlistJSON,
     Scatterplot,

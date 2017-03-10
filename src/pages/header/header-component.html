@@ -1,4 +1,5 @@
 <div class="header-component">
+    <div class="statusbar"></div>
     <div class="global-container">
 
             <div class="search-container">
@@ -15,15 +16,17 @@
 
             <div class="filter-nav-container">
                  <div class="filter-nav button-group">
-                    <div class="filter-title" (click)="presentModal()"> 
-                        Filters:
-                        <span [ngClass]="['active']">
-                            <a (click)="toggleTop40()">
-                                <ion-icon name="ios-bookmark"></ion-icon>
-                            </a>
-                        </span>
-                        <span><a href="#">Rising Stars</a> </span>
-                    </div>
+                     
+                        <div class="filter-title" (click)="presentModal()"> 
+                            Filters:
+                            <span [ngClass]="['active']">
+                                <a (click)="toggleTop40()">
+                                    <ion-icon name="ios-bookmark"></ion-icon>
+                                </a>
+                            </span>
+                            <span><a href="#">Rising Stars</a> </span>
+                        </div>
+                    
 
                     <div class="filter-container">
                         <div id="sorts">      

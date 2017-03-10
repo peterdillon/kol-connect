@@ -7,7 +7,6 @@ page-score {
 .score-container {
    max-width: 1024px;
    display: flex;
-   
 
    .total {
         color: white;
@@ -16,7 +15,7 @@ page-score {
         border-radius: .5rem;
         text-align: center;
         overflow: auto;
-        width: 23%;
+        width: 28%;
         margin-top: .7rem;
         right: 1.5rem;
        
@@ -28,12 +27,13 @@ page-score {
        }
        .total-count {
            background: transparent;
-           font-size: 11rem;
-           line-height: 9rem;
-           font-family: monospace;
+           font-size: 9rem;
            width: 100%;
            text-align: center;
+           font-family: monospace;
            border: 0;
+           padding: 0;
+           overflow: visible;
            &.invalidTotal {
                color: $alert;
            }
@@ -49,33 +49,36 @@ page-score {
        }
    }
 
-    section {
-        background-color: rgba(255, 255, 255, .2);
-        border-radius: .5rem; 
-        margin: .8rem;
-        padding: 0 .5rem;
-
-        .item-md.item-block .item-inner, 
-        .item-block .item-inner {
-            border-bottom: 0;
-        }
-        ion-item {
-            background-color: transparent; 
-        }
-        ion-label {
-            font-size: 2rem;
-            color: white;
-        }
-        ion-range  {
-            padding: 0 .5;
-            margin: 0;
-        }
-        .badge {
-            padding: .5rem 1rem;
-            font-size: 2rem;
+   .slide-container {
+       width: 70%;
+       
+        section {
             background-color: rgba(255, 255, 255, .2);
-        }
-      }
-    }
+            border-radius: .5rem; 
+            margin: .8rem;
+            padding: 0 .5rem;
 
+            .item-md.item-block .item-inner, 
+            .item-block .item-inner {
+                border-bottom: 0;
+            }
+            ion-item {
+                background-color: transparent; 
+            }
+            ion-label {
+                font-size: 2rem;
+                color: white;
+            }
+            ion-range  {
+                padding: 0 .5;
+                margin: 0;
+            }
+            .badge {
+                padding: .5rem 1rem;
+                font-size: 2rem;
+                background-color: rgba(255, 255, 255, .2);
+            }
+            }
+}   
+    }
 }

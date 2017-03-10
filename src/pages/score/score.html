@@ -12,12 +12,9 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
   <div class="score-container">
-
-    <ion-row>
-      <ion-col width-75>
+    <div class="slide-container">
           <section>
             <ion-item>
               <ion-label>Publications
@@ -81,12 +78,10 @@
             </ion-item>
           </section>
           
-      </ion-col>
       
-      
-      
-      <ion-col width-25>
-        <div class="total">
+    </div>
+
+     <div class="total">
           <h1>Total</h1>
           <input class="total-count" [ngClass]="{'invalidTotal': !isValidTotal }" [(ngModel)]="criteriaTotal">
           <div class="errorMsg" [(innerHTML)]="errorMsg"></div>
@@ -96,8 +91,5 @@
             <button ion-button round outline color="light" (click)="save()" [attr.disabled]="!isValidTotal ? '' : null" >Save</button>
           </div>
         </div>
-      </ion-col>
-
-    </ion-row>
   </div>
 </ion-content>

@@ -1,0 +1,66 @@
+page-row-list {
+    
+
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  70%  { transform: scale(1.6); opacity: 0; }
+  100% { opacity: 0; }
+  }
+  .pulse {
+        border-radius: 50%;
+        border: 3px solid $highlighted;
+        &:before {
+            content:'';
+            z-index: -1;
+            height: 5rem;
+            width: 5rem;
+            position: absolute;
+            border-radius: 50%;
+            animation: pulse 2.5s ease-out infinite;
+            background-color: $highlighted;
+            margin: .3rem 0 0 .3rem;
+        }
+    }
+    .item-ios ion-icon[item-left], 
+    .item-ios ion-icon[item-right],
+    .item-ios [item-left] {
+        margin: .2rem;
+    }
+
+    .content-top{
+        margin-top: 6rem;
+    }
+    .w-5 { width: 5%; }
+    .w-10 { width: 10%; }
+    .w-15 { width: 15%; }
+    .w-25 { width: 25%; }
+    .w-20 { width: 20%; }
+    .w-30 { width: 30%; }
+    .w-35 { width: 35%; }
+    .w-40 { width: 40%; }
+    .w-45 { width: 45%; }
+    .w-50 { width: 50%; } 
+    
+    h1 {
+        font-size: 1.6rem !important;
+        font-weight: bold !important;
+        white-space: normal;
+        small {
+            color: $highlight;
+        }
+    }
+    p {
+        white-space: normal;
+    }
+    .action-icons {
+        color: $highlight;
+        font-size: 5rem;
+        margin-right: 1rem;
+    }
+    .check {
+        font-size: 5rem;
+    }
+    .un-checked { opacity: .3; }
+    .checked    { opacity: 1; }
+
+}
