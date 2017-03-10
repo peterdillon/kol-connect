@@ -1,14 +1,12 @@
 header-component {
 
-.statusbar {
-    height: 2rem;
-    width: 100%;
-    position: fixed;
-    z-index: 20;
-    background-color: $highlight;
-}
-
-
+    .statusbar {
+        height: 2rem;
+        width: 100%;
+        position: fixed;
+        z-index: 20;
+        background-color: $highlight;
+    }
     .global-container {
         background-color: $highlight;
         overflow: hidden; // to hide shadow for scrolling filter effect
@@ -34,7 +32,7 @@ header-component {
         .action {
             font-size: 3rem;
             float: left;
-            padding: .3rem .5rem;
+            padding: 0 .6rem;
             color: white;
         }
     }
