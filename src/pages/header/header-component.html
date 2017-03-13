@@ -17,16 +17,11 @@
             <div class="filter-nav-container">
                  <div class="filter-nav button-group">
                      
-                        <div class="filter-title" (click)="presentModal()"> 
-                            Filters:
-                            <span [ngClass]="['active']">
-                                <a (click)="toggleTop40()">
-                                    <ion-icon name="ios-bookmark"></ion-icon>
-                                </a>
-                            </span>
-                            <span><a href="#">Rising Stars</a> </span>
-                        </div>
-                    
+                    <div class="filter-title"> 
+                        <span class="open-filter" (click)="presentModal()" [ngClass]="['active']">Filters</span>
+                        <span class="toggle-bookmarked" [ngClass]="['active']"><ion-icon name="ios-bookmark"></ion-icon></span>
+                        <span class="toggle-rising-stars" (click)="toggleTop40()" [ngClass]="['active']">Rising Stars</span>
+                    </div>
 
                     <div class="filter-container">
                         <div id="sorts">      
@@ -38,16 +33,16 @@
                             </div>                    
                         </div>
                     </div>
-                    <div class="select-container">
-                        
+
+                    <div class="select-container">    
                         <ion-item>
                             <ion-label>Sort by:</ion-label>
                                 <ion-select [(ngModel)]="sortBy.kind">
                                 <ion-option *ngFor="let key of sortChoice">{{key}}</ion-option>
                             </ion-select>
                         </ion-item>
-                        
                     </div>
+                    
                 </div>
             </div>
 

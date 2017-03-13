@@ -79,26 +79,31 @@ header-component {
             
                 .filter-title {
                     width: 22rem;
-                    font-weight: bold;
-                    text-transform: uppercase;
+                    font-size: 1.5rem;
                     box-shadow: 3px 0px 15px 3px rgba(0,0,0,.5);
                     height: 4.5rem;
                     text-align: right;
-                    padding: 1.2rem .5rem 0 0;
+                    padding: 1rem 0 0 0;
                     z-index: 1;
-                    
-                    span {
-                        border-right: 1px solid #D2C5EB;
-                        &:last-of-type { border-right:0; }
-                    }
-                    a {
+                     span {
+                        float: left;
+                        display: inline;
                         color: white;
                         text-decoration: none;
-                        padding: 0 1rem;
-                        text-transform: initial;
-                        font-weight: normal;
-                        line-height: .5rem;
-                    }   
+                        padding: .3rem 1.3rem;
+                    }  
+                    .open-filter {
+                        background-color: rgba(255,255,255,.1);
+                        border: 1px solid #D2C5EB;
+                        border-radius: .5rem;
+                    }
+                    .toggle-bookmarked {
+                        border-right: 1px solid #D2C5EB;
+                    }
+                    .toggle-rising-stars {
+
+                    }
+                   
                 }
             
             .filter-container {
