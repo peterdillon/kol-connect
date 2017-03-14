@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SocialSharing } from 'ionic-native';
 import { NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
 import { Http } from '@angular/http';

@@ -38,11 +38,18 @@ page-kol-profile-compare {
             font-size: 2.8rem;
             text-align: left;
         }
-        img {
+        img, ion-icon.icon-img {
           height: 12rem;
           width: 12rem;
           float: left;
           margin: 0 0 0 2rem;
+          // style items for ion-icon becuase it's a font
+          font-size: 12rem;
+          background-color: white;
+          color: #999;
+          border-radius: 100%;
+          line-height: 0rem;
+          box-shadow: 0 2px 2px #ccc;
         }
         ion-icon {
             font-size: 3rem;

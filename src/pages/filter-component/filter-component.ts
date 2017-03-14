@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { Content, ModalController, Platform, PopoverController, ViewController, NavParams, NavController, LoadingController } from 'ionic-angular';
+import { Content, ModalController, PopoverController, ViewController, NavParams, NavController, LoadingController } from 'ionic-angular';
 import { FilterService } from '../../app/filter.service';
-import { CategoryFilterPipe } from './category-pipe';
+//import { CategoryFilterPipe } from './category-pipe';
 import { KOLsService } from '../../app/kols.service';
 import { SaveFilterSets } from './saved-filter';
 

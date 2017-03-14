@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { SocialSharing } from 'ionic-native';
-import { Tabs, ActionSheetController, ActionSheet, ModalController, PopoverController, ViewController, NavParams, NavController } from 'ionic-angular';
+import { ModalController, PopoverController, ViewController, NavParams, NavController } from 'ionic-angular';
 import { FilterComponent } from '../filter-component/filter-component';
 import { FilterService } from '../../app/filter.service';
-import { Filter } from '../../app/filter';
-import { KOLsFilterPipe } from './filter-pipe';
 import { Score } from '../score/score';
 
 @Component({
@@ -19,7 +17,6 @@ export class HeaderComponent {
 
   constructor(
     public modalCtrl: ModalController,
-    public actionSheetCtrl: ActionSheetController,
     public navCtrl: NavController,
     public params: NavParams,
     public popoverCtrl: PopoverController,

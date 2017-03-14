@@ -64,7 +64,7 @@ export class Scatterplot implements OnInit {
             var series = e.series[0];
             if (series.value === null) return;
 
-            return "<div class='kol-card'><header><img src='" + series.imgPath + "' /></span></header><section><h1 class='name'>" + series.name + "</h1><p>" + series.status + "</p><a href='goToKOL("+series.Id+")'>View KOL</a></section></div>";
+            return "<div class='kol-card'><header><img src='./assets/custom/user-icon.png' /></header><section><h1 class='name'>" + series.name + "</h1><p>" + series.status + "</p><a href='goToKOL("+series.Id+")'>View KOL</a></section></div>";
           }
         }
       }

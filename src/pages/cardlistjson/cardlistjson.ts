@@ -1,14 +1,13 @@
-import { Component, Injectable, trigger, state, style, transition, animate, keyframes } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoadingController, NavParams, NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { FilterComponent } from '../filter-component/filter-component';
 import { KOLProfileJson } from '../kol-profilejson/kol-profilejson';
 import { KOLProfileCompare } from '../kol-profile-compare/kol-profile-compare';
 import { KOLProfileCompareThree } from '../kol-profile-compare-three/kol-profile-compare-three';
-import { KOLsFilterPipe } from './filter-pipe';
+// import { FilterComponent } from '../filter-component/filter-component';
+// import { KOLsFilterPipe } from './filter-pipe';
 import { KOLsService } from '../../app/kols.service';
-// import { HeaderComponent } from '../header/header-component';
 
 @Component({
   selector: 'page-cardlistjson',

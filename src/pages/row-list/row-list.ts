@@ -1,4 +1,4 @@
-import { Component, Injectable, trigger, state, style, transition, animate, keyframes } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoadingController, NavParams, NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
