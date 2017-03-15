@@ -32,7 +32,7 @@ export class HeaderComponent {
         // alert("Success");
       },
       ()=>{
-         // alert("failed")
+         // alert("Failed")
       })
   }
 

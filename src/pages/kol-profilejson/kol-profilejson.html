@@ -138,7 +138,7 @@
                     </button>
                   </ion-row>
 
-                  <div [hidden]="shouldHide">
+                  <div [hidden]="hiddenEngagments">
                     <ion-row>
                       <ion-col width-75>
                         <h6>Another Engagement Plan</h6>
@@ -164,48 +164,42 @@
                     </ion-row>
                   </div>
               <!-- / engagements -->
-
+              <br>
               
 
-              <!-- notes -->
-                <h1>Notes</h1>
-                  <ion-row>
-                      <ion-col>
-                        <p class="public-note">Dr. {{kol.FirstName}} {{kol.LastName}} was an incredible representative of our 
-                          product and interacted with attendees with sincere authenticity.</p>
-                      </ion-col>
-                  </ion-row>
-                  <ion-row> 
-                      <ion-col width-50>
-                        <small>PUBLIC - Barny Hoeffler</small>
-                      </ion-col>
-                      <ion-col width-50  class="tx-rt">
-                        <small>January 01, 2016</small>
-                      </ion-col>
-                  </ion-row>
-                <hr>
-                <div  class="private-bg">
-                   <ion-row>
-                    <ion-col color="danger">
-                      <p class="private-note">We should use Dr. {{kol.LastName}} again for future engagments,
-                        this KOL was knowledgable and congenial to producers and attendees.</p>
-                    </ion-col>
-                  </ion-row>
-                  <ion-row>
-                    <ion-col width-50 class="private-note">
-                      <small>PRIVATE - Joanne Wilson</small>
-                    </ion-col>
-                    <ion-col width-50  class="tx-rt private-note">
-                      <small>October 1, 2016</small>
-                    </ion-col>
-                  </ion-row>
+            <!-- notes -->
+             <div class="note-section" *ngFor="let row of rows; let i=index">
+                    <ion-row>
+                        <ion-col>
+                          <p class="note">{{row.noteContent}}</p>
+                            <span class="remove-note" (click)="removeNote(i)">
+                              <ion-icon name="ios-close"></ion-icon>
+                          </span>
+                        </ion-col>
+                        
+                    </ion-row>
+                    <ion-row> 
+                        <ion-col width-50>
+                          <small>{{row.notePrivacyType}}</small>
+                          <small>{{row.noteEngagementName}}</small>
+                        </ion-col>
+                        <ion-col width-50  class="tx-rt">
+                          <small>Posted by: Your Name</small>
+                          <small>{{today | date:'medium'}}</small>
+                        </ion-col>
+                    </ion-row>
                 </div>
                 <br>
-                <div class="add-note">
-                  <h1>Add Note</h1>
-                    <ion-list>
-                      <ion-textarea rows="6" #addNoteInput placeholder="Add note..."> </ion-textarea>
-                          <ion-item>
+
+
+                <ion-grid class="add-note">
+                <h1>Add Note</h1>
+                  <ion-list>
+                      <ion-row>
+                        <ion-textarea #addNoteInput rows="6" type="text" [(ngModel)]="noteContent" (keyup.enter)="addNote()" placeholder="Add note..."></ion-textarea>
+                      </ion-row>
+                      <ion-row>
+                        <ion-item>
                               <ion-label>Post as:</ion-label>
                               <ion-select [(ngModel)]="privacy.type">
                                 <ion-option *ngFor="let key of privacyKeys">{{key}}</ion-option>
@@ -217,12 +211,16 @@
                                 <ion-option *ngFor="let key of engagementKeys">{{key}}</ion-option>
                               </ion-select>
                           </ion-item>
-                          <button ion-button icon-left block color="grey">
+                      </ion-row>
+                      <ion-row>
+                        <button ion-button icon-left block color="grey" (click)="addNote()">
                             <ion-icon name="checkmark"></ion-icon> Save
                           </button>
+                      </ion-row>
                       </ion-list>
-                  </div>
-                <!-- / notes -->
+                  </ion-grid>
+
+                  <!-- / notes -->
 
                 </ion-col>
           </ion-row>

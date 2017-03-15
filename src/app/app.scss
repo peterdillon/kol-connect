@@ -42,10 +42,15 @@ ion-content {
     width: 40rem;
     border-radius: 0;
 }
-
+.tabs-md .tabbar,
 .tabs-ios .tabbar {
     background: transparent;
 }
+.tabs-md .tab-button,
+.tabs-md .tab-button-icon {
+    color: rgba(255,255,255, 0.5)
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
     color: white;
 }
