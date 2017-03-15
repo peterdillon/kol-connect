@@ -29,10 +29,10 @@ export class HeaderComponent {
   generalShare(){
     SocialSharing.share("Message",null, null, "Message 2")
     .then(()=>{
-        alert("Success");
+        // alert("Success");
       },
       ()=>{
-         alert("failed")
+         // alert("failed")
       })
   }
 
