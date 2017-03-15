@@ -179,13 +179,13 @@
                         
                     </ion-row>
                     <ion-row> 
-                        <ion-col width-50>
+                        <ion-col width-50 [class.private-note]="isClassVisible">
                           <small>{{row.notePrivacyType}}</small>
                           <small>{{row.noteEngagementName}}</small>
                         </ion-col>
                         <ion-col width-50  class="tx-rt">
                           <small>Posted by: Your Name</small>
-                          <small>{{today | date:'medium'}}</small>
+                          <small>{{row.noteDate | date:'medium'}}</small>
                         </ion-col>
                     </ion-row>
                 </div>

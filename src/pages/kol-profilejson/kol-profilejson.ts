@@ -22,7 +22,6 @@ export class KOLProfileJson implements OnInit {
   privacyKeys: any;
   engagement: any;
   engagementKeys: any;
-  today: number = Date.now();
 
   constructor(
     public navCtrl: NavController,
@@ -67,12 +66,15 @@ export class KOLProfileJson implements OnInit {
   // Save note
   rows = [];
   noteContent = "";
+  today: number;
 
     addNote() {
+        this.today = Date.now();
         this.rows.push({ 
           noteContent: this.noteContent,
           notePrivacyType: this.privacy.type,
-          noteEngagementName: this.engagement.name
+          noteEngagementName: this.engagement.name,
+          noteDate: this.today
           });
         this.noteContent = '';
         
@@ -81,6 +83,7 @@ export class KOLProfileJson implements OnInit {
         this.rows.splice(index, 1);
     }
   //----------  
+
 
   ionViewWillEnter(id) {
     let loader = this.loadingController.create({
