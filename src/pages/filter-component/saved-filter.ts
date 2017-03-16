@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { Content, ModalController, Platform, PopoverController, ViewController, NavParams, NavController, LoadingController } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { ViewController } from 'ionic-angular';
 
 // --------------------------------------------------------
 // SaveFilterSets template - opens in popover object above

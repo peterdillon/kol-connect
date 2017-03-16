@@ -102,7 +102,7 @@ export class Relationship implements OnInit {
           contentGenerator: function (d) {
             var series = d.series[0];
             if (series.value === null) return;
-            return "<div class='kol-card'><header><img src='" + d.imgPath + "' /></span></header><section><h1 class='name'>" + d.name + "</h1><p>Allergy and Immunology</p><a href='#'>View KOL</a></section></div>";
+            return "<div class='kol-card'><header><img src='./assets/custom/user-icon.png' /></header><section><h1 class='name'>" + d.name + "</h1><p>Allergy and Immunology</p><a href='#'>View KOL</a></section></div>";
           }
         },
         nodeExtras: function (node) {

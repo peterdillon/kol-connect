@@ -1,171 +1,145 @@
 header-component {
 
-// Global navigation styles.
-.global-container {
-    @include linearGradient(#5836B9, #9152C8);
-    position: fixed;
-    will-change: transform, top;
-    width: 100%;
-    z-index: 10;
-    padding-top: 1rem;
+    .statusbar {
+        height: 2rem;
+        width: 100%;
+        position: fixed;
+        z-index: 20;
+        background-color: $highlight;
+    }
+    .global-container {
+        background-color: $highlight;
+        overflow: hidden; // to hide shadow for scrolling filter effect
+        position: fixed;
+        will-change: transform, top;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        height: 6.5rem;
+        padding-top: 2rem;
+    }
 
-    .global-nav {
-        padding: 1.8rem;
-        
-        .logo {
-            float: left;
-            width: 18rem;
-            img { width: 100%; }
+    .search-container {
+        min-width: 11rem;
+        background-color: $highlight;
+        z-index: 2;
+        .searchbar-ios {
+            background-color: transparent;
         }
-
-        ul {
+    }
+    .action-container {
+        min-width: 8rem;
+        .action {
+            font-size: 3rem;
             float: left;
-            margin: .5rem 0 0 1.5rem;
-            padding-left: 2rem;   
-
-            @media (max-width: 1023px) {
-                padding-left: 0;
-            }
-
-        li {
-            display: inline;
-            list-style: none;
-            border-right: 1px solid #D2C5EB;
-            padding: 0 1rem;
-            
-            span { vertical-align: middle; }
-            &:last-of-type { border-right:0; }
-            &:first-of-type { padding-left: 0; }
-            &.active {
-              a, ion-icon {
-                color: white;
-                opacity: 1;
-                font-weight: bold;
-                
-              }
-            }
-            ion-icon {
-                color: white;
-                opacity: .7;
-                font-size: 1.9rem;
-            }
-            a {
-                vertical-align: middle;
-                color: white;
-                font-family: 'Varela Round', sans-serif;
-                opacity: .7;
-                text-decoration: none;
-                font-size: 1.9rem; 
-                
-            }
+            padding: 0 .6rem;
+            color: white;
         }
     }
 
-    .actions {
-        float: right;
+    .select-container {
+        width: 17rem;
+        height: 3rem;
 
-        button {
-            font-size: 1.7rem;
-            font-weight: bold;
+        ion-item {
+            background-color: transparent;
+
+            .item-inner {
+                border: 0 !important;
+                padding-right: 0;
+            }
+            ion-label {
+                color: #fff !important;
+                margin: 0;
+                flex: initial;
+            }
+            .select {
+                padding: 0;
+                overflow: visible;
+            }
+
+            .select-icon-inner {
+                color: #fff !important;
+            }
+            .select-text {
+                color: yellow;
+                padding-left: .5rem;
+            }
+
+        }
+    }
+
+    .filter-nav-container {
+        flex: 1;
+        .filter-nav {
             font-family: 'Varela Round', sans-serif;
+            font-size: 1.5rem;
             color: #fff;
-            padding: .9rem 2rem;
-            border-radius: 2rem;;
-            border: 2px solid #B286D9;
-            background: rgba(255, 255, 255, 0.1);
-            transition: all 300ms ease;
-            &:first-of-type { margin-right: 1rem; }
-            &:hover { background: rgba(255, 255, 255, 0.3); }
-            &.active { background: rgba(255, 255, 0, .8); color: #B286D9 }
-        }
-      } // END .actions
-    } // END .global-nav
-
-    // Global filter navigation styules
-    .filter-nav {
-        font-family: 'Varela Round', sans-serif;
-        font-size: 1.5rem;
-        color: #fff;
-        background-color: #909090;
-        padding: 1rem;
-        width: 100%;
-        float: left;
-
-        .filter-title {
-            //width: 7rem;
-            float: left;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-left: .7rem;  
-        }
-        .filter-list {
             display: flex;
-
-            ion-list {
-              
-              margin: 0 !important;
-              padding: 0 !important;
-              list-style-type: none;
-              height: 20px;
-              border: 0;
-
-              ion-item {
-                background-color: transparent !important;
-                text-align: right;
-                border: 0;
-
-                .item-inner, .item-cover, .input-wrapper {
-                  height: 20px;
+            
+                .filter-title {
+                    width: 22rem;
+                    font-size: 1.5rem;
+                    box-shadow: 3px 0px 15px 3px rgba(0,0,0,.5);
+                    height: 4.5rem;
+                    text-align: right;
+                    padding: 1rem 0 0 0;
+                    z-index: 1;
+                     span {
+                        float: left;
+                        display: inline;
+                        color: white;
+                        text-decoration: none;
+                        padding: .3rem 1.3rem;
+                    }  
+                    .open-filter {
+                        background-color: rgba(255,255,255,.1);
+                        border: 1px solid #D2C5EB;
+                        border-radius: .5rem;
+                    }
+                    .toggle-bookmarked {
+                        border-right: 1px solid #D2C5EB;
+                    }
+                    .toggle-rising-stars {
+                        color: rbga(255,255,255,.5);
+                    }
+                   
                 }
-
-                ion-label {
-                  font-family: 'Varela Round', sans-serif;
-                  color: #fff;
-                  margin: 0;
+            
+            .filter-container {
+                background-color: $highlighted;
+                height: 4.5rem;
+                padding: .7rem 1rem 0 0;
+                box-shadow: inset -15px 0px 15px -10px rgba(0,0,0,.6);
+                white-space: nowrap;
+                overflow-x: scroll;
+                @media only screen 
+                and (min-device-width : 768px) 
+                and (max-device-width : 1024px) 
+                and (orientation : landscape) { width: 33rem;}
+                @media only screen 
+                and (min-device-width : 768px) 
+                and (max-device-width : 1024px) 
+                and (orientation : portrait) { width: 14rem; }
+            }
+            .filter-item {
+                border-right: 1px solid rgba(255,255,255,.4);
+                color: #fff;
+                padding: .5rem 1.5rem;
+                height: 3.3rem;
+                display: inline-block;
+                &:last-of-type {
+                    border-right:0;
                 }
-                
-                .select-md {
-                  padding: 0 10px 0 0;
+                ion-icon {
+                    margin-left: .5rem;
+                    vertical-align: middle;
+                    color: #ccc;
                 }
-
-                .select-icon-inner {
-                    color: #fff;
+                .select-ios {
+                    margin: 11px 8px 11px 1px;
                 }
-                .select-text {
-                  font-family: 'Varela Round', sans-serif;
-                  color: yellow;
-                  padding: 0 .3rem 0 .6rem;
-                }
-
             }
-          }
-        }
-        .filter-item {
-            flex-wrap: wrap;
-            border-right: 1px solid #ccc;
-            color: #fff;
-            padding: 0 1rem;
-            &:last-of-type {
-                flex-grow: 1;
-                border-right:0;
-            }
-            &:nth-last-of-type(2) { 
-              border-right:0;
-            }
-            ion-icon {
-                margin-left: .5rem;
-                vertical-align: middle;
-                color: #ccc;
-            }
-            .select-ios {
-                margin: 11px 8px 11px 1px;
-            }
-        }
-        .is-checked {
-            background: #777;
-            color: #fff;
-            font-weight: bold;
-        }
-    } // END .filter-nav
-  } // END .global-container
+        } // END .filter-nav
+    } // .filter-nav-container
 }

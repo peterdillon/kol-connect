@@ -1,0 +1,46 @@
+<header-component></header-component>
+
+<ion-fab right middle #fab *ngIf="showCompare">
+    <div class="pulse">
+        <button ion-fab (click)="goToKOLCompare()" color="light">
+            <ion-icon name="ios-contacts"></ion-icon>    
+        </button>
+    </div>
+</ion-fab>
+
+<ion-content padding>
+    <div class="content-top">
+        <div *ngFor="let kol of kols | kolsFilter; let i = index">
+            <ion-item>
+                <ion-row>
+                <div class="w-15">
+                    <ion-icon item-left class="check un-checked action-icon" 
+                        name="ios-checkmark-circle-outline" 
+                        (click)="selectedKOLs(i,c)" 
+                        [class.checked]="selectedStatus[i]"
+                        id="{{kol.Id}}">
+                    </ion-icon>
+                    <span (click)="goToKOL(kol.Id)">
+                        <ion-icon name="contact" class="icon-img profile-icon"></ion-icon>
+                    </span>
+                </div>
+                <div class="w-35" (click)="goToKOL(kol.Id)">
+                    <h1>{{kol.FirstName}} {{kol.LastName}}, {{kol.Degree}}</h1>
+                    <p class="score">SCORE: {{kol.Score}}</p>
+                    <p>{{kol.Phone}}</p> 
+                    <p>{{kol.Email}}</p>
+                </div>
+                <div class="w-45" (click)="goToKOL(kol.Id)">
+                    <p>{{kol.Specialty}}</p>
+                    <p>{{kol.Affiliation}}</p>
+                    <p>{{kol.CityState}}</p>
+                </div>
+                <div class="w-5" (click)="goToKOL(kol.Id)">
+                    <ion-icon class="bookmark-icon" *ngIf="kol.top40" name="ios-bookmark"></ion-icon>
+                    <ion-icon class="bookmark-icon" *ngIf="!kol.top40" name="ios-bookmark-outline"></ion-icon>
+                </div>
+                </ion-row>
+            </ion-item>
+        </div>
+    </div>
+</ion-content>

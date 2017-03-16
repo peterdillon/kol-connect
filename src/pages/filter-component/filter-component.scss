@@ -108,7 +108,15 @@ filter-component {
     section {
         &.filter-container {
             margin: 9rem 0 0 0;
-            width: 77%;
+            
+            @media only screen 
+            and (min-device-width : 768px) 
+            and (max-device-width : 1024px) 
+            and (orientation : landscape) { width: 77%;}
+            @media only screen 
+            and (min-device-width : 768px) 
+            and (max-device-width : 1024px) 
+            and (orientation : portrait) { width: 70%; }
             
             ion-content {    
                 background: transparent;

@@ -1,0 +1,68 @@
+page-row-list {
+    
+
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  70%  { transform: scale(1.6); opacity: 0; }
+  100% { opacity: 0; }
+  }
+  .pulse {
+        border-radius: 50%;
+        border: 3px solid $highlighted;
+        &:before {
+            content:'';
+            z-index: -1;
+            height: 5rem;
+            width: 5rem;
+            position: absolute;
+            border-radius: 50%;
+            animation: pulse 2.5s ease-out infinite;
+            background-color: $highlighted;
+            margin: .3rem 0 0 .3rem;
+        }
+    }
+    .item-ios ion-icon[item-left], 
+    .item-ios ion-icon[item-right],
+    .item-ios [item-left] {
+        margin: .2rem;
+    }
+
+    .content-top{
+        margin-top: 6rem;
+    }
+    .w-5 { width: 5%; }
+    .w-15 { width: 15%; }
+    .w-35 { width: 35%; }
+    .w-45 { width: 45%; }
+    
+    h1 {
+        font-size: 1.6rem !important;
+        font-weight: bold !important;
+        white-space: normal;
+    }
+    p {
+        padding: .1rem 0;
+        white-space: normal;
+        &.score {
+            color: $highlight;
+        }
+    }
+    .action-icon {
+        color: $highlight;
+        font-size: 3.5rem;
+        margin: 2.3rem 1rem 0 0 !important;
+    }
+    .profile-icon {
+        color: $highlight;
+        float: right;
+        font-size: 8rem;
+        margin-right: 2rem;
+    }
+    .bookmark-icon {
+        color: $highlight;
+        font-size: 5rem;
+    }
+    .un-checked { opacity: .3; }
+    .checked    { opacity: 1; }
+
+}

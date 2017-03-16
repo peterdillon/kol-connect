@@ -27,7 +27,6 @@ ion-select {
   padding-right: 0;
 }
 .input-wrapper {
-  //background-color: #f7f7f7;
   padding-left: 0;
 }
 .select-md {
@@ -48,6 +47,19 @@ ion-select {
 ion-label {
   font-size: 1.4rem;
 }
+.add-note {
+  padding: 1rem;
+  border: 1px solid #eee;
+  background-color: #f1f1f1;
+
+  .list, .list-ios, .list-md  {
+    margin-bottom: 0; 
+  }
+  ion-input {
+    padding: .2rem 1.5rem;
+    background-color: #fff;
+  }
+}
 .private-note {
   color: $alert;
 }
@@ -62,8 +74,7 @@ ion-label {
       
       header {
         height: 15rem;
-        //background: linear-gradient(177deg, #9152C8 40%, #C96DD8 60%, #fff 61%, #fff 100%);
-        background: linear-gradient(90deg, #5B38B9 0%, #C96DD8 60%, #EB6660 100%);
+        background: linear-gradient(90deg, $highlight 0%, $highlight 60%, $highlighted 100%);
         color: #FFFFFF;
         text-align: center;
         padding: 1rem 1rem 0 1rem;
@@ -74,15 +85,33 @@ ion-label {
             font-family: 'Montserrat', sans-serif;
             font-size: 4rem;
             text-align: left;
+            a ion-icon {
+              font-size: 4.6rem;
+              color: #fff;
+            }
         }
-        img {
+        h3, h4 {
+          margin: 0;
+        }
+        .score {
+          color: yellow;
+        }
+        .bookmark {
+          font-size: 4rem;
+          margin-top: -.6rem;
+        }
+        img, ion-icon.icon-img {
           height: 12rem;
           width: 12rem;
           float: left;
           margin: 0 0 0 2rem;
-        }
-        ion-icon {
-            font-size: 4rem;
+          // style items for ion-icon becuase it's a font
+          font-size: 12rem;
+          background-color: white;
+          color: #999;
+          border-radius: 100%;
+          line-height: 0rem;
+          box-shadow: 0 2px 2px #ccc;
         }
       }
       section {
@@ -106,13 +135,42 @@ ion-label {
         }
         h6 {
           font-size: 1.5rem;
+          margin: 0 0 .3rem 0;
         }
         span.journal-section {
           display: block;
           padding-top: 2rem;
         }
+       .note-section {
+          margin-bottom: .5rem;
+          padding-bottom: .5rem;
+          border-bottom: 1px solid #ccc;
+          background-color: #f9f9f9;
+        }
+        p.note {
+          float: left;
+          width: 80%;
+        }
+        .private-note {
+          background-color: $alert-bg;
+        }
+        small {
+          display: block;
+        }
+        .remove-note {
+            font-size: 2.5rem;
+            color: #ccc;
+            padding: 0 1rem;
+            float: right;
+            margin: -.5rem 0;
+            cursor: pointer;
+            color: red;
+        }
+        a {
+          margin: 0 0 .3rem 0;
+        }
         p {
-          margin: 0;
+          margin: 0 0 .3rem 0;
           line-height: 2rem;
 
           &.journal {
@@ -123,43 +181,10 @@ ion-label {
             text-overflow: ellipsis;
           }
         }
-        .plan-row {
-          border-top: 1px solid #e7eaec;
+        
         }
-        .plan-time {
-          position: relative;
-          padding-top: .6rem;
-          border-right: 1px solid #e7eaec;
-          small { color: $positive; }
-        }
-        .plan-icon {
-          font-size: 1.5rem;
-          position: absolute;
-          top: 0;
-          right: 0;
-          padding: 3px;
-          width: 25px;
-          text-align: center;
-          border-bottom: 1px solid #e7eaec;
-          border-left: 1px solid #e7eaec;
-          background: #f8f8f8;
-        }
-        .plan-desc {
-          padding-left: 1rem;
-          padding-top: 1rem;
-          h6 {
-            margin-bottom: .3rem;
-          }
-          p {
-            font-size: 1rem;
-            line-height: 1.5rem;
-          }
-        }
-      
-        .tx-rt { text-align: right; }
-        .tx-ct { text-align: center; }
-
-       }
+     }
   }    
-}
 .tx-rt { text-align: right; }
+.tx-lt { text-align: left; }
+.tx-ct { text-align: center; }

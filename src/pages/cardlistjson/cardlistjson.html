@@ -1,26 +1,38 @@
 <header-component></header-component>
+
+<ion-fab right middle #fab *ngIf="showCompare">
+    <div class="pulse">
+        <button ion-fab (click)="goToKOLCompare()" color="light">
+            <ion-icon name="ios-contacts"></ion-icon>    
+        </button>
+    </div>
+</ion-fab>
+
 <ion-content>
-    <div class="card-container grid">
+    <div class="card-container">
         <!--| kolsFilter-->
-        <div *ngFor="let kol of kols | kolsFilter; let i = index" [@bounce]="bounceState">
-            <div class="kol-card element-item" data-category="transition">
+        <div *ngFor="let kol of kols | kolsFilter; let i = index">
+            <div class="kol-card">
 
                 <header>
-                    <ion-icon item-left class="check un-checked" name="ios-checkmark-circle-outline" (click)="selectedKOLs(i,c)" [class.checked]="selectedStatus[i]"
+                    <!--[ngClass]="{'checked': isClassVisible }"-->
+                    <ion-icon item-left class="check un-checked" 
+                        name="ios-checkmark-circle-outline" 
+                        (click)="selectedKOLs(i,c)" 
+                        [class.checked]="selectedStatus[i]"
                         id="{{kol.Id}}">
                     </ion-icon>
                     <!--[attr.data-selected]="false"  -->
-                    <span (click)="goToKOL(kol.Id)"><img src="{{kol.imgPath}}" /></span>
-
+                    <span (click)="goToKOL(kol.Id)">
+                        <ion-icon name="contact" class="icon-img"></ion-icon>
+                    </span>
                 </header>
+
                 <section>
                     <h1 class="name">{{kol.FirstName}} {{kol.LastName}}, {{kol.Degree}}</h1>
-                    <p>
-                        {{kol.Specialty}}
-                    </p>
+                    <p>{{kol.Specialty}}</p>
                     <p>{{kol.Affiliation}}
                         <br> {{kol.CityState}}</p>
-
                     <p>{{kol.Phone}}<br>{{kol.Email}}</p>
                     <!--<span *ngIf="kol.Publications__pr">
                         <b>Journals: ({{kol.pubsCount}}) </b>
@@ -31,30 +43,16 @@
                 </section>
                 <footer class="cf">
                     <div class="rating">
-                        <!--<ion-icon name="md-star" item-left></ion-icon>
-                        <ion-icon name="md-star" item-left></ion-icon>
-                        <ion-icon name="md-star-half" item-left></ion-icon>-->
                         Score: <strong>{{kol.Score}}</strong>
                     </div>
                     <div class="info">
-                        <ion-icon *ngIf="kol.top40" name="ios-heart"></ion-icon>
-                        <ion-icon *ngIf="!kol.top40" name="ios-heart-outline"></ion-icon>
+                        <ion-icon *ngIf="kol.top40" name="ios-bookmark"></ion-icon>
+                        <ion-icon *ngIf="!kol.top40" name="ios-bookmark-outline"></ion-icon>
                     </div>
                 </footer>
             </div>
         </div>
     </div>
     <!-- END card-container-->
-
-
-
-    <!-- Animation Buttons
-    <button [@flip]="flipState" ion-button color="light" (click)="toggleFlip()">Flip!</button>
-    <button [@flyInOut]="flyInOutState" ion-button color="light" (click)="toggleFlyInOut()">Fly Out!</button>
-    <button [@fade]="fadeState" ion-button color="light" (click)="toggleFade()">Fade!</button>
-    <button [@bounce]="bounceState" ion-button color="light" (click)="toggleBounce()">Bounce!</button>
-
-    <button ion-button color="light" (click)="goToKOLCompareThree()">Compare 3</button>
-     -->
 
 </ion-content>

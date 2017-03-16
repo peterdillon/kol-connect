@@ -2,21 +2,20 @@ import { Component } from '@angular/core';
 import { LoadingController, NavParams, NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { FilterComponent } from '../filter-component/filter-component';
 import { KOLProfileJson } from '../kol-profilejson/kol-profilejson';
 import { KOLProfileCompare } from '../kol-profile-compare/kol-profile-compare';
 import { KOLProfileCompareThree } from '../kol-profile-compare-three/kol-profile-compare-three';
-// import { FilterComponent } from '../filter-component/filter-component';
-// import { KOLsFilterPipe } from './filter-pipe';
+import { KOLsFilterPipe } from './filter-pipe';
 import { KOLsService } from '../../app/kols.service';
 
 @Component({
-  selector: 'page-cardlistjson',
-  templateUrl: './cardlistjson.html',
-  // providers: [HeaderComponent]
+  selector: 'page-row-list',
+  templateUrl: './row-list.html'
 })
 
 
-export class CardlistJSON {
+export class RowList {
 
   selectedStatus: Array<boolean> = [];
   kols: any[];

@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { SocialSharing } from 'ionic-native';
+import { NavController, NavParams, LoadingController, ModalController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import { KOLsService } from '../../app/kols.service';
-
-
+import { EngagementDetails } from '../engagement-details/engagement-details';
 
 declare let d3: any;
 
@@ -14,21 +14,85 @@ declare let d3: any;
 
 export class KOLProfileJson implements OnInit {
 
+  @ViewChild('addNoteInput') addNoteInput;
+
   kols: any;
   kol: any;
   privacy: any;
-  modeKeys: any;
+  privacyKeys: any;
+  engagement: any;
+  engagementKeys: any;
 
   constructor(
     public navCtrl: NavController,
     public params: NavParams,
+    public modalCtrl: ModalController,
     public loadingController: LoadingController,
     public http: Http,
     private kolService: KOLsService) {
     this.kol = {};
-    this.privacy = { "kind": "Public" }
-    this.modeKeys = ["Private", "Public"]
+    this.privacy = { "type": "Public" }
+    this.privacyKeys = ["Private", "Public"]
+    this.engagement = { "name": "General Note" }
+    this.engagementKeys = ["General Note", "Engagement 1", "Engagement 2", "Engagement 3",]
   }
+
+
+  addNoteTo(currentEngagement) {
+    // alert("Get current engagement... add focus on note input.")
+    this.addNoteInput.setFocus();
+ }
+
+  generalShare(){
+    SocialSharing.share("Message",null, null, "Message 2")
+    .then(()=>{
+       // alert("Success");
+      },
+      ()=>{
+        // alert("Failed")
+      })
+  }
+
+  viewDetails() {
+    let modal = this.modalCtrl.create(EngagementDetails);
+    modal.present();
+  }
+
+  hiddenEngagments = true;
+  showEngagements() {
+    this.hiddenEngagments = !this.hiddenEngagments;
+  }
+
+  // Save note ---------------------
+  notes = [];
+  noteContent = "";
+  today: number;
+  isClassVisible = false;
+  noteClassName = "";
+
+    addNote() {
+        this.today = Date.now();
+        if (this.privacy.type == "Private") {
+          this.noteClassName = "private-note"
+        }
+        else {
+          this.noteClassName = "public-note"
+        }
+        this.notes.push({ 
+          noteContent: this.noteContent,
+          notePrivacyType: this.privacy.type,
+          noteEngagementName: this.engagement.name,
+          noteDate: this.today,
+          noteClass: this.noteClassName
+          });
+        this.noteContent = '';
+        
+    }
+    removeNote(index) {
+        this.notes.splice(index, 1);
+    }
+  // END Save note -----------------
+
 
   ionViewWillEnter(id) {
     let loader = this.loadingController.create({
@@ -47,15 +111,6 @@ export class KOLProfileJson implements OnInit {
         }
         loader.dismiss();
       });
-
-      // this.kolService.getKOL(id).subscribe(data => {
-      //   // this.kols = data;
-      //   console.log(data);
-      //   loader.dismiss();
-      // }, 
-      // error => {
-      //   console.log(error);
-      // });
     });
   }
 
@@ -79,7 +134,7 @@ export class KOLProfileJson implements OnInit {
           contentGenerator: function (d) {
             var series = d.series[0];
             if (series.value === null) return;
-            return "<div class='kol-card'><header><img src='" + d.imgPath + "' /></span></header><section><h1 class='name'>" + d.name + "</h1><p>Allergy and Immunology</p><a href='#'>View KOL</a></section></div>";
+            return "<div class='kol-card'><header><img src='./assets/custom/user-icon.png' /></span></header><section><h1 class='name'>" + d.name + "</h1><p>Allergy and Immunology</p><a href='#'>View KOL</a></section></div>";
           }
         },
         nodeExtras: function (node) {

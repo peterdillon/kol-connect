@@ -1,5 +1,5 @@
 div.chart {
-    margin-top: 13rem;
+    margin-top: 8rem;
     .h4 {
     font-size: 24rem;
     color: #fff;
@@ -16,7 +16,7 @@ div.chart {
       thead { 
      
           tr {
-            background: linear-gradient( #9152C8 0%, #9152C8 100% );
+            background: linear-gradient(177deg, $highlight 40%, $darkened 60%, #fff 61%, #fff 100%);
             color: #FFFFFF;
             text-align: center;
             padding: 1rem 1rem 0 1rem;
