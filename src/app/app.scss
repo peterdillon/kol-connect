@@ -20,7 +20,7 @@
 
 // --------------------------------------------------
 // Nvd3 - SVG text element color for our dark background screens
-text { fill: #fff; }
+// text { fill: #fff; }
 
 // --------------------------------------------------
 // Global overrides
@@ -44,15 +44,17 @@ ion-content {
 }
 .tabs-md .tabbar,
 .tabs-ios .tabbar {
-    background: transparent;
+    background: $highlight;
 }
 .tabs-md .tab-button,
-.tabs-md .tab-button-icon {
-    color: rgba(255,255,255, 0.5)
+.tabs-md .tab-button-icon,
+.tabs-ios .tab-button,
+.tabs-ios .tab-button-icon {
+    color: rgba(255,255,255, 0.5) !important;
 }
 .tabs-md .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
-    color: white;
+    color: rgba(255,255,255, 1) !important;
 }
 
 // Entension of ionic grid

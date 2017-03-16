@@ -69,7 +69,7 @@ export class KOLProfileJson implements OnInit {
   today: number;
   isClassVisible = false;
   noteClassName = "";
-
+  
     addNote() {
         this.today = Date.now();
         if (this.privacy.type == "Private") {
