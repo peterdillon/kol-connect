@@ -63,18 +63,28 @@ export class KOLProfileJson implements OnInit {
     this.hiddenEngagments = !this.hiddenEngagments;
   }
 
-  // Save note
+  // Save note ---------------------
   rows = [];
   noteContent = "";
   today: number;
+  isClassVisible = false;
+  noteClassSetter = "";
 
     addNote() {
         this.today = Date.now();
+      //  alert(this.privacy.type);
+        if (this.privacy.type == "Private") {
+          this.noteClassSetter = "private-note"
+        }
+        if (this.privacy.type == "Public") {
+          this.noteClassSetter = "public-note"
+        }
         this.rows.push({ 
           noteContent: this.noteContent,
           notePrivacyType: this.privacy.type,
           noteEngagementName: this.engagement.name,
-          noteDate: this.today
+          noteDate: this.today,
+          noteClass: this.noteClassSetter
           });
         this.noteContent = '';
         
@@ -82,7 +92,7 @@ export class KOLProfileJson implements OnInit {
     removeNote(index) {
         this.rows.splice(index, 1);
     }
-  //----------  
+  // END Save note -----------------
 
 
   ionViewWillEnter(id) {

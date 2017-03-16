@@ -166,9 +166,8 @@
               <!-- / engagements -->
               <br>
               
-
             <!-- notes -->
-             <div class="note-section" *ngFor="let row of rows; let i=index">
+             <div  class="{{row.noteClass}} note-section" *ngFor="let row of rows; let i=index">
                     <ion-row>
                         <ion-col>
                           <p class="note">{{row.noteContent}}</p>
@@ -176,10 +175,10 @@
                               <ion-icon name="ios-close"></ion-icon>
                           </span>
                         </ion-col>
-                        
                     </ion-row>
                     <ion-row> 
-                        <ion-col width-50 [class.private-note]="isClassVisible">
+                      <!--[ngClass]="{'private-note': isClassVisible }"-->
+                        <ion-col width-50>
                           <small>{{row.notePrivacyType}}</small>
                           <small>{{row.noteEngagementName}}</small>
                         </ion-col>
@@ -190,8 +189,6 @@
                     </ion-row>
                 </div>
                 <br>
-
-
                 <ion-grid class="add-note">
                 <h1>Add Note</h1>
                   <ion-list>
