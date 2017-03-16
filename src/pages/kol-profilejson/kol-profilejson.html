@@ -167,24 +167,23 @@
               <br>
               
             <!-- notes -->
-             <div  class="{{row.noteClass}} note-section" *ngFor="let row of rows; let i=index">
+             <div  class="{{note.noteClass}} note-section" *ngFor="let note of notes; let i=index">
                     <ion-row>
                         <ion-col>
-                          <p class="note">{{row.noteContent}}</p>
+                          <p class="note">{{note.noteContent}}</p>
                             <span class="remove-note" (click)="removeNote(i)">
                               <ion-icon name="ios-close"></ion-icon>
                           </span>
                         </ion-col>
                     </ion-row>
-                    <ion-row> 
-                      <!--[ngClass]="{'private-note': isClassVisible }"-->
+                    <ion-row>
                         <ion-col width-50>
-                          <small>{{row.notePrivacyType}}</small>
-                          <small>{{row.noteEngagementName}}</small>
+                          <small>{{note.notePrivacyType}}</small>
+                          <small>{{note.noteEngagementName}}</small>
                         </ion-col>
                         <ion-col width-50  class="tx-rt">
-                          <small>Posted by: Your Name</small>
-                          <small>{{row.noteDate | date:'medium'}}</small>
+                          <small>Posted by: <i>YOUR NAME</i></small>
+                          <small>{{note.noteDate | date:'medium'}}</small>
                         </ion-col>
                     </ion-row>
                 </div>

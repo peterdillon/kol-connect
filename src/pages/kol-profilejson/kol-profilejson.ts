@@ -64,33 +64,32 @@ export class KOLProfileJson implements OnInit {
   }
 
   // Save note ---------------------
-  rows = [];
+  notes = [];
   noteContent = "";
   today: number;
   isClassVisible = false;
-  noteClassSetter = "";
+  noteClassName = "";
 
     addNote() {
         this.today = Date.now();
-      //  alert(this.privacy.type);
         if (this.privacy.type == "Private") {
-          this.noteClassSetter = "private-note"
+          this.noteClassName = "private-note"
         }
-        if (this.privacy.type == "Public") {
-          this.noteClassSetter = "public-note"
+        else {
+          this.noteClassName = "public-note"
         }
-        this.rows.push({ 
+        this.notes.push({ 
           noteContent: this.noteContent,
           notePrivacyType: this.privacy.type,
           noteEngagementName: this.engagement.name,
           noteDate: this.today,
-          noteClass: this.noteClassSetter
+          noteClass: this.noteClassName
           });
         this.noteContent = '';
         
     }
     removeNote(index) {
-        this.rows.splice(index, 1);
+        this.notes.splice(index, 1);
     }
   // END Save note -----------------
 
