@@ -99,7 +99,7 @@
                       <h6>Live Speaker Training</h6>
                       <p>March 21, 2017, Orlando FL</p>
                       <a (click)="viewDetails()">View Details</a> •
-                      <a (click)="addNoteTo(currentEngagement)">Add Note</a>
+                      <a (click)="addNoteTo()">Add Note</a>
                     </ion-col>
                     <ion-col width-25  class="tx-ct">
                       <ion-badge color="grey">Upcoming</ion-badge>
@@ -111,7 +111,7 @@
                       <h6>ASCO Ask The Experts Presenter</h6>
                       <p>February 01, 2017, Orlando FL</p>
                       <a (click)="viewDetails()">View Details</a> •
-                      <a (click)="addNoteTo(currentEngagement)">Add Note</a>
+                      <a (click)="addNoteTo()">Add Note</a>
                     </ion-col>
                     <ion-col width-25 class="tx-ct">
                       <ion-badge color="secondary">Successful</ion-badge>
@@ -124,7 +124,7 @@
                       <h6>ASCO Product Theater</h6>
                       <p>January 21, 2017, Orlando FL</p>
                       <a (click)="viewDetails()">View Details</a> •
-                      <a (click)="addNoteTo(currentEngagement)">Add Note</a>
+                      <a (click)="addNoteTo()">Add Note</a>
                     </ion-col>
                     <ion-col width-25  class="tx-ct">
                       <ion-badge color="danger">Canceled</ion-badge>
@@ -144,7 +144,7 @@
                         <h6>Another Engagement Plan</h6>
                         <p>February 01, 2017, Orlando FL</p>
                         <a (click)="viewDetails()">View Details</a> •
-                        <a (click)="addNoteTo(currentEngagement)">Add Note</a>
+                        <a (click)="addNoteTo()">Add Note</a>
                       </ion-col>
                       <ion-col width-25 class="tx-ct">
                         <ion-badge color="secondary">Successful</ion-badge>
@@ -156,7 +156,7 @@
                         <h6>Another Engagement Plan</h6>
                         <p>January 21, 2017, Orlando FL</p>
                         <a (click)="viewDetails()">View Details</a> •
-                        <a (click)="addNoteTo(currentEngagement)">Add Note</a>
+                        <a (click)="addNoteTo()">Add Note</a>
                       </ion-col>
                       <ion-col width-25  class="tx-ct">
                         <ion-badge color="danger">Canceled</ion-badge>
@@ -203,7 +203,7 @@
                           </ion-item>
                           <ion-item>
                               <ion-label>Engagement:</ion-label>
-                              <ion-select [(ngModel)]="engagement.name">
+                              <ion-select [disabled]="disableSelector" [(ngModel)]="engagement.name">
                                 <ion-option *ngFor="let key of engagementKeys">{{key}}</ion-option>
                               </ion-select>
                           </ion-item>
