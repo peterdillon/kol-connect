@@ -63,6 +63,8 @@ export class KOLProfileJson implements OnInit {
   today: number;
   isClassVisible = false;
   noteClassName = "";
+  disableSelector = false;
+  currentEngagement = "New Engagement";
 
     addNote() {
         this.today = Date.now();
@@ -80,20 +82,21 @@ export class KOLProfileJson implements OnInit {
           noteClass: this.noteClassName
           });
         this.noteContent = '';
-        
+        this.disableSelector = false;
     }
     removeNote(index) {
         this.notes.splice(index, 1);
     }
-
-  disableSelector:boolean;
-  currentEngagement = "New Engagement";
-
+    cancel() {
+      this.noteContent = '';
+      this.disableSelector = false;
+      this.engagement.name = this.currentEngagement;
+    }
     addNoteTo(currentEngagement) {
       this.engagement.name = this.currentEngagement;
       this.disableSelector = true;
       this.addNoteInput.setFocus();
-  }
+    }
 
   // END Save note -----------------
 

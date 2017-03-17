@@ -187,7 +187,7 @@
                         </ion-col>
                     </ion-row>
                 </div>
-                <br>
+                
                 <ion-grid class="add-note">
                 <h1>Add Note</h1>
                   <ion-list>
@@ -209,9 +209,16 @@
                           </ion-item>
                       </ion-row>
                       <ion-row>
-                        <button ion-button icon-left block color="grey" (click)="addNote()">
-                            <ion-icon name="checkmark"></ion-icon> Save
-                          </button>
+                        <ion-col>
+                            <button ion-button icon-left block color="grey" (click)="cancel()">
+                                <ion-icon name="ios-close"></ion-icon> Cancel
+                            </button>
+                          </ion-col>
+                          <ion-col>
+                            <button ion-button icon-left block color="secondary" (click)="addNote()">
+                              <ion-icon name="checkmark"></ion-icon> Save
+                            </button>
+                          </ion-col>
                       </ion-row>
                       </ion-list>
                   </ion-grid>
