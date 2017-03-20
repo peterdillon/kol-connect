@@ -10,13 +10,13 @@ import { KOLProfileCompareThree } from '../kol-profile-compare-three/kol-profile
 import { KOLsService } from '../../app/kols.service';
 
 @Component({
-  selector: 'page-cardlistjson',
-  templateUrl: './cardlistjson.html',
+  selector: 'page-cardlist',
+  templateUrl: './cardlist.html',
   // providers: [HeaderComponent]
 })
 
 
-export class CardlistJSON {
+export class Cardlist {
 
   selectedStatus: Array<boolean> = [];
   kols: any[];

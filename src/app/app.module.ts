@@ -1,12 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-//import { CardList } from '../pages/cardlist/cardlist';
-// import { Barchart } from '../pages/chart-bar/barchart';
 import { Login } from '../pages/login/login';
 import { Scatterplot } from '../pages/chart-scatterplot/scatterplot';
 import { Relationship } from '../pages/chart-relationship/relationship';
-import { CardlistJSON } from '../pages/cardlistjson/cardlistjson';
+import { Cardlist } from '../pages/cardlist/cardlist';
 import { Score } from '../pages/score/score';
 import { RowList } from '../pages/row-list/row-list';
 import { KOLsFilterPipe } from '../pages/cardlistjson/filter-pipe';
@@ -23,19 +21,15 @@ import { KOLProfileCompare } from '../pages/kol-profile-compare/kol-profile-comp
 import { KOLProfileCompareThree } from '../pages/kol-profile-compare-three/kol-profile-compare-three';
 import { KOLsService } from '../app/kols.service';
 import { FilterService } from '../app/filter.service';
-// import { SocialSharing } from 'ionic-native';
-
 
 @NgModule({
   declarations: [
     MyApp,
-    //CardList,
-    // Barchart,
     Login,
     Score,
     RowList,
     Relationship,
-    CardlistJSON,
+    Cardlist,
     KOLsFilterPipe,
     Scatterplot,
     HeaderComponent,
@@ -53,22 +47,19 @@ import { FilterService } from '../app/filter.service';
   imports: [
     IonicModule.forRoot(MyApp, {}, {
       links: [
-        { component: CardlistJSON, name: 'KOLs', segment: 'home' },
-        { component: Scatterplot, name: 'Scatterplot', segment: 'scatterplot' },
-        // { component: Barchart, name: 'Barchart', segment: 'barchart' }
+        { component: Cardlist, name: 'KOLs', segment: 'home' },
+        { component: Scatterplot, name: 'Scatterplot', segment: 'scatterplot' }
       ]
     })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    // CardList,
-    // Barchart,
     Login,
     Score,
     RowList,
     Relationship,
-    CardlistJSON,
+    Cardlist,
     Scatterplot,
     HeaderComponent,
     FilterComponent,
