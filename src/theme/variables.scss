@@ -12,6 +12,7 @@
 
 
 $alert:#EB6660;
+$alert-lt: mix(white, $alert, 40%);
 $alert-bg: mix(white, $alert, 80%);
 // Blue from left nav of eConnect: #1C5D97
 // original purple: #5B38B9
