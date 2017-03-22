@@ -5,9 +5,10 @@ import { Login } from '../pages/login/login';
 import { Scatterplot } from '../pages/chart-scatterplot/scatterplot';
 import { Relationship } from '../pages/chart-relationship/relationship';
 import { Cardlist } from '../pages/cardlist/cardlist';
+import { Engagements } from '../pages/engagements/engagements';
 import { Score } from '../pages/score/score';
 import { RowList } from '../pages/row-list/row-list';
-import { KOLsFilterPipe } from '../pages/cardlistjson/filter-pipe';
+import { KOLsFilterPipe } from '../pages/cardlist/filter-pipe';
 import { CategoryFilterPipe } from '../pages/filter-component/category-pipe';
 import { nvD3 } from 'ng2-nvd3';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -30,6 +31,7 @@ import { FilterService } from '../app/filter.service';
     RowList,
     Relationship,
     Cardlist,
+    Engagements,
     KOLsFilterPipe,
     Scatterplot,
     HeaderComponent,
@@ -60,6 +62,7 @@ import { FilterService } from '../app/filter.service';
     RowList,
     Relationship,
     Cardlist,
+    Engagements,
     Scatterplot,
     HeaderComponent,
     FilterComponent,

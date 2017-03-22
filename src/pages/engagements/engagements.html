@@ -1,0 +1,42 @@
+<ion-header class="custom-top-nav">
+  <ion-navbar>
+    <ion-title>Engagements</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="wrap">
+  
+  <header>
+    <ion-list-header>Engagements</ion-list-header>
+    <ion-list-header>KOLs</ion-list-header>
+  </header>
+
+  <div class="container">
+      <section>
+          <ion-list>
+            <ion-item *ngFor="let item of engagements" (click)="itemSelected(item)">
+              <h2>{{ item.engName }}</h2>
+              <p>{{ item.engDate }}</p>
+              <h3>{{ item.engCity }}</h3>
+              <div class="totals">Registered: <ion-badge item-right>{{item.registered}}</ion-badge></div>
+              <div class="totals">Attended: <ion-badge item-right>{{item.attended}}</ion-badge></div>
+              <div class="totals">Walk In: <ion-badge item-right>{{item.walkIns}}</ion-badge></div>
+
+            </ion-item>
+          </ion-list>
+      </section>
+      <section *ngIf="showKOLs">
+        <ion-list>
+          
+          <ion-item *ngFor="let kol of kols" (click)="goToKOL(kol.Id)">
+              <h1>{{ kol.FirstName }} {{ kol.LastName }} {{ kol.Degree }} </h1>
+              <p>{{ kol.Affiliation }} </p>
+              <ion-note item-right>
+                <ion-badge color="{{kol.statusColor}}">{{kol.status}}</ion-badge>
+              </ion-note>
+            </ion-item>
+          </ion-list>
+      </section>
+  
+  </div>
+</ion-content>

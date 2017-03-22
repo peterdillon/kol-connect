@@ -1,0 +1,35 @@
+page-engagements {
+  
+    .scroll-content { overflow-y: hidden !important;}
+    .custom-top-nav { background-color: $highlight; }
+    .wrap { overflow: hidden; }
+    header {
+        display: flex;
+        ion-list-header { 
+            font-size: 1.6rem !important;
+            font-weight: bold !important;
+            white-space: normal;
+            width: 50%; 
+        }
+    }
+    .container {
+        height: 85vh;
+        display: flex;
+        section {
+            overflow-y: scroll;
+            width: 50%;
+        }
+        h1 {
+            font-size: 1.6rem !important;
+            font-weight: bold !important;
+            white-space: normal;
+        }
+        .totals {
+            display: inline-block;
+            font-size: 1.6rem;
+            padding-right: 1rem;
+        }
+    }
+    
+
+}

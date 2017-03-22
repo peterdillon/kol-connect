@@ -4,6 +4,7 @@ import { Login } from '../login/login';
 import { RowList } from '../row-list/row-list';
 import { Scatterplot } from '../chart-scatterplot/scatterplot';
 import { Relationship } from '../chart-relationship/relationship';
+import { Engagements } from '../engagements/engagements';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class TabsPage {
   tab3Root: any = RowList;
   tab4Root: any = Scatterplot;
   tab5Root: any = Relationship;
+  tab6Root: any = Engagements;
   constructor() {
 
   }
