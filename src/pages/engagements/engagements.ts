@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingController, NavParams, NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { KOLProfileJson } from '../kol-profilejson/kol-profilejson';
 
 @Component({

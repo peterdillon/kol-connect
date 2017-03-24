@@ -27,7 +27,7 @@ export class KOLsService {
                 "Score": 100,
                 "Email": "janderson@alabamaallergy.com",
                 "LastName": "Anderson",
-                "Degree": "MD",
+                "Degree": "PhD",
                 "pubsCount": 2,
                 "PersonContactId": "003j000000HysvSAAR",
                 "top40": true,
