@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { Content, ModalController, PopoverController, ViewController, NavParams, NavController, LoadingController } from 'ionic-angular';
 import { FilterService } from '../../app/filter.service';
-//import { CategoryFilterPipe } from './category-pipe';
+import { Filter } from '../../app/filter';
+import { Observable } from 'rxjs/Rx';
 import { KOLsService } from '../../app/kols.service';
 import { SaveFilterSets } from './saved-filter';
 
@@ -13,6 +14,8 @@ export class FilterComponent {
 
   kols: any[];
 
+  filters$: Observable<Filter[]>;
+
   @ViewChild(Content) content: Content;
 
   constructor(
@@ -23,7 +26,11 @@ export class FilterComponent {
     public popoverCtrl: PopoverController,
     private loadingController: LoadingController,
     private kolService: KOLsService,
-    public fs: FilterService) { }
+    public fs: FilterService) {
+
+    this.filters$ = fs.getFilter();
+
+  }
 
   ionViewDidLoad() {
     console.log('FilterOverlayPage ViewDidLoad');
@@ -36,7 +43,7 @@ export class FilterComponent {
 
     loader.present().then(() => {
       this.kolService.getKOLs().subscribe(data => {
-        this.kols = data;
+        // this.kols = data;
         loader.dismiss();
       });
     });
@@ -59,6 +66,11 @@ export class FilterComponent {
     popover.present({
       ev: myEvent
     });
+  }
+
+  toggleFilter(filter: Filter) {
+    filter.toggle();
+    this.fs.update();
   }
 
 }

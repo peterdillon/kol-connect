@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { LoadingController, NavParams, NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
 import { KOLProfileJson } from '../kol-profilejson/kol-profilejson';
 import { KOLProfileCompare } from '../kol-profile-compare/kol-profile-compare';
 import { KOLProfileCompareThree } from '../kol-profile-compare-three/kol-profile-compare-three';
@@ -19,6 +20,7 @@ export class RowList {
 
   selectedStatus: Array<boolean> = [];
   kols: any[];
+  kols$: Observable<any>;
   id: any;
   showFilters: false;
 
@@ -28,14 +30,14 @@ export class RowList {
     private loadingController: LoadingController,
     private http: Http,
     private kolService: KOLsService
-    ) { }
+  ) { }
 
   //------------------------------
 
   counter = 0;
   showCompare = false;
   isClassVisible = false;
-  
+
   selectedKOLs(i, counter, isChecked) {
     this.selectedStatus[i] = !this.selectedStatus[i];
     this.isClassVisible = !this.isClassVisible;
@@ -45,7 +47,7 @@ export class RowList {
     }
     if (!this.selectedStatus[i]) {
       this.showCompare = false;
-     // this.counter--;
+      // this.counter--;
     }
     this.counter++;
     return this.counter;
@@ -64,10 +66,13 @@ export class RowList {
     });
 
     loader.present().then(() => {
-      this.kolService.getKOLs().subscribe(data => {
-        this.kols = data;
-        loader.dismiss();
-      });
+      // this.kolService.getKOLs().subscribe(data => {
+      //   this.kols = data;
+      //   loader.dismiss();
+      // });
+
+      this.kols$ = this.kolService.getKOLs();
+      loader.dismiss();
     });
   }
 

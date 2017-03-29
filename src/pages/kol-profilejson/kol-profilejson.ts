@@ -37,12 +37,12 @@ export class KOLProfileJson implements OnInit {
     this.engagementKeys = ["General Note", "Engagement 1", "Engagement 2", "Engagement 3"]
   }
 
-  generalShare(){
-    SocialSharing.share("Message",null, null, "Message 2")
-    .then(()=>{
-       // alert("Success");
+  generalShare() {
+    SocialSharing.share("Message", null, null, "Message 2")
+      .then(() => {
+        // alert("Success");
       },
-      ()=>{
+      () => {
         // alert("Failed")
       })
   }
@@ -66,37 +66,37 @@ export class KOLProfileJson implements OnInit {
   disableSelector = false;
   currentEngagement = "New Engagement";
 
-    addNote() {
-        this.today = Date.now();
-        if (this.privacy.type == "Private") {
-          this.noteClassName = "private-note"
-        }
-        else {
-          this.noteClassName = "public-note"
-        }
-        this.notes.push({ 
-          noteContent: this.noteContent,
-          notePrivacyType: this.privacy.type,
-          noteEngagementName: this.engagement.name,
-          noteDate: this.today,
-          noteClass: this.noteClassName
-          });
-        this.noteContent = '';
-        this.disableSelector = false;
+  addNote() {
+    this.today = Date.now();
+    if (this.privacy.type == "Private") {
+      this.noteClassName = "private-note"
     }
-    removeNote(index) {
-        this.notes.splice(index, 1);
+    else {
+      this.noteClassName = "public-note"
     }
-    cancel() {
-      this.noteContent = '';
-      this.disableSelector = false;
-      this.engagement.name = this.currentEngagement;
-    }
-    addNoteTo(currentEngagement) {
-      this.engagement.name = this.currentEngagement;
-      this.disableSelector = true;
-      this.addNoteInput.setFocus();
-    }
+    this.notes.push({
+      noteContent: this.noteContent,
+      notePrivacyType: this.privacy.type,
+      noteEngagementName: this.engagement.name,
+      noteDate: this.today,
+      noteClass: this.noteClassName
+    });
+    this.noteContent = '';
+    this.disableSelector = false;
+  }
+  removeNote(index) {
+    this.notes.splice(index, 1);
+  }
+  cancel() {
+    this.noteContent = '';
+    this.disableSelector = false;
+    this.engagement.name = this.currentEngagement;
+  }
+  addNoteTo(currentEngagement) {
+    this.engagement.name = this.currentEngagement;
+    this.disableSelector = true;
+    this.addNoteInput.setFocus();
+  }
 
   // END Save note -----------------
 
@@ -109,15 +109,8 @@ export class KOLProfileJson implements OnInit {
     id = this.params.get('id');
 
     loader.present().then(() => {
-      this.kolService.getKOLs().subscribe(data => {
-        var filteredData = data.filter(item => {
-          return item.Id == id;
-        });
-        if (filteredData.length) {
-          this.kol = filteredData[0];
-        }
-        loader.dismiss();
-      });
+      this.kol = this.kolService.getKOL(id);
+      loader.dismiss();
     });
   }
 

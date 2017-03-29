@@ -17,8 +17,8 @@
 
         <div class="filter-title">
           <span class="open-filter" (click)="presentModal()" [ngClass]="['active']">Filters</span>
-          <span class="toggle-bookmarked" (click)="toggleBookmarks()" [ngClass]="['active']"><ion-icon name="ios-bookmark"></ion-icon></span>
-          <span class="toggle-rising-stars" [ngClass]="['active']">Rising Stars</span>
+          <span class="toggle-bookmarked" (click)="toggleBookmarks()" [ngClass]="{'active':bookmarkFilter.selected}"><ion-icon name="ios-bookmark"></ion-icon></span>
+          <span class="toggle-rising-stars" (click)="toggleRisingStars()" [ngClass]="{'active':risingStarFilter.selected}">Rising Stars</span>
         </div>
 
         <div class="filter-container">

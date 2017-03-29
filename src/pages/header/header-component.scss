@@ -1,145 +1,139 @@
 header-component {
-
-    .statusbar {
-        height: 2rem;
-        width: 100%;
-        position: fixed;
-        z-index: 20;
-        background-color: $highlight;
+  .statusbar {
+    height: 2rem;
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    background-color: $highlight;
+  }
+  .global-container {
+    background-color: $highlight;
+    overflow: hidden; // to hide shadow for scrolling filter effect
+    position: fixed;
+    will-change: transform, top;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    height: 6.5rem;
+    padding-top: 2rem;
+  }
+  .search-container {
+    min-width: 11rem;
+    background-color: $highlight;
+    z-index: 2;
+    .searchbar-ios {
+      background-color: transparent;
     }
-    .global-container {
-        background-color: $highlight;
-        overflow: hidden; // to hide shadow for scrolling filter effect
-        position: fixed;
-        will-change: transform, top;
-        width: 100%;
-        z-index: 10;
-        display: flex;
-        height: 6.5rem;
-        padding-top: 2rem;
+  }
+  .action-container {
+    min-width: 8rem;
+    .action {
+      font-size: 3rem;
+      float: left;
+      padding: 0 .6rem;
+      color: white;
     }
-
-    .search-container {
-        min-width: 11rem;
-        background-color: $highlight;
-        z-index: 2;
-        .searchbar-ios {
-            background-color: transparent;
+  }
+  .select-container {
+    width: 17rem;
+    height: 3rem;
+    ion-item {
+      background-color: transparent;
+      .item-inner {
+        border: 0 !important;
+        padding-right: 0;
+      }
+      ion-label {
+        color: #fff !important;
+        margin: 0;
+        flex: initial;
+      }
+      .select {
+        padding: 0;
+        overflow: visible;
+      }
+      .select-icon-inner {
+        color: #fff !important;
+      }
+      .select-text {
+        color: yellow;
+        padding-left: .5rem;
+      }
+    }
+  }
+  .filter-nav-container {
+    flex: 1;
+    .filter-nav {
+      font-family: 'Varela Round', sans-serif;
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      .filter-title {
+        width: 22rem;
+        font-size: 1.5rem;
+        box-shadow: 3px 0px 15px 3px rgba(0, 0, 0, .5);
+        height: 4.5rem;
+        text-align: right;
+        padding: 1rem 0 0 0;
+        z-index: 1;
+        span {
+          float: left;
+          display: inline;
+          color: white;
+          text-decoration: none;
+          padding: .3rem 1.3rem;
         }
-    }
-    .action-container {
-        min-width: 8rem;
-        .action {
-            font-size: 3rem;
-            float: left;
-            padding: 0 .6rem;
-            color: white;
+        .open-filter {
+          background-color: rgba(255, 255, 255, .1);
+          border: 1px solid #D2C5EB;
+          border-radius: .5rem;
         }
-    }
-
-    .select-container {
-        width: 17rem;
-        height: 3rem;
-
-        ion-item {
-            background-color: transparent;
-
-            .item-inner {
-                border: 0 !important;
-                padding-right: 0;
-            }
-            ion-label {
-                color: #fff !important;
-                margin: 0;
-                flex: initial;
-            }
-            .select {
-                padding: 0;
-                overflow: visible;
-            }
-
-            .select-icon-inner {
-                color: #fff !important;
-            }
-            .select-text {
-                color: yellow;
-                padding-left: .5rem;
-            }
-
+        .toggle-bookmarked {
+          color: rgba(255, 255, 255, 0.3);
+          border-right: 1px solid #D2C5EB;
+          &.active {
+            color: rgba(255, 255, 255, 1);
+          }
         }
-    }
-
-    .filter-nav-container {
-        flex: 1;
-        .filter-nav {
-            font-family: 'Varela Round', sans-serif;
-            font-size: 1.5rem;
-            color: #fff;
-            display: flex;
-            
-                .filter-title {
-                    width: 22rem;
-                    font-size: 1.5rem;
-                    box-shadow: 3px 0px 15px 3px rgba(0,0,0,.5);
-                    height: 4.5rem;
-                    text-align: right;
-                    padding: 1rem 0 0 0;
-                    z-index: 1;
-                     span {
-                        float: left;
-                        display: inline;
-                        color: white;
-                        text-decoration: none;
-                        padding: .3rem 1.3rem;
-                    }  
-                    .open-filter {
-                        background-color: rgba(255,255,255,.1);
-                        border: 1px solid #D2C5EB;
-                        border-radius: .5rem;
-                    }
-                    .toggle-bookmarked {
-                        border-right: 1px solid #D2C5EB;
-                    }
-                    .toggle-rising-stars {
-                        color: rbga(255,255,255,.5);
-                    }
-                   
-                }
-            
-            .filter-container {
-                background-color: $highlighted;
-                height: 4.5rem;
-                padding: .7rem 1rem 0 0;
-                box-shadow: inset -15px 0px 15px -10px rgba(0,0,0,.6);
-                white-space: nowrap;
-                overflow-x: scroll;
-                @media only screen 
-                and (min-device-width : 768px) 
-                and (max-device-width : 1024px) 
-                and (orientation : landscape) { width: 33rem;}
-                @media only screen 
-                and (min-device-width : 768px) 
-                and (max-device-width : 1024px) 
-                and (orientation : portrait) { width: 14rem; }
-            }
-            .filter-item {
-                border-right: 1px solid rgba(255,255,255,.4);
-                color: #fff;
-                padding: .5rem 1.5rem;
-                height: 3.3rem;
-                display: inline-block;
-                &:last-of-type {
-                    border-right:0;
-                }
-                ion-icon {
-                    margin-left: .5rem;
-                    vertical-align: middle;
-                    color: #ccc;
-                }
-                .select-ios {
-                    margin: 11px 8px 11px 1px;
-                }
-            }
-        } // END .filter-nav
-    } // .filter-nav-container
+        .toggle-rising-stars {
+          color: rgba(255, 255, 255, .5);
+          &.active {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+      .filter-container {
+        background-color: $highlighted;
+        height: 4.5rem;
+        padding: .7rem 1rem 0 0;
+        box-shadow: inset -15px 0px 15px -10px rgba(0, 0, 0, .6);
+        white-space: nowrap;
+        overflow-x: scroll;
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+          width: 33rem;
+        }
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+          width: 14rem;
+        }
+      }
+      .filter-item {
+        border-right: 1px solid rgba(255, 255, 255, .4);
+        color: #fff;
+        padding: .5rem 1.5rem;
+        height: 3.3rem;
+        display: inline-block;
+        &:last-of-type {
+          border-right: 0;
+        }
+        ion-icon {
+          margin-left: .5rem;
+          vertical-align: middle;
+          color: #ccc;
+        }
+        .select-ios {
+          margin: 11px 8px 11px 1px;
+        }
+      }
+    } // END .filter-nav
+  } // .filter-nav-container
 }
