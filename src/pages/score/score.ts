@@ -58,10 +58,11 @@ export class Score {
   save() {
       let toast = this.toastCtrl.create({
         message: 'Saved score!',
-        duration: 1500,
+        duration: 2000,
         position: 'middle'
       });
       toast.present();
+      
   }
 
   reset() {

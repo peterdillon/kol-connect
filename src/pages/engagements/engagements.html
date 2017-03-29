@@ -14,21 +14,38 @@
   <div class="container">
       <section>
           <ion-list>
-            <ion-item *ngFor="let item of engagements" (click)="itemSelected(item)">
-              <h2>{{ item.engName }}</h2>
-              <p>{{ item.engDate }}</p>
-              <h3>{{ item.engCity }}</h3>
-              <div class="totals">Registered: <ion-badge item-right>{{item.registered}}</ion-badge></div>
-              <div class="totals">Attended: <ion-badge item-right>{{item.attended}}</ion-badge></div>
-              <div class="totals">Walk In: <ion-badge item-right>{{item.walkIns}}</ion-badge></div>
-
+            <ion-item *ngFor="let engagement of engagements; let i = index" (click)="showRelatedKOLs(i)">
+              <h1>{{ engagement.engName }}</h1>
+              <p>{{ engagement.engDate }}</p>
+              <h3>{{ engagement.engCity }}</h3>
             </ion-item>
           </ion-list>
       </section>
-      <section *ngIf="showKOLs">
+      <section *ngIf="kolList0">
         <ion-list>
-          
           <ion-item *ngFor="let kol of kols" (click)="goToKOL(kol.Id)">
+              <h1>{{ kol.FirstName }} {{ kol.LastName }} {{ kol.Degree }} </h1>
+              <p>{{ kol.Affiliation }} </p>
+              <ion-note item-right>
+                <ion-badge color="{{kol.statusColor}}">{{kol.status}}</ion-badge>
+              </ion-note>
+            </ion-item>
+          </ion-list>
+      </section>
+      <section *ngIf="kolList1">
+        <ion-list>
+          <ion-item *ngFor="let kol of kols2" (click)="goToKOL(kol.Id)">
+              <h1>{{ kol.FirstName }} {{ kol.LastName }} {{ kol.Degree }} </h1>
+              <p>{{ kol.Affiliation }} </p>
+              <ion-note item-right>
+                <ion-badge color="{{kol.statusColor}}">{{kol.status}}</ion-badge>
+              </ion-note>
+            </ion-item>
+          </ion-list>
+      </section>
+      <section *ngIf="kolList2">
+        <ion-list>
+          <ion-item *ngFor="let kol of kols3" (click)="goToKOL(kol.Id)">
               <h1>{{ kol.FirstName }} {{ kol.LastName }} {{ kol.Degree }} </h1>
               <p>{{ kol.Affiliation }} </p>
               <ion-note item-right>

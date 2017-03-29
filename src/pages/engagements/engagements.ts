@@ -11,11 +11,26 @@ export class Engagements {
 
     constructor( public navCtrl: NavController ) {}
 
-    showKOLs = false;
+    kolList0 = false;
+    kolList1 = false;
+    kolList2 = false;
 
-    itemSelected(item: string) {
-      this.showKOLs = true;
-      console.log("Selected Item", item);
+    showRelatedKOLs(index) {
+      if(index == 0) {
+        this.kolList0 = true;
+        this.kolList1 = false;
+        this.kolList2 = false;
+      }
+      if(index == 1) {
+        this.kolList0 = false;
+        this.kolList1 = true;
+        this.kolList2 = false;
+      }
+      if(index == 2) {
+        this.kolList0 = false;
+        this.kolList1 = false;
+        this.kolList2 = true;
+      }
     }
     
     goToKOL(id) {
@@ -130,7 +145,9 @@ export class Engagements {
           "Degree": "MD",
           "status": "Canceled",
           "statusColor": "danger"
-        },
+        } ]
+
+kols2 = [
         {
           "Id": "001j000000MVrIWAA1",
           "FirstName": "Douglas",
@@ -200,7 +217,10 @@ export class Engagements {
           "Degree": "MD",
           "status": "Canceled",
           "statusColor": "danger"
-        },
+        }
+]
+
+   kols3 = [     
         {
           "Id": "001j000000MVrImAAL",
           "FirstName": "Daniel",
