@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+// import { KOL } from './kol';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/catch';
-import { Observable } from 'rxjs/Rx';
-
+import { Observable, BehaviorSubject } from 'rxjs/Rx';
 
 @Injectable()
 export class KOLsService {
+
+    // kols: Observable<KOL[]>;
+
+    // private _kols: BehaviorSubject<KOL[]>;
+    // private dataStore: {
+    //     kols: KOL[]
+    // };
+
     constructor(private http: Http) { }
 
     // public baseURL = 'http://localhost:8100/assets/data/kols.json';

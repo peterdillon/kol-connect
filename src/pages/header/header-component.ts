@@ -21,18 +21,18 @@ export class HeaderComponent {
     public params: NavParams,
     public popoverCtrl: PopoverController,
     public fs: FilterService,
-    private viewCtrl: ViewController) { 
-      this.sortBy = { "kind": "Score" };
-      this.sortChoice = [ "Recently Updated", "Score", "First name", "Last name" ];
-    }
+    private viewCtrl: ViewController) {
+    this.sortBy = { "kind": "Score" };
+    this.sortChoice = ["Recently Updated", "Score", "First name", "Last name"];
+  }
 
-  generalShare(){
-    SocialSharing.share("Message",null, null, "Message 2")
-    .then(()=>{
+  generalShare() {
+    SocialSharing.share("Message", null, null, "Message 2")
+      .then(() => {
         // alert("Success");
       },
-      ()=>{
-         // alert("Failed")
+      () => {
+        // alert("Failed")
       })
   }
 
@@ -43,6 +43,10 @@ export class HeaderComponent {
   presentModal() {
     let modal = this.modalCtrl.create(FilterComponent);
     modal.present();
+  }
+
+  toggleBookmarks() {
+    this.fs.toggleBookmark();
   }
 
 }

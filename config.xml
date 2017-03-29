@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.ionictabsapp259394" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<!--<widget id="com.ionicframework.ionictabsapp259394" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">-->
+<widget id="com.evolutionmedcom.kol-connect" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>KOL Connect</name>
   <description>An Ionic/Cordova application.</description>
   <author email="peter.dillon@evolutionmedcom.com" href="http://evolutionmedcom.com/">Evolution Medical Communications</author>
@@ -37,4 +38,5 @@
   <allow-navigation href="http://10.1.0.129:8100"/>
   <allow-navigation href="http://192.168.231.72:8100"/>
   <allow-navigation href="http://192.168.231.137:8100"/>
+  <allow-navigation href="http://192.168.231.195:8100"/>
 </widget>

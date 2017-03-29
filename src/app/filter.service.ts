@@ -19,6 +19,10 @@ export class FilterService {
         ];
     }
 
+    toggleBookmark() {
+        console.log("toggling bookmark");
+    }
+
 }
 
 
