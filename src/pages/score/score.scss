@@ -1,7 +1,10 @@
 page-score {
 
+.toolbar-title-ios {
+    color: $highlight;
+}
 .text-ios-primary {
-    color: white;
+    //color: white;
 }
 
 .score-container {
@@ -9,9 +12,9 @@ page-score {
    display: flex;
 
    .total {
-        color: white;
+        color: #fff;
         position: fixed;
-        background-color: rgba(255, 255, 255, .2);
+        background-color: rgba($highlight, .7);
         border-radius: .5rem;
         text-align: center;
         overflow: auto;
@@ -23,7 +26,7 @@ page-score {
            padding: 1rem 0;
            margin: 1rem;
            font-size: 2rem;
-           border-bottom: 1px solid #ccc;
+           border-bottom: 1px solid #fff;
        }
        .total-count {
            background: transparent;
@@ -35,7 +38,7 @@ page-score {
            padding: 0;
            overflow: visible;
            &.invalidTotal {
-               color: $alert;
+               color: $alert-lt;
            }
        }
        .errorMsg {
@@ -53,7 +56,7 @@ page-score {
        width: 70%;
        
         section {
-            background-color: rgba(255, 255, 255, .2);
+            background-color: rgba($highlight, .7);
             border-radius: .5rem; 
             margin: .8rem;
             padding: .5rem;

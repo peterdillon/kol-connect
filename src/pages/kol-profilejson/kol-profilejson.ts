@@ -34,14 +34,8 @@ export class KOLProfileJson implements OnInit {
     this.privacy = { "type": "Public" }
     this.privacyKeys = ["Private", "Public"]
     this.engagement = { "name": "General Note" }
-    this.engagementKeys = ["General Note", "Engagement 1", "Engagement 2", "Engagement 3",]
+    this.engagementKeys = ["General Note", "Engagement 1", "Engagement 2", "Engagement 3"]
   }
-
-
-  addNoteTo(currentEngagement) {
-    // alert("Get current engagement... add focus on note input.")
-    this.addNoteInput.setFocus();
- }
 
   generalShare(){
     SocialSharing.share("Message",null, null, "Message 2")
@@ -69,6 +63,8 @@ export class KOLProfileJson implements OnInit {
   today: number;
   isClassVisible = false;
   noteClassName = "";
+  disableSelector = false;
+  currentEngagement = "New Engagement";
 
     addNote() {
         this.today = Date.now();
@@ -86,11 +82,22 @@ export class KOLProfileJson implements OnInit {
           noteClass: this.noteClassName
           });
         this.noteContent = '';
-        
+        this.disableSelector = false;
     }
     removeNote(index) {
         this.notes.splice(index, 1);
     }
+    cancel() {
+      this.noteContent = '';
+      this.disableSelector = false;
+      this.engagement.name = this.currentEngagement;
+    }
+    addNoteTo(currentEngagement) {
+      this.engagement.name = this.currentEngagement;
+      this.disableSelector = true;
+      this.addNoteInput.setFocus();
+    }
+
   // END Save note -----------------
 
 
