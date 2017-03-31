@@ -43,7 +43,7 @@ export class Engagements {
   engagements =  
     [{
         "engId": "001",
-        "engName": "Endocrinology and Cancer Treatment Program",
+        "engName": "National Advisory Board – Advisor",
         "engDate": "October 10, 2017",
         "engCity": "Brooklyn",
         "engState": "New York",
@@ -53,7 +53,7 @@ export class Engagements {
         "engInfo": "Voluptatem itaque, dolores autem at, culpa cum quam ratione laborum quo totam, nemo sed dolor, hic nisi nobis illo."
     },{
         "engId": "002",
-        "engName": "Modern Allergy Antihistamine Protocols",
+        "engName": "Community Advisory Board – Moderator",
         "engDate": "Novermber 22, 2017",
         "engCity": "Stanford",
         "engState": "Connecticut",
@@ -63,7 +63,7 @@ export class Engagements {
         "engInfo": "Magnam dolores, enim consectetur veniam illum error eaque ea necessitatibus nam ipsam maxime dolore temporibus animi odio eum molestiae iure."
       },{
         "engId": "003",
-        "engName": "Cancer Treatments 2017",
+        "engName": "ASCO 1:1 Encounters",
         "engDate": "December 22, 2017",
         "engCity": "New Brunswick",
         "engState": "New Jersey",

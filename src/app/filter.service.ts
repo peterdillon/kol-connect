@@ -18,10 +18,20 @@ export class FilterService {
         new Filter("Surgery", false, 0, "specialty"),
         new Filter("Endocrinology", false, 0, "specialty"),
 
+        new Filter("Allergy & Asthma Specialists, PA", false, 0, "affiliations"),
+        new Filter("David Geffen School of Medicine, UCLA", false, 0, "affiliations"),
+        new Filter("Marycliff Allergy Specialists", false, 0, "affiliations"),
+        new Filter("Massachusetts General Hospital", false, 0, "affiliations"),
+
         new Filter("< 5", false, 0, "pubsCount"),
         new Filter("< 10", false, 0, "pubsCount"),
         new Filter("< 20", false, 0, "pubsCount"),
         new Filter("20+", false, 0, "pubsCount"),
+        
+        new Filter("North", false, 0, "region"),
+        new Filter("South", false, 0, "region"),
+        new Filter("East", false, 0, "region"),
+        new Filter("West", false, 0, "region"),
     ];
 
     private _filter: BehaviorSubject<Filter[]> = new BehaviorSubject([]);

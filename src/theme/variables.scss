@@ -12,15 +12,18 @@
 
 
 $alert:#EB6660;
+$alert-transparent: rgba($alert, .3);
 $alert-lt: mix(white, $alert, 40%);
 $alert-bg: mix(white, $alert, 80%);
 // Blue from left nav of eConnect: #1C5D97
 // original purple: #5B38B9
 $highlight:#1C5D97;
+$highlight-transparent: rgba($highlight, .2);
 $darkened: mix(black, $highlight, 20%);
 $highlighted: mix(white, $highlight, 20%);
 $highlighted-x: mix(white, $highlight, 40%);
 $positive:  #1ab394;
+$positive-transparent: rgba($positive, .2);
 $yellow:  yellow;
 
 // Named Color Variables

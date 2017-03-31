@@ -1,6 +1,6 @@
 <!--<header-component></header-component>-->
 
-<ion-header>
+<ion-header class="custom-top-nav">
   <ion-toolbar>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -15,7 +15,7 @@
 <ion-content>
   <div class="score-container">
     <div class="slide-container">
-      <section>
+      <section class="behavior">
         <ion-item>
           <ion-label>Publications</ion-label>
           <ion-range step="5" color="light" [(ngModel)]="criteria1" (ionChange)="getScoreTotal($event)" (ionChange)="getScoreTotal($event)"></ion-range>
@@ -23,7 +23,7 @@
         </ion-item>
       </section>
 
-      <section>
+      <section class="behavior">
         <ion-item>
           <ion-label text-left>Peer Recognition - Nominations</ion-label>
           <ion-range step="5" color="light" [(ngModel)]="criteria2" (ionChange)="getScoreTotal($event)" (ionChange)="getScoreTotal($event)"></ion-range>
@@ -31,7 +31,7 @@
         </ion-item>
       </section>
 
-      <section>
+      <section class="behavior">
         <ion-item>
           <ion-label>Peer Recognition - Referrals</ion-label>
           <ion-range step="5" [(ngModel)]="criteria3" color="light" (ionChange)="getScoreTotal($event)" (ionChange)="getScoreTotal($event)"></ion-range>
@@ -39,7 +39,7 @@
         </ion-item>
       </section>
 
-      <section>
+      <section class="belief">
         <ion-item>
           <ion-label>Congress Presentations</ion-label>
           <ion-range step="5" [(ngModel)]="criteria5" color="light" (ionChange)="getScoreTotal($event)" (ionChange)="getScoreTotal($event)"></ion-range>
@@ -47,7 +47,7 @@
         </ion-item>
       </section>
 
-      <section>
+      <section class="belief">
         <ion-item>
           <ion-label>Leadership</ion-label>
           <ion-range step="5" [(ngModel)]="criteria4" color="light" (ionChange)="getScoreTotal($event)" (ionChange)="getScoreTotal($event)"></ion-range>
@@ -55,7 +55,7 @@
         </ion-item>
       </section>
 
-      <section>
+      <section class="belief">
         <ion-item>
           <ion-label>Trials</ion-label>
           <ion-range step="5" [(ngModel)]="criteria6" color="light" (ionChange)="getScoreTotal($event)" (ionChange)="getScoreTotal($event)"></ion-range>
@@ -63,7 +63,7 @@
         </ion-item>
       </section>
 
-      <section>
+      <section class="belief">
         <ion-item>
           <ion-label>Clinical XP</ion-label>
           <ion-range step="5" [(ngModel)]="criteria7" color="light" (ionChange)="getScoreTotal($event)" (ionChange)="getScoreTotal($event)"></ion-range>
@@ -75,14 +75,24 @@
     </div>
 
     <div class="total">
-      <h1>Total</h1>
-      <input class="total-count" [ngClass]="{'invalidTotal': !isValidTotal }" [(ngModel)]="criteriaTotal">
-      <div class="errorMsg" [(innerHTML)]="errorMsg"></div>
-      <div #dataContainer></div>
-      <div class="button-container">
-        <button ion-button round outline color="light" (click)="reset()">Reset</button>
-        <button ion-button round outline color="light" (click)="save()" [attr.disabled]="!isValidTotal ? '' : null">Save</button>
+      <div class="count-container">
+          <h1>Total</h1>
+          <input class="total-count" [ngClass]="{'invalidTotal': !isValidTotal }" [(ngModel)]="criteriaTotal">
+          <div class="errorMsg" [(innerHTML)]="errorMsg"></div>
+          <div #dataContainer></div>
+          <div class="button-container">
+            <button ion-button round outline color="light" (click)="reset()">Reset</button>
+            <button ion-button round outline color="light" (click)="save()" [attr.disabled]="!isValidTotal ? '' : null">Save</button>
+          </div>
+      </div>  
+
+      <div class="legend">
+        <div class="behavior">Behavior</div>
+        <div class="belief">Belief</div>
       </div>
+
     </div>
+    
+
   </div>
 </ion-content>

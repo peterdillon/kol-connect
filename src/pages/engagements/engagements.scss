@@ -5,11 +5,16 @@ page-engagements {
     .wrap { overflow: hidden; }
     header {
         display: flex;
+        background-color: rgba($highlight, .2);
+        
         ion-list-header { 
             font-size: 1.6rem !important;
             font-weight: bold !important;
             white-space: normal;
             width: 50%; 
+            &:last-child {
+                border-left: 1px solid $highlighted;
+            }
         }
     }
     .container {

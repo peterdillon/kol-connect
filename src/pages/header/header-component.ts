@@ -35,6 +35,16 @@ export class HeaderComponent {
 
   }
 
+ staticFilters = [
+   { name: "MD" },
+   { name: "PhD" },
+   { name: "North" },
+   { name: "West" },
+   { name: "< 20 Publications" },
+   { name: "Affiliations: Maryland School of Medicine" }
+
+ ]
+
   generalShare() {
     SocialSharing.share("Message", null, null, "Message 2")
       .then(() => {

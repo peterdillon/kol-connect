@@ -46,13 +46,13 @@ export class Scatterplot implements OnInit {
         showDistY: true,
         duration: 650,
         xAxis: {
-          axisLabel: 'X Axis',
+          axisLabel: 'Belief',
           tickFormat: function (d) {
             return d3.format('.02f')(d);
           }
         },
         yAxis: {
-          axisLabel: 'Y Axis',
+          axisLabel: 'Behavior',
           tickFormat: function (d) {
             return d3.format('.02f')(d);
           },

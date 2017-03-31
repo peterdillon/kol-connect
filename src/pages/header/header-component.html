@@ -23,11 +23,7 @@
 
         <div class="filter-container">
           <div id="sorts">
-            <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
-              {{filter.name}}
-              <ion-icon name="close"></ion-icon>
-            </div>
-            <div class="filter-item" *ngFor="let filter of fs.filters; let i = index" (click)="filter.deselect()">
+            <div class="filter-item" *ngFor="let filter of staticFilters">
               {{filter.name}}
               <ion-icon name="close"></ion-icon>
             </div>

@@ -8,6 +8,7 @@ export class KOLsService {
     private data: any[] = [
         {
             "Id": "001j000000MVrIKAA1",
+            "Region": "North",
             "FirstName": "John",
             "Specialty": "Allergy and Immunology",
             "CityState": "Birmingham, AL",
@@ -37,6 +38,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIMAA1",
+            "Region": "South",
             "FirstName": "Jonathan",
             "Specialty": "Allergy and Immunology",
             "CityState": "Cincinnati, OH",
@@ -129,6 +131,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIUAA1",
+            "Region": "East",
             "FirstName": "Joshua",
             "Specialty": "Surgery",
             "CityState": "Walnut Creek, CA",
@@ -158,6 +161,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIaAAL",
+            "Region": "West",
             "FirstName": "William",
             "Specialty": "Endocrinology",
             "CityState": "Dallas, TX",
@@ -250,6 +254,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000iapRnAAI",
+            "Region": "North",
             "FirstName": "Allen",
             "Specialty": "Endocrinology",
             "CityState": "Dallas, TX",
@@ -343,6 +348,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIWAA1",
+            "Region": "South",
             "FirstName": "Douglas",
             "Specialty": "Allergy and Immunology",
             "CityState": "Layton, UT",
@@ -359,6 +365,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIhAAL",
+            "Region": "East",
             "FirstName": "Marc",
             "Specialty": "Allergy and Immunology",
             "CityState": "Encinitas, CA",
@@ -451,6 +458,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000j0nFrAAI",
+            "Region": "West",
             "FirstName": "Karen",
             "Specialty": "Allergy and Immunology",
             "CityState": "CHESTNUT HILL, MA",
@@ -467,6 +475,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIPAA1",
+            "Region": "North",
             "FirstName": "Timothy",
             "Specialty": "Allergy and Immunology",
             "CityState": "Hummelstown, PA",
@@ -558,6 +567,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000NhZVuAAN",
+            "Region": "South",
             "FirstName": "Huamin",
             "Specialty": "Allergy and Immunology",
             "CityState": "Ellicott City, MD",
@@ -650,6 +660,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrImAAL",
+            "Region": "East",
             "FirstName": "Daniel",
             "Specialty": "Allergy and Immunology",
             "CityState": "Colorado Springs, CO",
@@ -686,6 +697,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000j0nOYAAY",
+            "Region": "West",
             "FirstName": "Isaac",
             "Specialty": "Allergy and Immunology",
             "CityState": "San Diego, CA",
@@ -702,6 +714,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIpAAL",
+            "Region": "North",
             "FirstName": "Katharine",
             "Specialty": "Allergy and Immunology",
             "CityState": "Boston, MA",
@@ -738,6 +751,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000ZtGXNAA3",
+            "Region": "North",
             "FirstName": "Aleena",
             "Specialty": "Allergy and Immunology",
             "CityState": "Spokane, WA",
@@ -830,6 +844,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrITAA1",
+            "Region": "North",
             "FirstName": "Richard",
             "Specialty": "Allergy and Immunology",
             "CityState": "Paradise Valley, AZ",
@@ -901,6 +916,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIcAAL",
+            "Region": "North",
             "FirstName": "Michael",
             "Specialty": "Allergy and Immunology",
             "CityState": "Mineola, NY",
@@ -951,6 +967,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIQAA1",
+            "Region": "North",
             "FirstName": "Mark",
             "Specialty": "Allergy and Immunology",
             "CityState": "Fair Lawn, NJ",
@@ -987,6 +1004,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIXAA1",
+            "Region": "North",
             "FirstName": "Jay",
             "Specialty": "Allergy and Immunology",
             "CityState": "Arlington, VA",
@@ -1003,6 +1021,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000iapaBAAQ",
+            "Region": "North",
             "FirstName": "Richard",
             "Specialty": "Allergy and Immunology",
             "CityState": "Philadelphia, PA",
@@ -1083,6 +1102,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000ZtGnCAAV",
+            "Region": "North",
             "FirstName": "Bruce",
             "Specialty": "Allergy and Immunology",
             "CityState": "Chestnut Hill, MA",
@@ -1175,6 +1195,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrINAA1",
+            "Region": "North",
             "FirstName": "Autumn",
             "Specialty": "Allergy and Immunology",
             "CityState": "Portland, OR",
@@ -1191,6 +1212,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000j0n94AAA",
+            "Region": "North",
             "FirstName": "John",
             "Specialty": "Allergy and Immunology",
             "CityState": "New York, NY",
@@ -1207,6 +1229,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000j0nBAAAY",
+            "Region": "North",
             "FirstName": "Anna",
             "Specialty": "Allergy and Immunology",
             "CityState": "Waxhaw, NC",
@@ -1223,6 +1246,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrILAA1",
+            "Region": "North",
             "FirstName": "James",
             "Specialty": "Allergy and Immunology",
             "CityState": "Los Angeles, CA",
@@ -1266,6 +1290,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000ZtGVvAAN",
+            "Region": "North",
             "FirstName": "Paula",
             "Specialty": "Allergy and Immunology",
             "CityState": "San Juan, PR",
@@ -1344,6 +1369,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIVAA1",
+            "Region": "North",
             "FirstName": "Douglas",
             "Specialty": "Allergy and Immunology",
             "CityState": "Waxhaw, NC",
@@ -1353,7 +1379,7 @@ export class KOLsService {
             "Email": "djohnston@asthmanc.com",
             "LastName": "Johnston",
             "Degree": "MD",
-            "pubsCount": 4,
+            "pubsCount": 11,
             "PersonContactId": "003j000000HysvdAAB",
             "favorite": true,
             "imgPath": "./assets/custom/doctor-1.png",
@@ -1394,6 +1420,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrInAAL",
+            "Region": "North",
             "FirstName": "Raffi",
             "Specialty": "Allergy and Immunology",
             "CityState": "Los Angeles, CA",
@@ -1402,7 +1429,7 @@ export class KOLsService {
             "Score": 16,
             "Email": "ucladoc@gmail.com",
             "LastName": "Tachdjian",
-            "pubsCount": 6,
+            "pubsCount": 19,
             "PersonContactId": "003j000000HysvvAAB",
             "favorite": false,
             "imgPath": "./assets/custom/doctor-2.png",
@@ -1457,6 +1484,7 @@ export class KOLsService {
         },
         {
             "Id": "001j000000MVrIrAAL",
+            "Region": "North",
             "FirstName": "Rafael",
             "Specialty": "Allergy and Immunology",
             "CityState": "San Juan, PR",
@@ -1466,12 +1494,12 @@ export class KOLsService {
             "Email": "zaragoza.urdaz@gmail.com",
             "LastName": "Zaragoza Urdaz",
             "Degree": "MD",
-            "pubsCount": 2,
+            "pubsCount": 24,
             "PersonContactId": "003j000000HysvzAAB",
             "favorite": false,
             "imgPath": "./assets/custom/doctor-3.png",
             "Publications__pr": {
-                "pubsCount": 2,
+                "pubsCount": 24,
                 "done": true,
                 "records": [
                     {
@@ -1519,6 +1547,15 @@ export class KOLsService {
         let activeSpecialtyFilters = this.filterService.getFiltersByCategory('specialty');
         let hasActiveSpecialtyFilters = activeSpecialtyFilters.length > 0;
 
+        let activeAffiliationFilters = this.filterService.getFiltersByCategory('affiliations');
+        let hasActiveAffiliationFilters = activeAffiliationFilters.length > 0;
+
+        let activePubsCountFilters = this.filterService.getFiltersByCategory('pubsCount');
+        let hasActivePubsCountFilters = activePubsCountFilters.length > 0
+
+        let activeRegionFilters = this.filterService.getFiltersByCategory('region');
+        let hasActiveRegionFilters = activeRegionFilters.length > 0;
+
         let filteredData = this.data.filter(kol => {
 
             //Handle Bookmarks
@@ -1540,6 +1577,30 @@ export class KOLsService {
             if (hasActiveSpecialtyFilters && activeSpecialtyFilters.indexOf(kol.Specialty) == -1) {
                 return false;
             }
+
+            //Handle Affiliations
+            if (hasActiveAffiliationFilters && activeAffiliationFilters.indexOf(kol.Affiliation) == -1) {
+                return false;
+            }
+
+            //Handle Region
+            if (hasActiveRegionFilters && activeRegionFilters.indexOf(kol.Region) == -1) {
+                return false;
+            }
+
+            // Handle PubsCount
+            if (hasActivePubsCountFilters && kol.pubsCount > 5) {
+                return false;
+            }
+            // if (hasActivePubsCountFilters && kol.pubsCount > 10) {
+            //     return false;
+            // }
+            // if (hasActivePubsCountFilters && kol.pubsCount > 20) {
+            //     return false;
+            // }
+            // if (hasActivePubsCountFilters && kol.pubsCount < 20 && kol.pubsCount > 30) {
+            //     return false;
+            // }
 
             return true;
         });

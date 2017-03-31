@@ -68,7 +68,7 @@ page-cardlist {
       section {
         background: #fff;
         padding: 0 1rem 2rem 1rem;
-        height: 12rem;
+        height: 12.5rem;
         overflow-y: hidden;
         h1 {
           font-size: 1.8rem;
@@ -86,15 +86,14 @@ page-cardlist {
         }
        }
         footer {
-          background: linear-gradient(177deg, #fff 0%, #fff 10%, #f2f2f2 11%, #f7f7f7 100%);
-          padding: 1rem 1rem 0 1rem;
+          background: #f7f7f7;
+          padding: .5rem 1rem 0 1rem;
           border-bottom-left-radius: .5rem;
           border-bottom-right-radius: .5rem;
           position: relative;
           .rating {
             float: left;
             color: #999;
-            // font-size: 2.3rem;
             font-size:1.5rem;
             margin-top: 10px;
 

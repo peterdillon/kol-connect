@@ -1,4 +1,8 @@
 header-component {
+
+  #sorts {
+    overflow: auto;
+  }
   .statusbar {
     height: 2rem;
     width: 100%;
@@ -105,7 +109,7 @@ header-component {
       .filter-container {
         background-color: $highlighted;
         height: 4.5rem;
-        padding: .7rem 1rem 0 0;
+        padding: .7rem .6rem 0 0;
         box-shadow: inset -15px 0px 15px -10px rgba(0, 0, 0, .6);
         white-space: nowrap;
         overflow-x: scroll;

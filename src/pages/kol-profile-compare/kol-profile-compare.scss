@@ -1,5 +1,10 @@
 page-kol-profile-compare {
 
+.custom-top-nav { background-color: $highlight; }
+.text-ios-primary, .toolbar-title-ios {
+    color: white;
+}
+
 .w-75 {
     float: left;
     width: 75%;
@@ -9,9 +14,6 @@ page-kol-profile-compare {
     width: 25%;
 }
 
-.custom-top-nav {
-    background-color: #120A15;
-}
 .kol-container {
    display: flex;
    flex-flow: row wrap;
