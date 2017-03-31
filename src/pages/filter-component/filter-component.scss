@@ -23,6 +23,7 @@ filter-component {
         .w-25 {
             float: right;
             width: 25%;
+            text-align: right;
         }
 
         .flex-head {
@@ -64,11 +65,8 @@ filter-component {
         }
 
         .close {
-            font-size: inherit;
-            text-align: right;
-            padding-right: 2rem;
+            color: #fff;
             font-size: 5rem;
-            cursor: pointer;
         }
 
     } // END header
